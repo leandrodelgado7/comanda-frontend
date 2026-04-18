@@ -1,0 +1,87 @@
+<div class="voice-order-screen">
+  <div class="voice-order-center">
+    <button
+      type="button"
+      class="mic-button"
+      [class.listening]="isListening"
+      [disabled]="isProcessing"
+      (contextmenu)="onMicContextMenu($event)"
+      (dragstart)="$event.preventDefault()"
+      (pointerdown)="startListening()"
+      (pointerup)="stopListening()"
+      (pointercancel)="stopListening()"
+      (pointerleave)="stopListening()"
+      aria-label="Iniciar pedido por voz"
+    >
+      <span class="mic-ripple ripple-1" aria-hidden="true"></span>
+      <span class="mic-ripple ripple-2" aria-hidden="true"></span>
+      <span class="mic-ripple ripple-3" aria-hidden="true"></span>
+      <span class="mic-icon" aria-hidden="true">🎤</span>
+    </button>
+
+    <div class="wave-shell" [class.active]="isListening">
+      <div #waveContainer class="wave-canvas" aria-hidden="true"></div>
+    </div>
+
+    @if (isListening) {
+      <p class="voice-order-text status-text">Escuchando...</p>
+    } @else if (isProcessing) {
+      <p class="voice-order-text status-text">Procesando...</p>
+    } @else {
+      <p class="voice-order-text">Presione el bot&oacute;n e indique el producto</p>
+    }
+  </div>
+
+  @if (showConfirmationModal) {
+    <div
+      class="modal fade show d-block"
+      tabindex="-1"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Confirmar producto por voz"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title h5 m-0">Quisiste decir...?</h3>
+            <button
+              type="button"
+              class="btn-close"
+              (click)="closeConfirmationModal()"
+              aria-label="Cerrar modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            @for (item of needsConfirmation; track $index) {
+              <div class="modal-item">
+                <div class="modal-quantity">
+                  Cantidad: <strong>{{ item.cantidad }}</strong>
+                </div>
+
+                <div class="modal-options">
+                  @for (option of item.options; track option.id) {
+                    <button
+                      type="button"
+                      class="modal-option-btn"
+                      (click)="confirmProduct(item.cantidad, option)"
+                    >
+                      <div class="option-code">Codigo: {{ option.id }}</div>
+                      <div class="option-description">
+                        {{ option.descripcion }}
+                      </div>
+                    </button>
+                  }
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal-backdrop fade show"
+      (click)="closeConfirmationModal()"
+    ></div>
+  }
+</div>

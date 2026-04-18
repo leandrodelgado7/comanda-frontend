@@ -1,0 +1,166 @@
+import { Component, HostListener, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { map } from 'rxjs';
+import { ProductListComponent } from './producto-list/product-list.component';
+import { OrderSummaryComponent } from './order-summary/order-summary.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
+import { VoiceOrderPanelComponent } from './voice-order/voice-order-panel.component';
+import { BarcodeScannerPanelComponent } from './barcode-order/barcode-scanner-panel.component';
+import { Product } from '../../core/models/product.model';
+import { AuthService } from '../../core/services/auth.service';
+import { CarritoService } from '../../core/services/carrito.service';
+import { UnregisteredItemModalComponent } from './unregistered-item-modal/unregistered-item-modal.component';
+
+type ProductLayoutMode = 'grid' | 'list';
+type ProductSortMode = 'ranking' | 'name-asc' | 'name-desc' | 'category-asc' | 'category-desc';
+
+@Component({
+  selector: 'app-orders',
+  standalone: true,
+  imports: [CommonModule, TopBarComponent, ProductListComponent, OrderSummaryComponent, UnregisteredItemModalComponent],
+  templateUrl: './orders.component.html',
+  styleUrl: './orders.component.scss'
+})
+export class OrdersComponent implements OnInit {
+  readonly voiceOrderPanelComponent = VoiceOrderPanelComponent;
+  readonly barcodeScannerPanelComponent = BarcodeScannerPanelComponent;
+  readonly username$ = this.authService.currentUsername$;
+  readonly itemsCount$ = this.carritoService.items$.pipe(
+    map((items) => items.reduce((acc, item) => acc + item.quantity, 0))
+  );
+  readonly orderTotal$ = this.carritoService.total$;
+  searchTerm = '';
+  selectedCategories: string[] = [];
+  layoutMode: ProductLayoutMode = 'grid';
+  sortMode: ProductSortMode = 'ranking';
+  isUserMenuOpen = false;
+  isSummarySheetOpen = false;
+  isMobilePortrait = false;
+  isVoiceOrderActive = false;
+  isBarcodeScannerActive = false;
+  isFullscreen = false;
+  isUnregisteredItemModalOpen = false;
+
+  constructor(
+    private readonly authService: AuthService,
+    private readonly carritoService: CarritoService
+  ) {}
+
+  ngOnInit(): void {
+    this.updateViewportMode();
+  }
+
+  onSearchChange(value: string): void {
+    this.searchTerm = value;
+  }
+
+  onCategoriesChange(categories: string[]): void {
+    this.selectedCategories = categories;
+  }
+
+  onSortModeChange(mode: ProductSortMode): void {
+    this.sortMode = mode;
+  }
+
+  onLayoutButtonPress(): void {
+    this.layoutMode = this.layoutMode === 'grid' ? 'list' : 'grid';
+  }
+
+  selectManualMode(): void {
+    if (!this.isVoiceOrderActive && !this.isBarcodeScannerActive) {
+      return;
+    }
+
+    this.activateManualMode();
+  }
+
+  selectVoiceOrderView(): void {
+    if (this.isVoiceOrderActive) {
+      return;
+    }
+
+    this.isVoiceOrderActive = true;
+    this.isBarcodeScannerActive = false;
+  }
+
+  selectBarcodeScannerView(): void {
+    if (this.isBarcodeScannerActive) {
+      return;
+    }
+
+    this.isBarcodeScannerActive = true;
+    this.isVoiceOrderActive = false;
+  }
+
+  openUnregisteredItemModal(): void {
+    this.isUnregisteredItemModalOpen = true;
+  }
+
+  closeUnregisteredItemModal(): void {
+    this.isUnregisteredItemModalOpen = false;
+    this.activateManualMode();
+  }
+
+  addUnregisteredItem(item: { description: string; amount: number }): void {
+    this.carritoService.addCustomItem(item.description, item.amount);
+    this.closeUnregisteredItemModal();
+  }
+
+  @HostListener('window:resize')
+  onWindowResize(): void {
+    this.updateViewportMode();
+  }
+
+  @HostListener('document:fullscreenchange')
+  onFullscreenChange(): void {
+    this.isFullscreen = Boolean(document.fullscreenElement);
+  }
+
+  toggleSummarySheet(): void {
+    if (!this.isMobilePortrait) {
+      return;
+    }
+
+    this.isSummarySheetOpen = !this.isSummarySheetOpen;
+  }
+
+  closeSummarySheet(): void {
+    this.isSummarySheetOpen = false;
+  }
+
+  toggleUserMenu(): void {
+    this.isUserMenuOpen = !this.isUserMenuOpen;
+  }
+
+  closeUserMenu(): void {
+    this.isUserMenuOpen = false;
+  }
+
+  logout(): void {
+    this.closeUserMenu();
+    this.authService.logout();
+  }
+
+  private updateViewportMode(): void {
+    const isPortraitMobile = window.matchMedia('(max-width: 767.98px) and (orientation: portrait)').matches;
+    this.isMobilePortrait = isPortraitMobile;
+
+    if (!isPortraitMobile) {
+      this.isSummarySheetOpen = false;
+    }
+  }
+
+  async toggleFullscreen(): Promise<void> {
+    if (this.isFullscreen) {
+      await document.exitFullscreen();
+      return;
+    }
+
+    await document.documentElement.requestFullscreen();
+  }
+
+  private activateManualMode(): void {
+    this.isVoiceOrderActive = false;
+    this.isBarcodeScannerActive = false;
+  }
+}

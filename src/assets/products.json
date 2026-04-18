@@ -1,0 +1,4945 @@
+[
+  {
+    "id": 1,
+    "descripcion": "Papas al horno (350 grs)",
+    "precio": 4200,
+    "unidad": "porcion",
+    "aliases": [
+      "papas",
+      "papas al",
+      "papas al horno 350",
+      "papas al horno 350 grs"
+    ],
+    "codigo": 7790520025869,
+    "imagen": "https://www.lasrecetasdelaura.com/wp-content/uploads/2016/11/papas-al-horno-cuadrada-1-500x375.jpg",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 204
+  },
+  {
+    "id": 2,
+    "descripcion": "Pollo deshuesado pizza confrita",
+    "precio": 10000,
+    "unidad": "unidad",
+    "aliases": [
+      "pollo",
+      "pollo deshuesado",
+      "pollo deshuesado pizza con frita"
+    ],
+    "codigo": 96269994,
+    "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGQk6UIoSN0rgrARQ4xi4C8tsX4hqj3pFMFQ&s",
+    "disponible": true,
+    "categoria": "Pizzas",
+    "ranking": 266
+  },
+  {
+    "id": 3,
+    "descripcion": "Pollo Deshuesado a la pizza",
+    "precio": 6200,
+    "unidad": "unidad",
+    "aliases": [
+      "pollo",
+      "pollo deshuesado",
+      "pollo deshuesado a la pizza"
+    ],
+    "codigo": 71227822,
+    "imagen": "https://img-global.cpcdn.com/recipes/11495c36a0eff723/680x781cq80/pollo-deshuesado-a-la-pizza-foto-principal.jpg",
+    "disponible": true,
+    "categoria": "Pizzas",
+    "ranking": 231
+  },
+  {
+    "id": 4,
+    "descripcion": "Pollo Deshuesado",
+    "precio": 6500,
+    "unidad": "unidad",
+    "aliases": [
+      "pollo",
+      "pollo deshuesado"
+    ],
+    "codigo": 48747447,
+    "imagen": "https://i0.wp.com/www.acortadoria.com/wp-content/uploads/2018/02/PC210025.jpg?resize=1024%2C768&ssl=1",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 235
+  },
+  {
+    "id": 5,
+    "descripcion": "Cuarto de Pollo a la parrilla con salsa",
+    "precio": 6800,
+    "unidad": "unidad",
+    "aliases": [
+      "14pollo",
+      "14pollo parri",
+      "14pollo parri csals a l pied"
+    ],
+    "codigo": 61622948,
+    "imagen": "https://thumbs.dreamstime.com/b/cuarto-asado-la-parrilla-de-la-pierna-de-pollo-del-bbq-en-el-tablero-de-madera-visi%C3%B3n-superior-69895300.jpg",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 237
+  },
+  {
+    "id": 6,
+    "descripcion": "Cuarto de Pollo a la parrilla con papas al horno",
+    "precio": 9500,
+    "unidad": "unidad",
+    "aliases": [
+      "14pollo",
+      "14pollo parri",
+      "14pollo parri cpapas h"
+    ],
+    "codigo": 26015644,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 256
+  },
+  {
+    "id": 7,
+    "descripcion": "Cuarto de Pollo a la parrilla con papas al fritas",
+    "precio": 10000,
+    "unidad": "unidad",
+    "aliases": [
+      "14pollo",
+      "14pollo parri",
+      "14pollo parri cpapas f"
+    ],
+    "codigo": 36338626,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 267
+  },
+  {
+    "id": 8,
+    "descripcion": "Cuarto de Pollo a la parrilla",
+    "precio": 6200,
+    "unidad": "unidad",
+    "aliases": [
+      "14pollo",
+      "14pollo a",
+      "14pollo a la parrilla"
+    ],
+    "codigo": 43691984,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 232
+  },
+  {
+    "id": 9,
+    "descripcion": "Pollo a la Parrilla",
+    "precio": 20000,
+    "unidad": "unidad",
+    "aliases": [
+      "pollo",
+      "pollo a",
+      "pollo a la parrilla"
+    ],
+    "codigo": 45657502,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 291
+  },
+  {
+    "id": 10,
+    "descripcion": "Sandwich Hamburguesa Completo",
+    "precio": 7500,
+    "unidad": "unidad",
+    "aliases": [
+      "sandwich",
+      "sandwich hamb",
+      "sandwich hamb completo"
+    ],
+    "codigo": 28881433,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Sandwiches",
+    "ranking": 252
+  },
+  {
+    "id": 11,
+    "descripcion": "Sandwich Hamburguesa con jamón y queso",
+    "precio": 6500,
+    "unidad": "unidad",
+    "aliases": [
+      "sandwich",
+      "sandwich hamb",
+      "sandwich hamb cjyq"
+    ],
+    "codigo": 54043771,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Sandwiches",
+    "ranking": 236
+  },
+  {
+    "id": 12,
+    "descripcion": "Sandwich Primavera",
+    "precio": 4800,
+    "unidad": "unidad",
+    "aliases": [
+      "sandwich",
+      "sandwich primavera"
+    ],
+    "codigo": 43400272,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Sandwiches",
+    "ranking": 209
+  },
+  {
+    "id": 13,
+    "descripcion": "Pan Sacramento",
+    "precio": 10,
+    "unidad": "unidad",
+    "aliases": [
+      "pan",
+      "pan sacramento"
+    ],
+    "codigo": 10658259,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 8
+  },
+  {
+    "id": 14,
+    "descripcion": "Empanadas Calabresas al horno",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empanadas",
+      "empanadas calabresas",
+      "empanadas calabresas al horno"
+    ],
+    "codigo": 84058444,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 77
+  },
+  {
+    "id": 15,
+    "descripcion": "Milanesa de Pollo Sola",
+    "precio": 22000,
+    "unidad": "unidad",
+    "aliases": [
+      "milanesa",
+      "milanesa de",
+      "milanesa de pollo sola"
+    ],
+    "codigo": 22547504,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Milanesas",
+    "ranking": 293
+  },
+  {
+    "id": 16,
+    "descripcion": "Empanadas Capresse al horno",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empanadas",
+      "empanadas capresse",
+      "empanadas capresse al horno"
+    ],
+    "codigo": 86410280,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 78
+  },
+  {
+    "id": 17,
+    "descripcion": "Empanadas cuatro quesos al horno",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empanadas",
+      "empanadas cuatro",
+      "empanadas cuatro quesos al horno"
+    ],
+    "codigo": 80266162,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 79
+  },
+  {
+    "id": 18,
+    "descripcion": "Empanadas de jamón y queso y Anana al horno",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empanadas",
+      "empanadas de",
+      "empanadas de jyq y anana al horno"
+    ],
+    "codigo": 92238595,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 80
+  },
+  {
+    "id": 19,
+    "descripcion": "Empanadas de Verdura al horno",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empanadas",
+      "empanadas de",
+      "empanadas de verdura al horno"
+    ],
+    "codigo": 17148560,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 81
+  },
+  {
+    "id": 20,
+    "descripcion": "Empanadas de cebolla y queso al horno",
+    "precio": 2000,
+    "unidad": "unidad",
+    "aliases": [
+      "empanadas",
+      "empanadas de",
+      "empanadas de cebolla y queso al horno"
+    ],
+    "codigo": 60765806,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 76
+  },
+  {
+    "id": 21,
+    "descripcion": "Empanadas de jamón y queso al horno",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empanadas",
+      "empanadas de",
+      "empanadas de jyq al horno"
+    ],
+    "codigo": 27165397,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 82
+  },
+  {
+    "id": 22,
+    "descripcion": "Empanadas de Pizza al horno",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empanadas",
+      "empanadas de",
+      "empanadas de pizza al horno"
+    ],
+    "codigo": 60834469,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Pizzas",
+    "ranking": 83
+  },
+  {
+    "id": 24,
+    "descripcion": "Milanesa de Carne Sola",
+    "precio": 33000,
+    "unidad": "unidad",
+    "aliases": [
+      "milanesa",
+      "milanesa de",
+      "milanesa de carne sola"
+    ],
+    "codigo": 39687974,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Milanesas",
+    "ranking": 302
+  },
+  {
+    "id": 25,
+    "descripcion": "Sandwich Milanesa Carne con Jamón y Queso",
+    "precio": 9700,
+    "unidad": "unidad",
+    "aliases": [
+      "sandwichmilanesa",
+      "sandwichmilanesa carne",
+      "sandwichmilanesa carne cjyq"
+    ],
+    "codigo": 34180096,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Sandwiches",
+    "ranking": 260
+  },
+  {
+    "id": 27,
+    "descripcion": "Milanesa Pollo arrollada con papas",
+    "precio": 12000,
+    "unidad": "unidad",
+    "aliases": [
+      "milanesa",
+      "milanesa pollo",
+      "milanesa pollo arrollada cp"
+    ],
+    "codigo": 82458892,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Milanesas",
+    "ranking": 280
+  },
+  {
+    "id": 28,
+    "descripcion": "Milanesa Arrollada Pollo Rellena",
+    "precio": 8200,
+    "unidad": "unidad",
+    "aliases": [
+      "milanesa",
+      "milanesa arrollada",
+      "milanesa arrollada pollo rell"
+    ],
+    "codigo": 39472259,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Milanesas",
+    "ranking": 255
+  },
+  {
+    "id": 29,
+    "descripcion": "Sandwich Milanesa de Carne",
+    "precio": 9500,
+    "unidad": "unidad",
+    "aliases": [
+      "sandwich",
+      "sandwich milanesa",
+      "sandwich milanesa de carne"
+    ],
+    "codigo": 37688398,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Sandwiches",
+    "ranking": 257
+  },
+  {
+    "id": 30,
+    "descripcion": "Empanadas de Carne al horno",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empanadas",
+      "empanadas de",
+      "empanadas de carne al horno"
+    ],
+    "codigo": 73436415,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 84
+  },
+  {
+    "id": 31,
+    "descripcion": "Empanadas de Pollo al horno",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empanadas",
+      "empanadas de",
+      "empanadas de pollo al horno"
+    ],
+    "codigo": 91311249,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 85
+  },
+  {
+    "id": 32,
+    "descripcion": "Sandwich Milanesa carne completa",
+    "precio": 9900,
+    "unidad": "unidad",
+    "aliases": [
+      "sandwich",
+      "sandwich milanesa",
+      "sandwich milanesa carne completa"
+    ],
+    "codigo": 98523812,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Sandwiches",
+    "ranking": 261
+  },
+  {
+    "id": 33,
+    "descripcion": "Sandwich Milanesa Pollo Completa",
+    "precio": 9900,
+    "unidad": "unidad",
+    "aliases": [
+      "sandwich",
+      "sandwich milanesa",
+      "sandwich milanesa pollo completa"
+    ],
+    "codigo": 80760050,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Sandwiches",
+    "ranking": 262
+  },
+  {
+    "id": 34,
+    "descripcion": "Sandwich Milanesa Pollo",
+    "precio": 9500,
+    "unidad": "unidad",
+    "aliases": [
+      "sandwich",
+      "sandwich milanesa",
+      "sandwich milanesa pollo"
+    ],
+    "codigo": 37103742,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Sandwiches",
+    "ranking": 258
+  },
+  {
+    "id": 35,
+    "descripcion": "Salsa Pizza pastas y Demas",
+    "precio": 5000,
+    "unidad": "unidad",
+    "aliases": [
+      "salsa",
+      "salsa pizza",
+      "salsa pizza pastas y demas"
+    ],
+    "codigo": 13569353,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Pizzas",
+    "ranking": 210
+  },
+  {
+    "id": 36,
+    "descripcion": "Milanesa Napolitana pollo",
+    "precio": 22000,
+    "unidad": "unidad",
+    "aliases": [
+      "milanesa",
+      "milanesa napolitana",
+      "milanesa napolitana pollo"
+    ],
+    "codigo": 17514397,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Milanesas",
+    "ranking": 294
+  },
+  {
+    "id": 37,
+    "descripcion": "Salsa Bolognesa",
+    "precio": 4000,
+    "unidad": "unidad",
+    "aliases": [
+      "salsa",
+      "salsa bolognesa"
+    ],
+    "codigo": 72156255,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 202
+  },
+  {
+    "id": 38,
+    "descripcion": "Sandwich de Hamburguesas",
+    "precio": 5500,
+    "unidad": "unidad",
+    "aliases": [
+      "sandwich",
+      "sandwich de",
+      "sandwich de hamburguesas"
+    ],
+    "codigo": 83546467,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Sandwiches",
+    "ranking": 228
+  },
+  {
+    "id": 39,
+    "descripcion": "Papas Fritas",
+    "precio": 3800,
+    "unidad": "unidad",
+    "aliases": [
+      "papas",
+      "papas fritas"
+    ],
+    "codigo": 69515676,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 198
+  },
+  {
+    "id": 41,
+    "descripcion": "Sorrentino de jamón y queso con tuco",
+    "precio": 7000,
+    "unidad": "unidad",
+    "aliases": [
+      "sorrentino",
+      "sorrentino de",
+      "sorrentino de jyq ctuco"
+    ],
+    "codigo": 48013398,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Pastas",
+    "ranking": 240
+  },
+  {
+    "id": 42,
+    "descripcion": "Sorrentino de jamón y queso con bolonesa",
+    "precio": 11000,
+    "unidad": "unidad",
+    "aliases": [
+      "sorrentino",
+      "sorrentino de",
+      "sorrentino de jyq cbol"
+    ],
+    "codigo": 52839251,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Pastas",
+    "ranking": 273
+  },
+  {
+    "id": 43,
+    "descripcion": "Canelones de jamón y queso",
+    "precio": 7000,
+    "unidad": "unidad",
+    "aliases": [
+      "canelones",
+      "canelones de",
+      "canelones de jyq"
+    ],
+    "codigo": 21842412,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Pastas",
+    "ranking": 241
+  },
+  {
+    "id": 44,
+    "descripcion": "Canelones de verdura",
+    "precio": 7000,
+    "unidad": "unidad",
+    "aliases": [
+      "canelones",
+      "canelones de",
+      "canelones de verdura"
+    ],
+    "codigo": 74688361,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Pastas",
+    "ranking": 242
+  },
+  {
+    "id": 50,
+    "descripcion": "Porcion de papa al horno",
+    "precio": 4200,
+    "unidad": "unidad",
+    "aliases": [
+      "porcion",
+      "porcion de",
+      "porcion de papa al horno"
+    ],
+    "codigo": 30729354,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 205
+  },
+  {
+    "id": 51,
+    "descripcion": "Porcion de papas Fritas",
+    "precio": 3800,
+    "unidad": "unidad",
+    "aliases": [
+      "porcion",
+      "porcion de",
+      "porcion de papas fritas"
+    ],
+    "codigo": 14750956,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 199
+  },
+  {
+    "id": 53,
+    "descripcion": "Bocaditos",
+    "precio": 11000,
+    "unidad": "unidad",
+    "aliases": [
+      "bocaditos"
+    ],
+    "codigo": 55296500,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 274
+  },
+  {
+    "id": 55,
+    "descripcion": "Marinera de pescado",
+    "precio": 22000,
+    "unidad": "unidad",
+    "aliases": [
+      "marinera",
+      "marinera de",
+      "marinera de pescado"
+    ],
+    "codigo": 90473234,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 295
+  },
+  {
+    "id": 56,
+    "descripcion": "Pescado relleno Arrollado",
+    "precio": 6800,
+    "unidad": "unidad",
+    "aliases": [
+      "pescado",
+      "pescado relleno",
+      "pescado relleno arrollado"
+    ],
+    "codigo": 49567252,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 238
+  },
+  {
+    "id": 57,
+    "descripcion": "Tarta individual jamón y queso con tapa",
+    "precio": 6800,
+    "unidad": "unidad",
+    "aliases": [
+      "tarta",
+      "tarta indiv",
+      "tarta indiv jyq con tapa"
+    ],
+    "codigo": 42916167,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Tartas",
+    "ranking": 239
+  },
+  {
+    "id": 58,
+    "descripcion": "Tarta individual jamón y queso sin tapa",
+    "precio": 7000,
+    "unidad": "unidad",
+    "aliases": [
+      "tarta",
+      "tarta indiv",
+      "tarta indiv jyq sin tapa"
+    ],
+    "codigo": 87204274,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Tartas",
+    "ranking": 243
+  },
+  {
+    "id": 59,
+    "descripcion": "Tarta individual pollo sin tapa",
+    "precio": 7000,
+    "unidad": "unidad",
+    "aliases": [
+      "tarta",
+      "tarta indiv",
+      "tarta indiv pollo sin tapa"
+    ],
+    "codigo": 19729184,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Tartas",
+    "ranking": 244
+  },
+  {
+    "id": 60,
+    "descripcion": "Tapa Grande jamón y queso Calzoni",
+    "precio": 10000,
+    "unidad": "porcion",
+    "aliases": [
+      "tapa",
+      "tapa grande",
+      "tapa grande jyq calzoni"
+    ],
+    "codigo": 59109836,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Tartas",
+    "ranking": 268
+  },
+  {
+    "id": 61,
+    "descripcion": "Tarta Grande pollo Calzoni",
+    "precio": 9900,
+    "unidad": "porcion",
+    "aliases": [
+      "tarta",
+      "tarta grande",
+      "tarta grande pollo calzoni"
+    ],
+    "codigo": 16542133,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Tartas",
+    "ranking": 263
+  },
+  {
+    "id": 62,
+    "descripcion": "Pollo deshuesado al verdeo",
+    "precio": 6200,
+    "unidad": "unidad",
+    "aliases": [
+      "pollo",
+      "pollo deshuesado",
+      "pollo deshuesado al verdeo"
+    ],
+    "codigo": 95674534,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 233
+  },
+  {
+    "id": 63,
+    "descripcion": "Pollo Arrollado Relleno",
+    "precio": 7800,
+    "unidad": "unidad",
+    "aliases": [
+      "pollo",
+      "pollo arrollado",
+      "pollo arrollado relleno"
+    ],
+    "codigo": 63365866,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 253
+  },
+  {
+    "id": 64,
+    "descripcion": "Ensalada rusa",
+    "precio": 16500,
+    "unidad": "unidad",
+    "aliases": [
+      "ensalada",
+      "ensalada rusa"
+    ],
+    "codigo": 54409374,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 288
+  },
+  {
+    "id": 65,
+    "descripcion": "Pollo deshuesado al verdeo",
+    "precio": 17500,
+    "unidad": "unidad",
+    "aliases": [
+      "pollo",
+      "pollo deshuesado",
+      "pollo deshuesado al verdeo"
+    ],
+    "codigo": 77529129,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 289
+  },
+  {
+    "id": 66,
+    "descripcion": "Pollo deshuesado a la piedra",
+    "precio": 6200,
+    "unidad": "unidad",
+    "aliases": [
+      "pollo",
+      "pollo deshuesado",
+      "pollo deshuesado a la piedra"
+    ],
+    "codigo": 40337535,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 234
+  },
+  {
+    "id": 67,
+    "descripcion": "Salsa de verdeo",
+    "precio": 10000,
+    "unidad": "unidad",
+    "aliases": [
+      "salsa",
+      "salsa de",
+      "salsa de verdeo"
+    ],
+    "codigo": 86637412,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 269
+  },
+  {
+    "id": 68,
+    "descripcion": "Tarta individual calabaza sin tapa",
+    "precio": 7000,
+    "unidad": "unidad",
+    "aliases": [
+      "tarta",
+      "tarta indiv",
+      "tarta indiv calabaza sin tapa"
+    ],
+    "codigo": 93522939,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Tartas",
+    "ranking": 245
+  },
+  {
+    "id": 70,
+    "descripcion": "Pizza mozzarella",
+    "precio": 9500,
+    "unidad": "unidad",
+    "aliases": [
+      "pizza",
+      "pizza mozzarella"
+    ],
+    "codigo": 45518977,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Pizzas",
+    "ranking": 259
+  },
+  {
+    "id": 71,
+    "descripcion": "Pizza especial",
+    "precio": 13500,
+    "unidad": "unidad",
+    "aliases": [
+      "pizza",
+      "pizza especial"
+    ],
+    "codigo": 70381070,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Pizzas",
+    "ranking": 284
+  },
+  {
+    "id": 72,
+    "descripcion": "Pizza de Huevo Frito",
+    "precio": 21000,
+    "unidad": "unidad",
+    "aliases": [
+      "pizza",
+      "pizza de",
+      "pizza de huevo frito"
+    ],
+    "codigo": 89897814,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Pizzas",
+    "ranking": 292
+  },
+  {
+    "id": 73,
+    "descripcion": "Pizza rellena con jamón y queso",
+    "precio": 13500,
+    "unidad": "unidad",
+    "aliases": [
+      "pizza",
+      "pizza rellena",
+      "pizza rellena con jyq"
+    ],
+    "codigo": 99301806,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Pizzas",
+    "ranking": 285
+  },
+  {
+    "id": 74,
+    "descripcion": "Lengua a la vinagreta",
+    "precio": 23500,
+    "unidad": "porcion",
+    "aliases": [
+      "lengua",
+      "lengua a",
+      "lengua a la vinagreta"
+    ],
+    "codigo": 14698216,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 298
+  },
+  {
+    "id": 75,
+    "descripcion": "Ensalada de arroz",
+    "precio": 13000,
+    "unidad": "unidad",
+    "aliases": [
+      "ensalada",
+      "ensalada de",
+      "ensalada de arroz"
+    ],
+    "codigo": 60851155,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 283
+  },
+  {
+    "id": 76,
+    "descripcion": "Flan Casero",
+    "precio": 5000,
+    "unidad": "unidad",
+    "aliases": [
+      "flan",
+      "flan casero"
+    ],
+    "codigo": 44361433,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Postres",
+    "ranking": 211
+  },
+  {
+    "id": 77,
+    "descripcion": "Budin de pan",
+    "precio": 5000,
+    "unidad": "unidad",
+    "aliases": [
+      "budin",
+      "budin de",
+      "budin de pan"
+    ],
+    "codigo": 91461018,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Postres",
+    "ranking": 212
+  },
+  {
+    "id": 78,
+    "descripcion": "Salsa a la piedra",
+    "precio": 6000,
+    "unidad": "unidad",
+    "aliases": [
+      "salsa",
+      "salsa a",
+      "salsa a la piedra"
+    ],
+    "codigo": 64824963,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 229
+  },
+  {
+    "id": 80,
+    "descripcion": "Tarta de jamón y queso Tipo Calzoni",
+    "precio": 9900,
+    "unidad": "unidad",
+    "aliases": [
+      "tarta",
+      "tarta de",
+      "tarta de jyq tipo calzoni"
+    ],
+    "codigo": 51154970,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Tartas",
+    "ranking": 264
+  },
+  {
+    "id": 81,
+    "descripcion": "Carne de cerdo",
+    "precio": 26000,
+    "unidad": "unidad",
+    "aliases": [
+      "carne",
+      "carne de",
+      "carne de cerdo"
+    ],
+    "codigo": 46932269,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 299
+  },
+  {
+    "id": 82,
+    "descripcion": "Arroz con Pollo a la olla",
+    "precio": 10000,
+    "unidad": "unidad",
+    "aliases": [
+      "arroz",
+      "arroz con",
+      "arroz con pollo a la olla"
+    ],
+    "codigo": 59377782,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 270
+  },
+  {
+    "id": 83,
+    "descripcion": "Carne de Cerdo",
+    "precio": 26000,
+    "unidad": "unidad",
+    "aliases": [
+      "carne",
+      "carne de",
+      "carne de cerdo"
+    ],
+    "codigo": 78046457,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 300
+  },
+  {
+    "id": 84,
+    "descripcion": "Matambre a la Pizza",
+    "precio": 36000,
+    "unidad": "unidad",
+    "aliases": [
+      "matambre",
+      "matambre a",
+      "matambre a la pizza"
+    ],
+    "codigo": 34094062,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Pizzas",
+    "ranking": 304
+  },
+  {
+    "id": 85,
+    "descripcion": "Tortilla papa",
+    "precio": 11000,
+    "unidad": "unidad",
+    "aliases": [
+      "tortilla",
+      "tortilla papa"
+    ],
+    "codigo": 59403788,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 275
+  },
+  {
+    "id": 86,
+    "descripcion": "Budines",
+    "precio": 4000,
+    "unidad": "unidad",
+    "aliases": [
+      "budines"
+    ],
+    "codigo": 29886324,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Postres",
+    "ranking": 203
+  },
+  {
+    "id": 87,
+    "descripcion": "Tortilla Acelga y Zanahoria",
+    "precio": 11000,
+    "unidad": "unidad",
+    "aliases": [
+      "tortilla",
+      "tortilla acelga",
+      "tortilla acelga y zanahoria"
+    ],
+    "codigo": 83738900,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 276
+  },
+  {
+    "id": 88,
+    "descripcion": "Alfajores de Maicena",
+    "precio": 16000,
+    "unidad": "unidad",
+    "aliases": [
+      "alfajores",
+      "alfajores de",
+      "alfajores de maicena"
+    ],
+    "codigo": 84343915,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Postres",
+    "ranking": 287
+  },
+  {
+    "id": 89,
+    "descripcion": "Bondiola de cerdo",
+    "precio": 26000,
+    "unidad": "unidad",
+    "aliases": [
+      "bondiola",
+      "bondiola de",
+      "bondiola de cerdo"
+    ],
+    "codigo": 99326523,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 301
+  },
+  {
+    "id": 90,
+    "descripcion": "Pizza Napolitana",
+    "precio": 14500,
+    "unidad": "unidad",
+    "aliases": [
+      "pizza",
+      "pizza napolitana"
+    ],
+    "codigo": 15074094,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Pizzas",
+    "ranking": 286
+  },
+  {
+    "id": 91,
+    "descripcion": "Choco Torta",
+    "precio": 5000,
+    "unidad": "unidad",
+    "aliases": [
+      "choco",
+      "choco torta"
+    ],
+    "codigo": 93311810,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Postres",
+    "ranking": 213
+  },
+  {
+    "id": 92,
+    "descripcion": "Postre Tiramisu Grande",
+    "precio": 5000,
+    "unidad": "porcion",
+    "aliases": [
+      "postre",
+      "postre tiramisu",
+      "postre tiramisu grande"
+    ],
+    "codigo": 94387776,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Postres",
+    "ranking": 214
+  },
+  {
+    "id": 93,
+    "descripcion": "Tonne",
+    "precio": 45000,
+    "unidad": "unidad",
+    "aliases": [
+      "tonne"
+    ],
+    "codigo": 68552480,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 305
+  },
+  {
+    "id": 94,
+    "descripcion": "Matambre arrollado",
+    "precio": 45000,
+    "unidad": "unidad",
+    "aliases": [
+      "matambre",
+      "matambre arrollado"
+    ],
+    "codigo": 71129618,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 306
+  },
+  {
+    "id": 95,
+    "descripcion": "Milanesa de pollo",
+    "precio": 22000,
+    "unidad": "unidad",
+    "aliases": [
+      "milanesa",
+      "milanesa de",
+      "milanesa de pollo"
+    ],
+    "codigo": 33109762,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Milanesas",
+    "ranking": 296
+  },
+  {
+    "id": 96,
+    "descripcion": "Empanadas Saltena al horno",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empanadas",
+      "empanadas saltena",
+      "empanadas saltena al horno"
+    ],
+    "codigo": 98691312,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 86
+  },
+  {
+    "id": 97,
+    "descripcion": "Locro",
+    "precio": 9900,
+    "unidad": "unidad",
+    "aliases": [
+      "locro"
+    ],
+    "codigo": 10736340,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 265
+  },
+  {
+    "id": 98,
+    "descripcion": "Tortilla Verdura y Zanahoria",
+    "precio": 11000,
+    "unidad": "unidad",
+    "aliases": [
+      "tortilla",
+      "tortilla verd",
+      "tortilla verd y zanah"
+    ],
+    "codigo": 81787001,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 277
+  },
+  {
+    "id": 99,
+    "descripcion": "Chuleta con papas Horno",
+    "precio": 12000,
+    "unidad": "unidad",
+    "aliases": [
+      "chuleta",
+      "chuleta con",
+      "chuleta con papas horno"
+    ],
+    "codigo": 78625652,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 281
+  },
+  {
+    "id": 100,
+    "descripcion": "Arroz con Albondiga",
+    "precio": 10000,
+    "unidad": "unidad",
+    "aliases": [
+      "arroz",
+      "arroz con",
+      "arroz con albondiga"
+    ],
+    "codigo": 84459803,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 271
+  },
+  {
+    "id": 101,
+    "descripcion": "Tapa Empanada Horno",
+    "precio": 1,
+    "unidad": "unidad",
+    "aliases": [
+      "tapa",
+      "tapa empanada",
+      "tapa empanada horno"
+    ],
+    "codigo": 86892184,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 1
+  },
+  {
+    "id": 102,
+    "descripcion": "Pinchos Rebozadas Carne",
+    "precio": 10000,
+    "unidad": "unidad",
+    "aliases": [
+      "pinchos",
+      "pinchos rebozadas",
+      "pinchos rebozadas carne"
+    ],
+    "codigo": 90175975,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 272
+  },
+  {
+    "id": 103,
+    "descripcion": "Terrina de verdura",
+    "precio": 11000,
+    "unidad": "unidad",
+    "aliases": [
+      "terrina",
+      "terrina de",
+      "terrina de verdura"
+    ],
+    "codigo": 57951633,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 278
+  },
+  {
+    "id": 104,
+    "descripcion": "Pan de carne",
+    "precio": 7200,
+    "unidad": "unidad",
+    "aliases": [
+      "pan",
+      "pan de",
+      "pan de carne"
+    ],
+    "codigo": 29532254,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 251
+  },
+  {
+    "id": 105,
+    "descripcion": "Pionono",
+    "precio": 19000,
+    "unidad": "unidad",
+    "aliases": [
+      "pionono"
+    ],
+    "codigo": 50815111,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 290
+  },
+  {
+    "id": 106,
+    "descripcion": "Levite naranja 1 1/2 lt",
+    "precio": 1818,
+    "unidad": "unidad",
+    "aliases": [
+      "levite",
+      "levite naranja",
+      "levite naranja 1 12",
+      "levite naranja 1 12 lt"
+    ],
+    "codigo": 57378130,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 52
+  },
+  {
+    "id": 107,
+    "descripcion": "Levite naranja 2 1/4 lt",
+    "precio": 2397,
+    "unidad": "unidad",
+    "aliases": [
+      "levite",
+      "levite naranja",
+      "levite naranja 2 14",
+      "levite naranja 2 14 lt"
+    ],
+    "codigo": 30022463,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 121
+  },
+  {
+    "id": 108,
+    "descripcion": "Levite manzana 1/2 lt",
+    "precio": 1322,
+    "unidad": "unidad",
+    "aliases": [
+      "levite",
+      "levite manzana",
+      "levite manzana 12",
+      "levite manzana 12 lt"
+    ],
+    "codigo": 79759465,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 26
+  },
+  {
+    "id": 109,
+    "descripcion": "Levite manzana 1 1/2 lt",
+    "precio": 1818,
+    "unidad": "unidad",
+    "aliases": [
+      "levite",
+      "levite manzana",
+      "levite manzana 1 12",
+      "levite manzana 1 12 lt"
+    ],
+    "codigo": 47631229,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 53
+  },
+  {
+    "id": 110,
+    "descripcion": "Levite manzana 2 1/4 lt",
+    "precio": 2397,
+    "unidad": "unidad",
+    "aliases": [
+      "levite",
+      "levite manzana",
+      "levite manzana 2 14",
+      "levite manzana 2 14 lt"
+    ],
+    "codigo": 12755843,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 122
+  },
+  {
+    "id": 111,
+    "descripcion": "Levite Pomelo 1/2 lt",
+    "precio": 1322,
+    "unidad": "unidad",
+    "aliases": [
+      "levite",
+      "levite pomelo",
+      "levite pomelo 12",
+      "levite pomelo 12 lt"
+    ],
+    "codigo": 99178705,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 27
+  },
+  {
+    "id": 112,
+    "descripcion": "Levite Pomelo 1 1/2 lt",
+    "precio": 1818,
+    "unidad": "unidad",
+    "aliases": [
+      "levite",
+      "levite pomelo",
+      "levite pomelo 1 12",
+      "levite pomelo 1 12 lt"
+    ],
+    "codigo": 33547184,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 54
+  },
+  {
+    "id": 113,
+    "descripcion": "Levite Pomelo 2 1/4 lt",
+    "precio": 2397,
+    "unidad": "unidad",
+    "aliases": [
+      "levite",
+      "levite pomelo",
+      "levite pomelo 2 14",
+      "levite pomelo 2 14 lt"
+    ],
+    "codigo": 13018808,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 123
+  },
+  {
+    "id": 114,
+    "descripcion": "Levite Pera 1 1/2 lt",
+    "precio": 1818,
+    "unidad": "unidad",
+    "aliases": [
+      "levite",
+      "levite pera",
+      "levite pera 1 12",
+      "levite pera 1 12 lt"
+    ],
+    "codigo": 49302186,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 55
+  },
+  {
+    "id": 115,
+    "descripcion": "Levite Pera 2 1/4 lt",
+    "precio": 2397,
+    "unidad": "unidad",
+    "aliases": [
+      "levite",
+      "levite pera",
+      "levite pera 2 14",
+      "levite pera 2 14 lt"
+    ],
+    "codigo": 22676777,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 124
+  },
+  {
+    "id": 116,
+    "descripcion": "Levite Anana 1 1/2 lt",
+    "precio": 1818,
+    "unidad": "unidad",
+    "aliases": [
+      "levite",
+      "levite anana",
+      "levite anana 1 12",
+      "levite anana 1 12 lt"
+    ],
+    "codigo": 12701265,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 56
+  },
+  {
+    "id": 117,
+    "descripcion": "Levite Anana 2 1/4 lt",
+    "precio": 2397,
+    "unidad": "unidad",
+    "aliases": [
+      "levite",
+      "levite anana",
+      "levite anana 2 14",
+      "levite anana 2 14 lt"
+    ],
+    "codigo": 75732629,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 125
+  },
+  {
+    "id": 118,
+    "descripcion": "Jugo Baggio Chico (manzana) 200 ml",
+    "precio": 579,
+    "unidad": "unidad",
+    "aliases": [
+      "jugo",
+      "jugo baggio",
+      "jugo baggio chico manzana 200",
+      "jugo baggio chico manzana 200 ml"
+    ],
+    "codigo": 19347366,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 9
+  },
+  {
+    "id": 119,
+    "descripcion": "Jugo Baggio Chico (Naranja) 200 ml",
+    "precio": 579,
+    "unidad": "unidad",
+    "aliases": [
+      "jugo",
+      "jugo baggio",
+      "jugo baggio chico naranja 200",
+      "jugo baggio chico naranja 200 ml"
+    ],
+    "codigo": 26055941,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 10
+  },
+  {
+    "id": 120,
+    "descripcion": "Jugo Baggio Chico (Durazno) 200 ml",
+    "precio": 579,
+    "unidad": "unidad",
+    "aliases": [
+      "jugo",
+      "jugo baggio",
+      "jugo baggio chico durazno 200",
+      "jugo baggio chico durazno 200 ml"
+    ],
+    "codigo": 15953564,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 11
+  },
+  {
+    "id": 121,
+    "descripcion": "Jugo Baggio Chico (Multifruta) 200 ml",
+    "precio": 579,
+    "unidad": "unidad",
+    "aliases": [
+      "jugo",
+      "jugo baggio",
+      "jugo baggio chico multifruta 200",
+      "jugo baggio chico multifruta 200 ml"
+    ],
+    "codigo": 99275144,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 12
+  },
+  {
+    "id": 122,
+    "descripcion": "Jugo Baggio (manzana) 1lt",
+    "precio": 2231,
+    "unidad": "unidad",
+    "aliases": [
+      "jugo",
+      "jugo baggio",
+      "jugo baggio manzana 1lt"
+    ],
+    "codigo": 53743106,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 108
+  },
+  {
+    "id": 123,
+    "descripcion": "Jugo Baggio (Naranja) 1 lt",
+    "precio": 2231,
+    "unidad": "unidad",
+    "aliases": [
+      "jugo",
+      "jugo baggio",
+      "jugo baggio naranja 1",
+      "jugo baggio naranja 1 lt"
+    ],
+    "codigo": 81938071,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 109
+  },
+  {
+    "id": 124,
+    "descripcion": "Jugo Baggio (Durazno) 1 lt",
+    "precio": 2231,
+    "unidad": "unidad",
+    "aliases": [
+      "jugo",
+      "jugo baggio",
+      "jugo baggio durazno 1",
+      "jugo baggio durazno 1 lt"
+    ],
+    "codigo": 99300277,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 110
+  },
+  {
+    "id": 125,
+    "descripcion": "Jugo Baggio (Multifruta) 1 lt",
+    "precio": 2231,
+    "unidad": "unidad",
+    "aliases": [
+      "jugo",
+      "jugo baggio",
+      "jugo baggio multifruta 1",
+      "jugo baggio multifruta 1 lt"
+    ],
+    "codigo": 61123192,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 111
+  },
+  {
+    "id": 126,
+    "descripcion": "Agua Mineral 1/2 lt Villa Sur",
+    "precio": 826,
+    "unidad": "unidad",
+    "aliases": [
+      "agua",
+      "agua mineral",
+      "agua mineral 12 lt villa sur",
+      "agua mineral 12 villa sur"
+    ],
+    "codigo": 88264076,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 13
+  },
+  {
+    "id": 127,
+    "descripcion": "Agua Mineral 1,65 lts Villa del Sur",
+    "precio": 1488,
+    "unidad": "unidad",
+    "aliases": [
+      "agua",
+      "agua mineral",
+      "agua mineral 165 lts villa del sur"
+    ],
+    "codigo": 63498174,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 43
+  },
+  {
+    "id": 128,
+    "descripcion": "Agua Mineral 2,25 lts Villa del Sur",
+    "precio": 2397,
+    "unidad": "unidad",
+    "aliases": [
+      "agua",
+      "agua mineral",
+      "agua mineral 225 lts villa del sur"
+    ],
+    "codigo": 60909858,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 126
+  },
+  {
+    "id": 129,
+    "descripcion": "Cerveza Imperial 473 cc",
+    "precio": 1901,
+    "unidad": "unidad",
+    "aliases": [
+      "cerveza",
+      "cerveza imperial",
+      "cerveza imperial 473 cc"
+    ],
+    "codigo": 50018650,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas con alcohol",
+    "ranking": 65
+  },
+  {
+    "id": 130,
+    "descripcion": "Cerveza Imperial 710 cc",
+    "precio": 3058,
+    "unidad": "unidad",
+    "aliases": [
+      "cerveza",
+      "cerveza imperial",
+      "cerveza imperial 710 cc"
+    ],
+    "codigo": 11994771,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas con alcohol",
+    "ranking": 167
+  },
+  {
+    "id": 131,
+    "descripcion": "Cerveza Schneider 473",
+    "precio": 1901,
+    "unidad": "unidad",
+    "aliases": [
+      "cerveza",
+      "cerveza schneider",
+      "cerveza schneider 473"
+    ],
+    "codigo": 29752112,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas con alcohol",
+    "ranking": 66
+  },
+  {
+    "id": 132,
+    "descripcion": "Cerveza Schneider 710",
+    "precio": 3058,
+    "unidad": "unidad",
+    "aliases": [
+      "cerveza",
+      "cerveza schneider",
+      "cerveza schneider 710"
+    ],
+    "codigo": 41131924,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas con alcohol",
+    "ranking": 168
+  },
+  {
+    "id": 133,
+    "descripcion": "Cerveza Heineken 370 cc (porron)",
+    "precio": 2231,
+    "unidad": "unidad",
+    "aliases": [
+      "cerveza",
+      "cerveza heineken",
+      "cerveza heineken 370 cc porron"
+    ],
+    "codigo": 53209227,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas con alcohol",
+    "ranking": 112
+  },
+  {
+    "id": 135,
+    "descripcion": "Pure tomate Arcor 520g lt",
+    "precio": 2545,
+    "unidad": "unidad",
+    "aliases": [
+      "pure",
+      "pure tomate",
+      "pure tomate arcor 520g",
+      "pure tomate arcor 520g lt"
+    ],
+    "codigo": 73908537,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 145
+  },
+  {
+    "id": 136,
+    "descripcion": "Pure instantaneo papa Knor",
+    "precio": 1174,
+    "unidad": "unidad",
+    "aliases": [
+      "pure",
+      "pure instantaneo",
+      "pure instantaneo papa knor"
+    ],
+    "codigo": 58770008,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 23
+  },
+  {
+    "id": 137,
+    "descripcion": "Agua Mineral Sport (pico) Villa del Sur",
+    "precio": 1488,
+    "unidad": "unidad",
+    "aliases": [
+      "agua",
+      "agua mineral",
+      "agua mineral sport pico villa del sur"
+    ],
+    "codigo": 33807914,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 44
+  },
+  {
+    "id": 138,
+    "descripcion": "Cerveza Isenbeck 473 cc",
+    "precio": 1901,
+    "unidad": "unidad",
+    "aliases": [
+      "cerveza",
+      "cerveza isenbeck",
+      "cerveza isenbeck 473 cc"
+    ],
+    "codigo": 93853502,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas con alcohol",
+    "ranking": 67
+  },
+  {
+    "id": 139,
+    "descripcion": "Pepsi 1/2 Lt",
+    "precio": 1322,
+    "unidad": "unidad",
+    "aliases": [
+      "pepsi",
+      "pepsi 12",
+      "pepsi 12 lt"
+    ],
+    "codigo": 82125708,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 28
+  },
+  {
+    "id": 140,
+    "descripcion": "Pepsi 1 1/2 lt",
+    "precio": 2810,
+    "unidad": "unidad",
+    "aliases": [
+      "pepsi",
+      "pepsi 1",
+      "pepsi 1 12",
+      "pepsi 1 12 lt"
+    ],
+    "codigo": 80066713,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 149
+  },
+  {
+    "id": 141,
+    "descripcion": "Pepsi 2  lt",
+    "precio": 3471,
+    "unidad": "unidad",
+    "aliases": [
+      "pepsi",
+      "pepsi 2",
+      "pepsi 2 lt"
+    ],
+    "codigo": 61263881,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 179
+  },
+  {
+    "id": 142,
+    "descripcion": "Seven Up 1/2 Lt",
+    "precio": 1322,
+    "unidad": "unidad",
+    "aliases": [
+      "seven",
+      "seven up",
+      "seven up 12",
+      "seven up 12 lt"
+    ],
+    "codigo": 66100327,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 29
+  },
+  {
+    "id": 143,
+    "descripcion": "Seven Up 1 1/2 lt",
+    "precio": 2810,
+    "unidad": "unidad",
+    "aliases": [
+      "seven",
+      "seven up",
+      "seven up 1 12",
+      "seven up 1 12 lt"
+    ],
+    "codigo": 97927567,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 150
+  },
+  {
+    "id": 144,
+    "descripcion": "Seven Up 2 1/4 lt",
+    "precio": 3471,
+    "unidad": "unidad",
+    "aliases": [
+      "seven",
+      "seven up",
+      "seven up 2 14",
+      "seven up 2 14 lt"
+    ],
+    "codigo": 59886356,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 180
+  },
+  {
+    "id": 145,
+    "descripcion": "Mirinda 1/2 Lt",
+    "precio": 1322,
+    "unidad": "unidad",
+    "aliases": [
+      "mirinda",
+      "mirinda 12",
+      "mirinda 12 lt"
+    ],
+    "codigo": 28238068,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 30
+  },
+  {
+    "id": 146,
+    "descripcion": "Mirinda 1 1/2 lt",
+    "precio": 2810,
+    "unidad": "unidad",
+    "aliases": [
+      "mirinda",
+      "mirinda 1",
+      "mirinda 1 12",
+      "mirinda 1 12 lt"
+    ],
+    "codigo": 80232455,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 151
+  },
+  {
+    "id": 147,
+    "descripcion": "Mirinda 2 1/4 lt",
+    "precio": 3471,
+    "unidad": "unidad",
+    "aliases": [
+      "mirinda",
+      "mirinda 2",
+      "mirinda 2 14",
+      "mirinda 2 14 lt"
+    ],
+    "codigo": 84111560,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 181
+  },
+  {
+    "id": 148,
+    "descripcion": "H2O Citrus 1 1/2 lt",
+    "precio": 2810,
+    "unidad": "unidad",
+    "aliases": [
+      "h2o",
+      "h2o citrus",
+      "h2o citrus 1 12",
+      "h2o citrus 1 12 lt"
+    ],
+    "codigo": 63514018,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 152
+  },
+  {
+    "id": 149,
+    "descripcion": "H2O Citrus 2 1/4 lt",
+    "precio": 3471,
+    "unidad": "unidad",
+    "aliases": [
+      "h2o",
+      "h2o citrus",
+      "h2o citrus 2 14",
+      "h2o citrus 2 14 lt"
+    ],
+    "codigo": 82234732,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 182
+  },
+  {
+    "id": 150,
+    "descripcion": "Paso Toros Pomelo 500 cc",
+    "precio": 1322,
+    "unidad": "unidad",
+    "aliases": [
+      "paso",
+      "paso toros",
+      "paso toros pomelo 500 cc"
+    ],
+    "codigo": 23549457,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 31
+  },
+  {
+    "id": 151,
+    "descripcion": "H2O Limoneto 1 1/2 lts",
+    "precio": 2810,
+    "unidad": "unidad",
+    "aliases": [
+      "h2o",
+      "h2o limoneto",
+      "h2o limoneto 1 12 lts"
+    ],
+    "codigo": 22699470,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 153
+  },
+  {
+    "id": 152,
+    "descripcion": "H2O Limoneto 2 1/4 lts",
+    "precio": 3471,
+    "unidad": "unidad",
+    "aliases": [
+      "h2o",
+      "h2o limoneto",
+      "h2o limoneto 2 14 lts"
+    ],
+    "codigo": 92451768,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 183
+  },
+  {
+    "id": 153,
+    "descripcion": "H2O Manzana 1 1/2 lts",
+    "precio": 2810,
+    "unidad": "unidad",
+    "aliases": [
+      "h2o",
+      "h2o manzana",
+      "h2o manzana 1 12 lts"
+    ],
+    "codigo": 17278931,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 154
+  },
+  {
+    "id": 154,
+    "descripcion": "H2O Manzana 2 1/4 lts",
+    "precio": 3471,
+    "unidad": "unidad",
+    "aliases": [
+      "h2o",
+      "h2o manzana",
+      "h2o manzana 2 14 lts"
+    ],
+    "codigo": 51858781,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 184
+  },
+  {
+    "id": 155,
+    "descripcion": "H2O Pomelo Rosado 1 1/2 lts",
+    "precio": 2810,
+    "unidad": "unidad",
+    "aliases": [
+      "h2o",
+      "h2o pomelo",
+      "h2o pomelo rosado 1 12 lts"
+    ],
+    "codigo": 82539433,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 155
+  },
+  {
+    "id": 156,
+    "descripcion": "H2O Pomelo Rosado 2 1/4 lts",
+    "precio": 3471,
+    "unidad": "unidad",
+    "aliases": [
+      "h2o",
+      "h2o pomelo",
+      "h2o pomelo rosado 2 14 lts"
+    ],
+    "codigo": 12695600,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 185
+  },
+  {
+    "id": 157,
+    "descripcion": "Cerveza Quilmes -2 lt",
+    "precio": 8,
+    "unidad": "unidad",
+    "aliases": [
+      "cerveza",
+      "cerveza quilmes",
+      "cerveza quilmes 2",
+      "cerveza quilmes 2 lt"
+    ],
+    "codigo": 25453453,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas con alcohol",
+    "ranking": 2
+  },
+  {
+    "id": 158,
+    "descripcion": "Cerveza Quilmes IPA -2 lt",
+    "precio": 3058,
+    "unidad": "unidad",
+    "aliases": [
+      "cerveza",
+      "cerveza quilmes",
+      "cerveza quilmes ipa 2",
+      "cerveza quilmes ipa 2 lt"
+    ],
+    "codigo": 35758840,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas con alcohol",
+    "ranking": 169
+  },
+  {
+    "id": 159,
+    "descripcion": "Cerveza Quilmes 710",
+    "precio": 3058,
+    "unidad": "unidad",
+    "aliases": [
+      "cerveza",
+      "cerveza quilmes",
+      "cerveza quilmes 710"
+    ],
+    "codigo": 10861606,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas con alcohol",
+    "ranking": 170
+  },
+  {
+    "id": 160,
+    "descripcion": "Cerveza Brahma lata 473 ml",
+    "precio": 1901,
+    "unidad": "unidad",
+    "aliases": [
+      "cerveza",
+      "cerveza brahma",
+      "cerveza brahma lata 473",
+      "cerveza brahma lata 473 ml"
+    ],
+    "codigo": 44235245,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas con alcohol",
+    "ranking": 68
+  },
+  {
+    "id": 161,
+    "descripcion": "Cerveza Brahma 710cc",
+    "precio": 3058,
+    "unidad": "unidad",
+    "aliases": [
+      "cerveza",
+      "cerveza brahma",
+      "cerveza brahma 710cc"
+    ],
+    "codigo": 86878109,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas con alcohol",
+    "ranking": 171
+  },
+  {
+    "id": 162,
+    "descripcion": "Cerveza Corona Porron 330ml",
+    "precio": 2231,
+    "unidad": "unidad",
+    "aliases": [
+      "cerveza",
+      "cerveza corona",
+      "cerveza corona porron 330ml"
+    ],
+    "codigo": 74283670,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas con alcohol",
+    "ranking": 113
+  },
+  {
+    "id": 163,
+    "descripcion": "Agua Mineral 1/2 lt Villavicencio",
+    "precio": 8,
+    "unidad": "unidad",
+    "aliases": [
+      "agua",
+      "agua mineral",
+      "agua mineral 12 lt villavicencio",
+      "agua mineral 12 villavicencio"
+    ],
+    "codigo": 26419245,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 3
+  },
+  {
+    "id": 164,
+    "descripcion": "Agua Mineral 1 1/2 lt Villavicencio",
+    "precio": 8,
+    "unidad": "unidad",
+    "aliases": [
+      "agua",
+      "agua mineral",
+      "agua mineral 1 12 lt villavicencio",
+      "agua mineral 1 12 villavicencio"
+    ],
+    "codigo": 56226137,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 4
+  },
+  {
+    "id": 165,
+    "descripcion": "Agua Mineral 2 lt Villavicencio",
+    "precio": 2397,
+    "unidad": "unidad",
+    "aliases": [
+      "agua",
+      "agua mineral",
+      "agua mineral 2 lt villavicencio",
+      "agua mineral 2 villavicencio"
+    ],
+    "codigo": 13846794,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 127
+  },
+  {
+    "id": 166,
+    "descripcion": "Paso de los Toros Pomelo 1 1/2 lts",
+    "precio": 2810,
+    "unidad": "unidad",
+    "aliases": [
+      "paso",
+      "paso de",
+      "paso de los toros pomelo 1 12 lts"
+    ],
+    "codigo": 56449108,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 156
+  },
+  {
+    "id": 167,
+    "descripcion": "Paso Toros Tonica 1 1/2 lts",
+    "precio": 2810,
+    "unidad": "unidad",
+    "aliases": [
+      "paso",
+      "paso toros",
+      "paso toros tonica 1 12 lts"
+    ],
+    "codigo": 67213129,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 157
+  },
+  {
+    "id": 168,
+    "descripcion": "Gatorade multifruta x 500 cc",
+    "precio": 1818,
+    "unidad": "unidad",
+    "aliases": [
+      "gatorade",
+      "gatorade multifruta",
+      "gatorade multifruta x 500 cc"
+    ],
+    "codigo": 96989789,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 57
+  },
+  {
+    "id": 169,
+    "descripcion": "Cerveza Andes Rubia 473 ml",
+    "precio": 1901,
+    "unidad": "unidad",
+    "aliases": [
+      "cerveza",
+      "cerveza andes",
+      "cerveza andes rubia 473",
+      "cerveza andes rubia 473 ml"
+    ],
+    "codigo": 26653013,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas con alcohol",
+    "ranking": 69
+  },
+  {
+    "id": 170,
+    "descripcion": "Cerveza Andes Roja 473 ml",
+    "precio": 1901,
+    "unidad": "unidad",
+    "aliases": [
+      "cerveza",
+      "cerveza andes",
+      "cerveza andes roja 473",
+      "cerveza andes roja 473 ml"
+    ],
+    "codigo": 83509449,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas con alcohol",
+    "ranking": 70
+  },
+  {
+    "id": 171,
+    "descripcion": "Cerveza Andes IPA 473 ml",
+    "precio": 1901,
+    "unidad": "unidad",
+    "aliases": [
+      "cerveza",
+      "cerveza andes",
+      "cerveza andes ipa 473",
+      "cerveza andes ipa 473 ml"
+    ],
+    "codigo": 68556020,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas con alcohol",
+    "ranking": 71
+  },
+  {
+    "id": 172,
+    "descripcion": "Cerveza Andes Negra 473 ml",
+    "precio": 1901,
+    "unidad": "unidad",
+    "aliases": [
+      "cerveza",
+      "cerveza andes",
+      "cerveza andes negra 473",
+      "cerveza andes negra 473 ml"
+    ],
+    "codigo": 64944595,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas con alcohol",
+    "ranking": 72
+  },
+  {
+    "id": 173,
+    "descripcion": "Cerveza Budweiser 710",
+    "precio": 3471,
+    "unidad": "unidad",
+    "aliases": [
+      "cerveza",
+      "cerveza budweiser",
+      "cerveza budweiser 710"
+    ],
+    "codigo": 88386376,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas con alcohol",
+    "ranking": 186
+  },
+  {
+    "id": 174,
+    "descripcion": "Coca Cola 1/2 lt",
+    "precio": 1322,
+    "unidad": "unidad",
+    "aliases": [
+      "coca",
+      "coca cola",
+      "coca cola 12",
+      "coca cola 12 lt"
+    ],
+    "codigo": 71799425,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 32
+  },
+  {
+    "id": 175,
+    "descripcion": "Coca Cola 1 lt",
+    "precio": 2314,
+    "unidad": "unidad",
+    "aliases": [
+      "coca",
+      "coca cola",
+      "coca cola 1",
+      "coca cola 1 lt"
+    ],
+    "codigo": 79936076,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 119
+  },
+  {
+    "id": 176,
+    "descripcion": "Coca Cola 1 1/2 lt",
+    "precio": 3140,
+    "unidad": "unidad",
+    "aliases": [
+      "coca",
+      "coca cola",
+      "coca cola 1 12",
+      "coca cola 1 12 lt"
+    ],
+    "codigo": 7790895000430,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 176
+  },
+  {
+    "id": 177,
+    "descripcion": "Coca Cola 2 1/4 lt",
+    "precio": 3719,
+    "unidad": "unidad",
+    "aliases": [
+      "coca",
+      "coca cola",
+      "coca cola 2 14",
+      "coca cola 2 14 lt"
+    ],
+    "codigo": 69671328,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 193
+  },
+  {
+    "id": 178,
+    "descripcion": "Coca Cola 2 1/2 lt",
+    "precio": 3967,
+    "unidad": "unidad",
+    "aliases": [
+      "coca",
+      "coca cola",
+      "coca cola 2 12",
+      "coca cola 2 12 lt"
+    ],
+    "codigo": 18247480,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 200
+  },
+  {
+    "id": 179,
+    "descripcion": "Monster en lata 473 cc",
+    "precio": 2231,
+    "unidad": "unidad",
+    "aliases": [
+      "monster",
+      "monster en",
+      "monster en lata 473 cc"
+    ],
+    "codigo": 77856481,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 114
+  },
+  {
+    "id": 180,
+    "descripcion": "Sprite 1/2 lt",
+    "precio": 1322,
+    "unidad": "unidad",
+    "aliases": [
+      "sprite",
+      "sprite 12",
+      "sprite 12 lt"
+    ],
+    "codigo": 89477277,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 33
+  },
+  {
+    "id": 181,
+    "descripcion": "Sprite 1 1/2 lt",
+    "precio": 3140,
+    "unidad": "unidad",
+    "aliases": [
+      "sprite",
+      "sprite 1",
+      "sprite 1 12",
+      "sprite 1 12 lt"
+    ],
+    "codigo": 41262700,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 177
+  },
+  {
+    "id": 182,
+    "descripcion": "Sprite 2 1/4 lt",
+    "precio": 3719,
+    "unidad": "unidad",
+    "aliases": [
+      "sprite",
+      "sprite 2",
+      "sprite 2 14",
+      "sprite 2 14 lt"
+    ],
+    "codigo": 20121972,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 194
+  },
+  {
+    "id": 183,
+    "descripcion": "Sprite 2 1/2 lts",
+    "precio": 3967,
+    "unidad": "unidad",
+    "aliases": [
+      "sprite",
+      "sprite 2",
+      "sprite 2 12 lts"
+    ],
+    "codigo": 54952823,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 201
+  },
+  {
+    "id": 184,
+    "descripcion": "Fanta Naranja 1/2 lt",
+    "precio": 1322,
+    "unidad": "unidad",
+    "aliases": [
+      "fanta",
+      "fanta naranja",
+      "fanta naranja 12",
+      "fanta naranja 12 lt"
+    ],
+    "codigo": 98135420,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 34
+  },
+  {
+    "id": 185,
+    "descripcion": "Fanta Naranja 1 1/2 lt",
+    "precio": 3140,
+    "unidad": "unidad",
+    "aliases": [
+      "fanta",
+      "fanta naranja",
+      "fanta naranja 1 12",
+      "fanta naranja 1 12 lt"
+    ],
+    "codigo": 55569458,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 178
+  },
+  {
+    "id": 186,
+    "descripcion": "Fanta Naranja 2 1/4 lt",
+    "precio": 3719,
+    "unidad": "unidad",
+    "aliases": [
+      "fanta",
+      "fanta naranja",
+      "fanta naranja 2 14",
+      "fanta naranja 2 14 lt"
+    ],
+    "codigo": 56707357,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 195
+  },
+  {
+    "id": 187,
+    "descripcion": "Aquarius Pomelo 2 1/4 lts",
+    "precio": 2545,
+    "unidad": "unidad",
+    "aliases": [
+      "aquarius",
+      "aquarius pomelo",
+      "aquarius pomelo 2 14 lts"
+    ],
+    "codigo": 42504098,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 146
+  },
+  {
+    "id": 188,
+    "descripcion": "Aquarius Naranja 2 1/4 lt",
+    "precio": 2545,
+    "unidad": "unidad",
+    "aliases": [
+      "aquarius",
+      "aquarius naranja",
+      "aquarius naranja 2 14",
+      "aquarius naranja 2 14 lt"
+    ],
+    "codigo": 16453373,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 147
+  },
+  {
+    "id": 189,
+    "descripcion": "Aquarius Manzana 2 1/4 lt",
+    "precio": 2545,
+    "unidad": "unidad",
+    "aliases": [
+      "aquarius",
+      "aquarius manzana",
+      "aquarius manzana 2 14",
+      "aquarius manzana 2 14 lt"
+    ],
+    "codigo": 56859823,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 148
+  },
+  {
+    "id": 190,
+    "descripcion": "Cerveza Isenbeck lata 710ml",
+    "precio": 1901,
+    "unidad": "unidad",
+    "aliases": [
+      "cerveza",
+      "cerveza isenbeck",
+      "cerveza isenbeck lata 710ml"
+    ],
+    "codigo": 81687510,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas con alcohol",
+    "ranking": 73
+  },
+  {
+    "id": 191,
+    "descripcion": "Agua Mineral 1/2 lt Eco de los Andes",
+    "precio": 1240,
+    "unidad": "unidad",
+    "aliases": [
+      "agua",
+      "agua mineral",
+      "agua mineral 12 eco de los andes",
+      "agua mineral 12 lt eco de los andes"
+    ],
+    "codigo": 32611844,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 25
+  },
+  {
+    "id": 192,
+    "descripcion": "Agua Mineral 1 1/2 lt Eco de los Andes",
+    "precio": 1190,
+    "unidad": "unidad",
+    "aliases": [
+      "agua",
+      "agua mineral",
+      "agua mineral 1 12 eco de los andes",
+      "agua mineral 1 12 lt eco de los andes"
+    ],
+    "codigo": 91423835,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 24
+  },
+  {
+    "id": 193,
+    "descripcion": "Agua Mineral 2 lt Eco de los Andes",
+    "precio": 2397,
+    "unidad": "unidad",
+    "aliases": [
+      "agua",
+      "agua mineral",
+      "agua mineral 2 eco de los andes",
+      "agua mineral 2 lt eco de los andes"
+    ],
+    "codigo": 72210901,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 128
+  },
+  {
+    "id": 194,
+    "descripcion": "Cerveza Heineken Lata 473 ml",
+    "precio": 2231,
+    "unidad": "unidad",
+    "aliases": [
+      "cerveza",
+      "cerveza heineken",
+      "cerveza heineken lata 473",
+      "cerveza heineken lata 473 ml"
+    ],
+    "codigo": 14088112,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas con alcohol",
+    "ranking": 115
+  },
+  {
+    "id": 195,
+    "descripcion": "Sprite 1 lt",
+    "precio": 2314,
+    "unidad": "unidad",
+    "aliases": [
+      "sprite",
+      "sprite 1",
+      "sprite 1 lt"
+    ],
+    "codigo": 86417307,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 120
+  },
+  {
+    "id": 196,
+    "descripcion": "Fanta Lata 345 ml",
+    "precio": 2135,
+    "unidad": "unidad",
+    "aliases": [
+      "fanta",
+      "fanta lata",
+      "fanta lata 345",
+      "fanta lata 345 ml"
+    ],
+    "codigo": 67872725,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 106
+  },
+  {
+    "id": 197,
+    "descripcion": "Lays Clasicas 85g",
+    "precio": 2479,
+    "unidad": "unidad",
+    "aliases": [
+      "lays",
+      "lays clasicas",
+      "lays clasicas 85g"
+    ],
+    "codigo": 32911611,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 132
+  },
+  {
+    "id": 198,
+    "descripcion": "3d quesos 85g",
+    "precio": 2479,
+    "unidad": "unidad",
+    "aliases": [
+      "3d",
+      "3d quesos",
+      "3d quesos 85g"
+    ],
+    "codigo": 77122286,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 133
+  },
+  {
+    "id": 199,
+    "descripcion": "Cheetos quesos 85g",
+    "precio": 2479,
+    "unidad": "unidad",
+    "aliases": [
+      "cheetos",
+      "cheetos quesos",
+      "cheetos quesos 85g"
+    ],
+    "codigo": 64312220,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 134
+  },
+  {
+    "id": 200,
+    "descripcion": "Lays jamon Serrano 77g",
+    "precio": 2479,
+    "unidad": "unidad",
+    "aliases": [
+      "lays",
+      "lays jamon",
+      "lays jamon serrano 77g"
+    ],
+    "codigo": 79854242,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 135
+  },
+  {
+    "id": 201,
+    "descripcion": "Lays queso y cebolla 77g",
+    "precio": 2479,
+    "unidad": "unidad",
+    "aliases": [
+      "lays",
+      "lays queso",
+      "lays queso y cebolla 77g"
+    ],
+    "codigo": 61825922,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 136
+  },
+  {
+    "id": 202,
+    "descripcion": "Pep Rueditas 120g",
+    "precio": 2135,
+    "unidad": "unidad",
+    "aliases": [
+      "pep",
+      "pep rueditas",
+      "pep rueditas 120g"
+    ],
+    "codigo": 29373656,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 107
+  },
+  {
+    "id": 203,
+    "descripcion": "Lays Provoleta 77g",
+    "precio": 2479,
+    "unidad": "unidad",
+    "aliases": [
+      "lays",
+      "lays provoleta",
+      "lays provoleta 77g"
+    ],
+    "codigo": 57674892,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 137
+  },
+  {
+    "id": 204,
+    "descripcion": "Lays Mostaza 77g",
+    "precio": 2479,
+    "unidad": "unidad",
+    "aliases": [
+      "lays",
+      "lays mostaza",
+      "lays mostaza 77g"
+    ],
+    "codigo": 19652034,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 138
+  },
+  {
+    "id": 205,
+    "descripcion": "Lays Ketchuop 77g",
+    "precio": 2479,
+    "unidad": "unidad",
+    "aliases": [
+      "lays",
+      "lays ketchuop",
+      "lays ketchuop 77g"
+    ],
+    "codigo": 14233891,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 139
+  },
+  {
+    "id": 206,
+    "descripcion": "Lays ondas finas 70g",
+    "precio": 2479,
+    "unidad": "unidad",
+    "aliases": [
+      "lays",
+      "lays ondas",
+      "lays ondas finas 70g"
+    ],
+    "codigo": 59756674,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 140
+  },
+  {
+    "id": 207,
+    "descripcion": "Pep Rueditas 74g",
+    "precio": 1335,
+    "unidad": "unidad",
+    "aliases": [
+      "pep",
+      "pep rueditas",
+      "pep rueditas 74g"
+    ],
+    "codigo": 92809354,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 42
+  },
+  {
+    "id": 208,
+    "descripcion": "Lays Clasicas 40g",
+    "precio": 1488,
+    "unidad": "unidad",
+    "aliases": [
+      "lays",
+      "lays clasicas",
+      "lays clasicas 40g"
+    ],
+    "codigo": 81756402,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 45
+  },
+  {
+    "id": 209,
+    "descripcion": "Doritos queso 40g",
+    "precio": 1488,
+    "unidad": "unidad",
+    "aliases": [
+      "doritos",
+      "doritos queso",
+      "doritos queso 40g"
+    ],
+    "codigo": 13160420,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 46
+  },
+  {
+    "id": 210,
+    "descripcion": "Cheetos queso 43g",
+    "precio": 1488,
+    "unidad": "unidad",
+    "aliases": [
+      "cheetos",
+      "cheetos queso",
+      "cheetos queso 43g"
+    ],
+    "codigo": 51704027,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 47
+  },
+  {
+    "id": 211,
+    "descripcion": "Cheetos queso crema 43g",
+    "precio": 1488,
+    "unidad": "unidad",
+    "aliases": [
+      "cheetos",
+      "cheetos queso",
+      "cheetos queso crema 43g"
+    ],
+    "codigo": 21453806,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 48
+  },
+  {
+    "id": 212,
+    "descripcion": "Lays onda 43g",
+    "precio": 1488,
+    "unidad": "unidad",
+    "aliases": [
+      "lays",
+      "lays onda",
+      "lays onda 43g"
+    ],
+    "codigo": 13217835,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 49
+  },
+  {
+    "id": 213,
+    "descripcion": "Lay Barbacoa 77 gr",
+    "precio": 2479,
+    "unidad": "porcion",
+    "aliases": [
+      "lay",
+      "lay barbacoa",
+      "lay barbacoa 77",
+      "lay barbacoa 77 gr"
+    ],
+    "codigo": 84202060,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 141
+  },
+  {
+    "id": 214,
+    "descripcion": "Twistos Minit jamon 95g",
+    "precio": 2479,
+    "unidad": "unidad",
+    "aliases": [
+      "twistos",
+      "twistos minit",
+      "twistos minit jamon 95g"
+    ],
+    "codigo": 56529046,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 142
+  },
+  {
+    "id": 215,
+    "descripcion": "Twistos Minit queso 95g",
+    "precio": 2479,
+    "unidad": "unidad",
+    "aliases": [
+      "twistos",
+      "twistos minit",
+      "twistos minit queso 95g"
+    ],
+    "codigo": 88964635,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 143
+  },
+  {
+    "id": 216,
+    "descripcion": "Twistos Minit jamon 40g",
+    "precio": 1322,
+    "unidad": "unidad",
+    "aliases": [
+      "twistos",
+      "twistos minit",
+      "twistos minit jamon 40g"
+    ],
+    "codigo": 90973642,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 35
+  },
+  {
+    "id": 217,
+    "descripcion": "Twistos Minit queso 40g",
+    "precio": 1322,
+    "unidad": "unidad",
+    "aliases": [
+      "twistos",
+      "twistos minit",
+      "twistos minit queso 40g"
+    ],
+    "codigo": 18134189,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 36
+  },
+  {
+    "id": 218,
+    "descripcion": "Doritos Dinamitas 45 gr",
+    "precio": 1488,
+    "unidad": "porcion",
+    "aliases": [
+      "doritos",
+      "doritos dinamitas",
+      "doritos dinamitas 45",
+      "doritos dinamitas 45 gr"
+    ],
+    "codigo": 31465966,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 50
+  },
+  {
+    "id": 219,
+    "descripcion": "Doritos Dinamita 82 gr",
+    "precio": 8,
+    "unidad": "porcion",
+    "aliases": [
+      "doritos",
+      "doritos dinamita",
+      "doritos dinamita 82",
+      "doritos dinamita 82 gr"
+    ],
+    "codigo": 61365998,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 5
+  },
+  {
+    "id": 221,
+    "descripcion": "Empanada Calabresa Frita",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empanada",
+      "empanada calabresa",
+      "empanada calabresa frita"
+    ],
+    "codigo": 17486566,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 87
+  },
+  {
+    "id": 222,
+    "descripcion": "Empanada Capresse Frita",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empanada",
+      "empanada capresse",
+      "empanada capresse frita"
+    ],
+    "codigo": 70643166,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 88
+  },
+  {
+    "id": 223,
+    "descripcion": "Empanada Cuattro Quesos Frita",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empanada",
+      "empanada cuattro",
+      "empanada cuattro quesos frita"
+    ],
+    "codigo": 41692625,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 89
+  },
+  {
+    "id": 224,
+    "descripcion": "Empanada de Jamon queso y Anana Frita",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empanada",
+      "empanada de",
+      "empanada de jamon queso y anana frita"
+    ],
+    "codigo": 41884932,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 90
+  },
+  {
+    "id": 225,
+    "descripcion": "Empanada de verdura Frita",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empanada",
+      "empanada de",
+      "empanada de verdura frita"
+    ],
+    "codigo": 58690398,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 91
+  },
+  {
+    "id": 226,
+    "descripcion": "Empanada de Cebolla y queso Frita",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empanada",
+      "empanada de",
+      "empanada de cebolla y queso frita"
+    ],
+    "codigo": 77363184,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 92
+  },
+  {
+    "id": 227,
+    "descripcion": "Empanada de jamon y Queso Frita",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empanada",
+      "empanada de",
+      "empanada de jamon y queso frita"
+    ],
+    "codigo": 41037636,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 93
+  },
+  {
+    "id": 228,
+    "descripcion": "Empanada de Pizza Frita",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empanada",
+      "empanada de",
+      "empanada de pizza frita"
+    ],
+    "codigo": 22412146,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Pizzas",
+    "ranking": 94
+  },
+  {
+    "id": 229,
+    "descripcion": "Empanada de Carne Frita",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empanada",
+      "empanada de",
+      "empanada de carne frita"
+    ],
+    "codigo": 50991070,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 95
+  },
+  {
+    "id": 230,
+    "descripcion": "Empanada de pollo Frita",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empanada",
+      "empanada de",
+      "empanada de pollo frita"
+    ],
+    "codigo": 56093398,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 96
+  },
+  {
+    "id": 231,
+    "descripcion": "Empanada Salteña Frita",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empanada",
+      "empanada salteña",
+      "empanada salteña frita"
+    ],
+    "codigo": 74129209,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 97
+  },
+  {
+    "id": 232,
+    "descripcion": "Levite naranja 1/2Lt",
+    "precio": 1322,
+    "unidad": "unidad",
+    "aliases": [
+      "levite",
+      "levite naranja",
+      "levite naranja 12lt"
+    ],
+    "codigo": 41177030,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 37
+  },
+  {
+    "id": 235,
+    "descripcion": "Vino Uxmal",
+    "precio": 6198,
+    "unidad": "unidad",
+    "aliases": [
+      "vino",
+      "vino uxmal"
+    ],
+    "codigo": 72992162,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 230
+  },
+  {
+    "id": 236,
+    "descripcion": "Vino Bodega Privada",
+    "precio": 4545,
+    "unidad": "unidad",
+    "aliases": [
+      "vino",
+      "vino bodega",
+      "vino bodega privada"
+    ],
+    "codigo": 51291177,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 206
+  },
+  {
+    "id": 237,
+    "descripcion": "Vino esmeralda",
+    "precio": 7025,
+    "unidad": "unidad",
+    "aliases": [
+      "vino",
+      "vino esmeralda"
+    ],
+    "codigo": 68710029,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 250
+  },
+  {
+    "id": 238,
+    "descripcion": "Vino Lopez",
+    "precio": 3471,
+    "unidad": "unidad",
+    "aliases": [
+      "vino",
+      "vino lopez"
+    ],
+    "codigo": 56808529,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 187
+  },
+  {
+    "id": 239,
+    "descripcion": "Vino Vazco Viejo",
+    "precio": 2397,
+    "unidad": "unidad",
+    "aliases": [
+      "vino",
+      "vino vazco",
+      "vino vazco viejo"
+    ],
+    "codigo": 39811734,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 129
+  },
+  {
+    "id": 240,
+    "descripcion": "Vino Otro Loco Mas",
+    "precio": 5289,
+    "unidad": "unidad",
+    "aliases": [
+      "vino",
+      "vino otro",
+      "vino otro loco mas"
+    ],
+    "codigo": 65425933,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 223
+  },
+  {
+    "id": 241,
+    "descripcion": "Vino Profugo",
+    "precio": 4545,
+    "unidad": "unidad",
+    "aliases": [
+      "vino",
+      "vino profugo"
+    ],
+    "codigo": 97130827,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 207
+  },
+  {
+    "id": 242,
+    "descripcion": "Vino Suter Champaña",
+    "precio": 5372,
+    "unidad": "unidad",
+    "aliases": [
+      "vino",
+      "vino suter",
+      "vino suter champaña"
+    ],
+    "codigo": 68090852,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 224
+  },
+  {
+    "id": 243,
+    "descripcion": "Vino Cosecha Tardia Blanco Dulce",
+    "precio": 3554,
+    "unidad": "unidad",
+    "aliases": [
+      "vino",
+      "vino cosecha",
+      "vino cosecha tardia blanco dulce"
+    ],
+    "codigo": 34418440,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 192
+  },
+  {
+    "id": 244,
+    "descripcion": "Vino Zorro Salvaje",
+    "precio": 4545,
+    "unidad": "unidad",
+    "aliases": [
+      "vino",
+      "vino zorro",
+      "vino zorro salvaje"
+    ],
+    "codigo": 21557379,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 208
+  },
+  {
+    "id": 245,
+    "descripcion": "Vino Novecente",
+    "precio": 3719,
+    "unidad": "unidad",
+    "aliases": [
+      "vino",
+      "vino novecente"
+    ],
+    "codigo": 40215228,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 196
+  },
+  {
+    "id": 246,
+    "descripcion": "Vino Reserva de Los Andes",
+    "precio": 3719,
+    "unidad": "unidad",
+    "aliases": [
+      "vino",
+      "vino reserva",
+      "vino reserva de los andes"
+    ],
+    "codigo": 55401205,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 197
+  },
+  {
+    "id": 247,
+    "descripcion": "Cerveza Quilmes 473ml",
+    "precio": 1901,
+    "unidad": "unidad",
+    "aliases": [
+      "cerveza",
+      "cerveza quilmes",
+      "cerveza quilmes 473ml"
+    ],
+    "codigo": 71607288,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas con alcohol",
+    "ranking": 74
+  },
+  {
+    "id": 249,
+    "descripcion": "Doritos Queso 77 gr",
+    "precio": 2479,
+    "unidad": "porcion",
+    "aliases": [
+      "doritos",
+      "doritos queso",
+      "doritos queso 77",
+      "doritos queso 77 gr"
+    ],
+    "codigo": 96137227,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 144
+  },
+  {
+    "id": 250,
+    "descripcion": "Seven up Cero 1/2 lt",
+    "precio": 1488,
+    "unidad": "unidad",
+    "aliases": [
+      "seven",
+      "seven up",
+      "seven up cero 12",
+      "seven up cero 12 lt"
+    ],
+    "codigo": 20087899,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 51
+  },
+  {
+    "id": 251,
+    "descripcion": "Cerveza Andes Lata Rubia 710ml",
+    "precio": 3471,
+    "unidad": "unidad",
+    "aliases": [
+      "cerveza",
+      "cerveza andes",
+      "cerveza andes lata rubia 710ml"
+    ],
+    "codigo": 58506566,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas con alcohol",
+    "ranking": 188
+  },
+  {
+    "id": 252,
+    "descripcion": "Cerveza Andes Lata Roja 710ml",
+    "precio": 3471,
+    "unidad": "unidad",
+    "aliases": [
+      "cerveza",
+      "cerveza andes",
+      "cerveza andes lata roja 710ml"
+    ],
+    "codigo": 33621987,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas con alcohol",
+    "ranking": 189
+  },
+  {
+    "id": 253,
+    "descripcion": "Cerveza Andes Lata IPA 710ml",
+    "precio": 3471,
+    "unidad": "unidad",
+    "aliases": [
+      "cerveza",
+      "cerveza andes",
+      "cerveza andes lata ipa 710ml"
+    ],
+    "codigo": 73815054,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas con alcohol",
+    "ranking": 190
+  },
+  {
+    "id": 254,
+    "descripcion": "Cerveza Andes Lata Negra 710ml",
+    "precio": 3471,
+    "unidad": "unidad",
+    "aliases": [
+      "cerveza",
+      "cerveza andes",
+      "cerveza andes lata negra 710ml"
+    ],
+    "codigo": 76763843,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas con alcohol",
+    "ranking": 191
+  },
+  {
+    "id": 255,
+    "descripcion": "Cerveza Budweiser Porron 3555ml",
+    "precio": 2231,
+    "unidad": "unidad",
+    "aliases": [
+      "cerveza",
+      "cerveza budweiser",
+      "cerveza budweiser porron 3555ml"
+    ],
+    "codigo": 83551917,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas con alcohol",
+    "ranking": 116
+  },
+  {
+    "id": 256,
+    "descripcion": "Cerveza Budweiser Lata 473 ml",
+    "precio": 1901,
+    "unidad": "unidad",
+    "aliases": [
+      "cerveza",
+      "cerveza budweiser",
+      "cerveza budweiser lata 473",
+      "cerveza budweiser lata 473 ml"
+    ],
+    "codigo": 59534181,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas con alcohol",
+    "ranking": 75
+  },
+  {
+    "id": 257,
+    "descripcion": "Pepsi Lata 354 ml",
+    "precio": 826,
+    "unidad": "unidad",
+    "aliases": [
+      "pepsi",
+      "pepsi lata",
+      "pepsi lata 354",
+      "pepsi lata 354 ml"
+    ],
+    "codigo": 28332356,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 14
+  },
+  {
+    "id": 258,
+    "descripcion": "Coca Cola Lata 354 ml",
+    "precio": 826,
+    "unidad": "unidad",
+    "aliases": [
+      "coca",
+      "coca cola",
+      "coca cola lata 354",
+      "coca cola lata 354 ml"
+    ],
+    "codigo": 77761239,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 15
+  },
+  {
+    "id": 259,
+    "descripcion": "Seven Up lata 354 ml",
+    "precio": 826,
+    "unidad": "unidad",
+    "aliases": [
+      "seven",
+      "seven up",
+      "seven up lata 354",
+      "seven up lata 354 ml"
+    ],
+    "codigo": 32017205,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 16
+  },
+  {
+    "id": 260,
+    "descripcion": "Coca Coola Cero lata 354 ml",
+    "precio": 826,
+    "unidad": "unidad",
+    "aliases": [
+      "coca",
+      "coca coola",
+      "coca coola cero lata 354",
+      "coca coola cero lata 354 ml"
+    ],
+    "codigo": 40266464,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 17
+  },
+  {
+    "id": 261,
+    "descripcion": "Vino Marquez",
+    "precio": 5372,
+    "unidad": "unidad",
+    "aliases": [
+      "vino",
+      "vino marquez"
+    ],
+    "codigo": 96825323,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 225
+  },
+  {
+    "id": 262,
+    "descripcion": "Vini Santa Julia",
+    "precio": 5372,
+    "unidad": "unidad",
+    "aliases": [
+      "vini",
+      "vini santa",
+      "vini santa julia"
+    ],
+    "codigo": 29373096,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 226
+  },
+  {
+    "id": 263,
+    "descripcion": "Vino Santa Julia Chemin Dulce",
+    "precio": 5372,
+    "unidad": "unidad",
+    "aliases": [
+      "vino",
+      "vino santa",
+      "vino santa julia chemin dulce"
+    ],
+    "codigo": 87106615,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 227
+  },
+  {
+    "id": 264,
+    "descripcion": "Gatorade UVA 500 ml",
+    "precio": 1818,
+    "unidad": "unidad",
+    "aliases": [
+      "gatorade",
+      "gatorade uva",
+      "gatorade uva 500",
+      "gatorade uva 500 ml"
+    ],
+    "codigo": 80861930,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 58
+  },
+  {
+    "id": 265,
+    "descripcion": "Gatorade MANZANA 500 ml",
+    "precio": 1818,
+    "unidad": "unidad",
+    "aliases": [
+      "gatorade",
+      "gatorade manzana",
+      "gatorade manzana 500",
+      "gatorade manzana 500 ml"
+    ],
+    "codigo": 92527107,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 59
+  },
+  {
+    "id": 266,
+    "descripcion": "Gatorade NARANJA 500 ml",
+    "precio": 1818,
+    "unidad": "unidad",
+    "aliases": [
+      "gatorade",
+      "gatorade naranja",
+      "gatorade naranja 500",
+      "gatorade naranja 500 ml"
+    ],
+    "codigo": 86104976,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 60
+  },
+  {
+    "id": 267,
+    "descripcion": "Gatorade ROJO 500 ml",
+    "precio": 1818,
+    "unidad": "unidad",
+    "aliases": [
+      "gatorade",
+      "gatorade rojo",
+      "gatorade rojo 500",
+      "gatorade rojo 500 ml"
+    ],
+    "codigo": 43036132,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 61
+  },
+  {
+    "id": 268,
+    "descripcion": "Gatorade AZUL 500 ml",
+    "precio": 1818,
+    "unidad": "unidad",
+    "aliases": [
+      "gatorade",
+      "gatorade azul",
+      "gatorade azul 500",
+      "gatorade azul 500 ml"
+    ],
+    "codigo": 41902661,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 62
+  },
+  {
+    "id": 269,
+    "descripcion": "Lay Flamin Hot 70 grs",
+    "precio": 8,
+    "unidad": "porcion",
+    "aliases": [
+      "lay",
+      "lay flamin",
+      "lay flamin hot 70",
+      "lay flamin hot 70 grs"
+    ],
+    "codigo": 95585630,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 6
+  },
+  {
+    "id": 270,
+    "descripcion": "Levite Pomelo Rosado 1/2 lt",
+    "precio": 1322,
+    "unidad": "unidad",
+    "aliases": [
+      "levite",
+      "levite pomelo",
+      "levite pomelo rosado 12",
+      "levite pomelo rosado 12 lt"
+    ],
+    "codigo": 25762360,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 38
+  },
+  {
+    "id": 271,
+    "descripcion": "Levite Pomelo Rosado 1 1/2",
+    "precio": 1818,
+    "unidad": "unidad",
+    "aliases": [
+      "levite",
+      "levite pomelo",
+      "levite pomelo rosado 1 12"
+    ],
+    "codigo": 38991886,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 63
+  },
+  {
+    "id": 272,
+    "descripcion": "Levite Pomelo Rosado 2 1/4",
+    "precio": 2397,
+    "unidad": "unidad",
+    "aliases": [
+      "levite",
+      "levite pomelo",
+      "levite pomelo rosado 2 14"
+    ],
+    "codigo": 25224552,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 130
+  },
+  {
+    "id": 273,
+    "descripcion": "Levite Cero 1/2 Manzana",
+    "precio": 1322,
+    "unidad": "unidad",
+    "aliases": [
+      "levite",
+      "levite cero",
+      "levite cero 12 manzana"
+    ],
+    "codigo": 11947249,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 39
+  },
+  {
+    "id": 274,
+    "descripcion": "Levite Cero 1  1/2 Manzana",
+    "precio": 1818,
+    "unidad": "unidad",
+    "aliases": [
+      "levite",
+      "levite cero",
+      "levite cero 1 12 manzana"
+    ],
+    "codigo": 67746685,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 64
+  },
+  {
+    "id": 275,
+    "descripcion": "Levite Cero  2  1/4 Manzana",
+    "precio": 2397,
+    "unidad": "unidad",
+    "aliases": [
+      "levite",
+      "levite cero",
+      "levite cero 2 14 manzana"
+    ],
+    "codigo": 33137497,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 131
+  },
+  {
+    "id": 276,
+    "descripcion": "Levite Pera 1/2",
+    "precio": 1322,
+    "unidad": "unidad",
+    "aliases": [
+      "levite",
+      "levite pera",
+      "levite pera 12"
+    ],
+    "codigo": 43308276,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 40
+  },
+  {
+    "id": 277,
+    "descripcion": "Levite Anana 1/2",
+    "precio": 8,
+    "unidad": "unidad",
+    "aliases": [
+      "levite",
+      "levite anana",
+      "levite anana 12"
+    ],
+    "codigo": 41697859,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 7
+  },
+  {
+    "id": 278,
+    "descripcion": "Jugo Baggio Multifruta 1 1/2",
+    "precio": 3058,
+    "unidad": "unidad",
+    "aliases": [
+      "jugo",
+      "jugo baggio",
+      "jugo baggio multifruta 1 12"
+    ],
+    "codigo": 29131587,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 172
+  },
+  {
+    "id": 279,
+    "descripcion": "Jugo Baggio Durazno 1 1/2",
+    "precio": 3058,
+    "unidad": "unidad",
+    "aliases": [
+      "jugo",
+      "jugo baggio",
+      "jugo baggio durazno 1 12"
+    ],
+    "codigo": 74931629,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 173
+  },
+  {
+    "id": 280,
+    "descripcion": "Jugo Baggio Naranja 1 1/2",
+    "precio": 3058,
+    "unidad": "unidad",
+    "aliases": [
+      "jugo",
+      "jugo baggio",
+      "jugo baggio naranja 1 12"
+    ],
+    "codigo": 36783855,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 174
+  },
+  {
+    "id": 281,
+    "descripcion": "Jugo Baggio Manzana 1 1/2",
+    "precio": 3058,
+    "unidad": "unidad",
+    "aliases": [
+      "jugo",
+      "jugo baggio",
+      "jugo baggio manzana 1 12"
+    ],
+    "codigo": 90627746,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 175
+  },
+  {
+    "id": 283,
+    "descripcion": "Cerveza Lata 473 Stella Artois",
+    "precio": 2231,
+    "unidad": "unidad",
+    "aliases": [
+      "cerveza",
+      "cerveza lata",
+      "cerveza lata 473 stella artois"
+    ],
+    "codigo": 40174366,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas con alcohol",
+    "ranking": 117
+  },
+  {
+    "id": 284,
+    "descripcion": "Pepsi Black 1/2 lt",
+    "precio": 1322,
+    "unidad": "unidad",
+    "aliases": [
+      "pepsi",
+      "pepsi black",
+      "pepsi black 12",
+      "pepsi black 12 lt"
+    ],
+    "codigo": 52955989,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 41
+  },
+  {
+    "id": 286,
+    "descripcion": "Agua Saborizada 1 1/2 lt Pureza de las Sierras Pomelo",
+    "precio": 992,
+    "unidad": "unidad",
+    "aliases": [
+      "agua",
+      "agua saboriz",
+      "agua saboriz 1 12 lt pureza de las sierras pomelo",
+      "agua saboriz 1 12 pureza de las sierras pomelo"
+    ],
+    "codigo": 26479624,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 18
+  },
+  {
+    "id": 287,
+    "descripcion": "Agua Saborizada 1 1/2 lt Pureza de las Sierras Limonada",
+    "precio": 992,
+    "unidad": "unidad",
+    "aliases": [
+      "agua",
+      "agua saboriz1",
+      "agua saboriz1 12 ltpureza de las sierras limonada"
+    ],
+    "codigo": 35978818,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 19
+  },
+  {
+    "id": 288,
+    "descripcion": "Agua Saborizada 1/2 lt Pureza de las Sierras Manzan",
+    "precio": 992,
+    "unidad": "unidad",
+    "aliases": [
+      "agua",
+      "agua saboriz1",
+      "agua saboriz1 12 lt pureza de las sierras manzan",
+      "agua saboriz1 12 pureza de las sierras manzan"
+    ],
+    "codigo": 48808168,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 20
+  },
+  {
+    "id": 289,
+    "descripcion": "Agua Saborizada 1 1/2 lt Pureza de las Sierras Pomelo Rosado",
+    "precio": 992,
+    "unidad": "unidad",
+    "aliases": [
+      "agua",
+      "agua sabor1",
+      "agua sabor1 12 lt purezadelassierras pomel rosad",
+      "agua sabor1 12 purezadelassierras pomel rosad"
+    ],
+    "codigo": 80284072,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 21
+  },
+  {
+    "id": 290,
+    "descripcion": "Agua Saborizada 1 1/2 lt Pureza de las Sierras Naranja",
+    "precio": 992,
+    "unidad": "unidad",
+    "aliases": [
+      "agua",
+      "agua saboriz",
+      "agua saboriz 1 12 lt purezade las sierras naranja",
+      "agua saboriz 1 12 purezade las sierras naranja"
+    ],
+    "codigo": 85813408,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas sin alcohol",
+    "ranking": 22
+  },
+  {
+    "id": 291,
+    "descripcion": "Cerveza Corona Porron Cero 330ml",
+    "precio": 2231,
+    "unidad": "unidad",
+    "aliases": [
+      "cerveza",
+      "cerveza corona",
+      "cerveza corona porron cero 330ml"
+    ],
+    "codigo": 94676001,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Bebidas con alcohol",
+    "ranking": 118
+  },
+  {
+    "id": 297,
+    "descripcion": "Postre Chees Cake Frutilla Grande",
+    "precio": 5000,
+    "unidad": "porcion",
+    "aliases": [
+      "postre",
+      "postre chees",
+      "postre chees cake frutilla grande"
+    ],
+    "codigo": 77686348,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Postres",
+    "ranking": 215
+  },
+  {
+    "id": 298,
+    "descripcion": "Postre Mus de Chocolate con Coco Grande",
+    "precio": 5000,
+    "unidad": "porcion",
+    "aliases": [
+      "postre",
+      "postre mus",
+      "postre mus chocolate ccoco grande"
+    ],
+    "codigo": 97401891,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Postres",
+    "ranking": 216
+  },
+  {
+    "id": 299,
+    "descripcion": "Postre Mus de Chocolate con Chocolina Grande",
+    "precio": 5000,
+    "unidad": "porcion",
+    "aliases": [
+      "postre",
+      "postre mus",
+      "postre mus chocolate cchocolina grande"
+    ],
+    "codigo": 86200347,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Postres",
+    "ranking": 217
+  },
+  {
+    "id": 300,
+    "descripcion": "Postre Tiramizu Grande",
+    "precio": 5000,
+    "unidad": "porcion",
+    "aliases": [
+      "postre",
+      "postre tiramizu",
+      "postre tiramizu grande"
+    ],
+    "codigo": 47400907,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Postres",
+    "ranking": 218
+  },
+  {
+    "id": 301,
+    "descripcion": "Postre de Pistacho Grande",
+    "precio": 5000,
+    "unidad": "porcion",
+    "aliases": [
+      "postre",
+      "postre de",
+      "postre de pistacho grande"
+    ],
+    "codigo": 97518326,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Postres",
+    "ranking": 219
+  },
+  {
+    "id": 302,
+    "descripcion": "Postre Frutos Rojos Grande",
+    "precio": 5000,
+    "unidad": "porcion",
+    "aliases": [
+      "postre",
+      "postre frutos",
+      "postre frutos rojos grande"
+    ],
+    "codigo": 53682939,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Postres",
+    "ranking": 220
+  },
+  {
+    "id": 303,
+    "descripcion": "Postre Chocotorta Grande",
+    "precio": 5000,
+    "unidad": "porcion",
+    "aliases": [
+      "postre",
+      "postre chocotorta",
+      "postre chocotorta grande"
+    ],
+    "codigo": 45945036,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Postres",
+    "ranking": 221
+  },
+  {
+    "id": 304,
+    "descripcion": "Postre Durazno Grande",
+    "precio": 5000,
+    "unidad": "porcion",
+    "aliases": [
+      "postre",
+      "postre durazno",
+      "postre durazno grande"
+    ],
+    "codigo": 79026355,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Postres",
+    "ranking": 222
+  },
+  {
+    "id": 305,
+    "descripcion": "Postre Tiramizu Chico",
+    "precio": 3000,
+    "unidad": "unidad",
+    "aliases": [
+      "postre",
+      "postre tiramizu",
+      "postre tiramizu chico"
+    ],
+    "codigo": 99282103,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Postres",
+    "ranking": 158
+  },
+  {
+    "id": 310,
+    "descripcion": "Postre Chees cake Frutilla Chico",
+    "precio": 3000,
+    "unidad": "unidad",
+    "aliases": [
+      "postre",
+      "postre chees",
+      "postre chees cake frutilla chico"
+    ],
+    "codigo": 20693524,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Postres",
+    "ranking": 159
+  },
+  {
+    "id": 311,
+    "descripcion": "Postre Mus de Chocolate con Coco Chico",
+    "precio": 3000,
+    "unidad": "unidad",
+    "aliases": [
+      "postre",
+      "postre mus",
+      "postre mus chocolate ccoco chico"
+    ],
+    "codigo": 69952984,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Postres",
+    "ranking": 160
+  },
+  {
+    "id": 312,
+    "descripcion": "Postre Mus de Chocolate con Chocolina Chico",
+    "precio": 3000,
+    "unidad": "unidad",
+    "aliases": [
+      "postre",
+      "postre mus",
+      "postre mus chocolate cchocolina chico"
+    ],
+    "codigo": 37296956,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Postres",
+    "ranking": 161
+  },
+  {
+    "id": 313,
+    "descripcion": "Postre Tiramizu Chico",
+    "precio": 3000,
+    "unidad": "unidad",
+    "aliases": [
+      "postre",
+      "postre tiramizu",
+      "postre tiramizu chico"
+    ],
+    "codigo": 78613694,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Postres",
+    "ranking": 162
+  },
+  {
+    "id": 314,
+    "descripcion": "Postre Pistacho Chico",
+    "precio": 3000,
+    "unidad": "unidad",
+    "aliases": [
+      "postre",
+      "postre pistacho",
+      "postre pistacho chico"
+    ],
+    "codigo": 17417871,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Postres",
+    "ranking": 163
+  },
+  {
+    "id": 315,
+    "descripcion": "Postre Frutos Rojos Chico",
+    "precio": 3000,
+    "unidad": "unidad",
+    "aliases": [
+      "postre",
+      "postre frutos",
+      "postre frutos rojos chico"
+    ],
+    "codigo": 21206271,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Postres",
+    "ranking": 164
+  },
+  {
+    "id": 316,
+    "descripcion": "Postre Durazno Chico",
+    "precio": 3000,
+    "unidad": "unidad",
+    "aliases": [
+      "postre",
+      "postre durazno",
+      "postre durazno chico"
+    ],
+    "codigo": 72291638,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Postres",
+    "ranking": 165
+  },
+  {
+    "id": 317,
+    "descripcion": "Postre Chocotorta Chico",
+    "precio": 3000,
+    "unidad": "unidad",
+    "aliases": [
+      "postre",
+      "postre chocotorta",
+      "postre chocotorta chico"
+    ],
+    "codigo": 16391520,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Postres",
+    "ranking": 166
+  },
+  {
+    "id": 318,
+    "descripcion": "Milanesa de pescado",
+    "precio": 22000,
+    "unidad": "unidad",
+    "aliases": [
+      "milanesa",
+      "milanesa de",
+      "milanesa de pescado"
+    ],
+    "codigo": 88028808,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Milanesas",
+    "ranking": 297
+  },
+  {
+    "id": 319,
+    "descripcion": "Sorrentino de Verdura",
+    "precio": 7000,
+    "unidad": "unidad",
+    "aliases": [
+      "sorrentino",
+      "sorrentino de",
+      "sorrentino de verdura"
+    ],
+    "codigo": 50827947,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Pastas",
+    "ranking": 246
+  },
+  {
+    "id": 321,
+    "descripcion": "Ñoquis",
+    "precio": 7000,
+    "unidad": "unidad",
+    "aliases": [
+      "ñoquis"
+    ],
+    "codigo": 23201079,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 247
+  },
+  {
+    "id": 323,
+    "descripcion": "Pechuga de Pollo Rellena",
+    "precio": 7800,
+    "unidad": "unidad",
+    "aliases": [
+      "pechuga",
+      "pechuga de",
+      "pechuga de pollo rellena"
+    ],
+    "codigo": 20115099,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 254
+  },
+  {
+    "id": 324,
+    "descripcion": "Verdura al horno",
+    "precio": 11000,
+    "unidad": "unidad",
+    "aliases": [
+      "verdura",
+      "verdura al",
+      "verdura al horno"
+    ],
+    "codigo": 35727340,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 279
+  },
+  {
+    "id": 325,
+    "descripcion": "Bife de Cuadril",
+    "precio": 12000,
+    "unidad": "unidad",
+    "aliases": [
+      "bife",
+      "bife de",
+      "bife de cuadril"
+    ],
+    "codigo": 59238675,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 282
+  },
+  {
+    "id": 326,
+    "descripcion": "Empanada de Pollo al Roquefort al Horno",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empanada",
+      "empanada de",
+      "empanada de pollo al roquefort horno"
+    ],
+    "codigo": 80115236,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 98
+  },
+  {
+    "id": 327,
+    "descripcion": "Empanada de pollo con crema y verdura al Horno",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empanada",
+      "empanada de",
+      "empanada de pollo c crema y verdura horno"
+    ],
+    "codigo": 90816491,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 99
+  },
+  {
+    "id": 328,
+    "descripcion": "Empanada Burger Horno",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empanada",
+      "empanada burger",
+      "empanada burger horno"
+    ],
+    "codigo": 70157923,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 100
+  },
+  {
+    "id": 329,
+    "descripcion": "Empanada de Humita al Horno",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empanada",
+      "empanada de",
+      "empanada de humita horno"
+    ],
+    "codigo": 38140552,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 101
+  },
+  {
+    "id": 330,
+    "descripcion": "Milanesa de Carne Napolitana",
+    "precio": 33000,
+    "unidad": "unidad",
+    "aliases": [
+      "milanesa",
+      "milanesa de",
+      "milanesa de carne napolitana"
+    ],
+    "codigo": 82963263,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Milanesas",
+    "ranking": 303
+  },
+  {
+    "id": 331,
+    "descripcion": "Empanada de Pollo con Roquefort Frita",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empnada",
+      "empnada de",
+      "empnada de polloroquefort frita"
+    ],
+    "codigo": 62676520,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 102
+  },
+  {
+    "id": 332,
+    "descripcion": "Empanada de Pollo Crema y Verdura Frita",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empanada",
+      "empanada de",
+      "empanada de pollo crema y verdura frita"
+    ],
+    "codigo": 10163334,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 103
+  },
+  {
+    "id": 333,
+    "descripcion": "Empanada Burgert Frita",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empanada",
+      "empanada burgert",
+      "empanada burgert frita"
+    ],
+    "codigo": 65868890,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 104
+  },
+  {
+    "id": 334,
+    "descripcion": "Empanada Humita Frita",
+    "precio": 2100,
+    "unidad": "unidad",
+    "aliases": [
+      "empanada",
+      "empanada humita",
+      "empanada humita frita"
+    ],
+    "codigo": 95250697,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Empanadas",
+    "ranking": 105
+  },
+  {
+    "id": 335,
+    "descripcion": "Ravioles Verduras",
+    "precio": 7000,
+    "unidad": "unidad",
+    "aliases": [
+      "ravioles",
+      "ravioles verduras"
+    ],
+    "codigo": 32449794,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 248
+  },
+  {
+    "id": 336,
+    "descripcion": "Ravioles Jamon y Queso",
+    "precio": 7000,
+    "unidad": "unidad",
+    "aliases": [
+      "ravioles",
+      "ravioles jamon",
+      "ravioles jamon y queso"
+    ],
+    "codigo": 94464426,
+    "imagen": "",
+    "disponible": true,
+    "categoria": "Comidas elaboradas",
+    "ranking": 249
+  }
+]

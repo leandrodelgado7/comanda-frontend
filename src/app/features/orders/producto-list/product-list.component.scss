@@ -1,0 +1,126 @@
+.product-card {
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  min-height: 240px;
+  transition: transform 0.08s ease-in-out;
+}
+
+.product-card:active {
+  transform: scale(0.99);
+}
+
+.product-card:disabled {
+  opacity: 0.85;
+}
+
+.product-media {
+  width: 100%;
+  height: 122px;
+}
+
+.product-image {
+  object-fit: cover;
+}
+
+.product-card:not(.product-card-list) .product-media {
+  width: calc(100% - 16px);
+  margin: 8px auto 0;
+  border-radius: 10px 10px 0 0;
+}
+
+.product-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e5e7eb;
+  color: #4b5563;
+}
+
+.placeholder-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.product-quantity-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 6px;
+  z-index: 4;
+}
+
+.list-layout .product-card-list {
+  min-height: 90px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
+}
+
+.list-layout .product-card-list .product-media {
+  flex: 0 0 72px;
+  width: 72px;
+  min-width: 72px;
+  height: 72px;
+  margin: 0 8px 0 0;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.list-layout .product-card-list .card-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  padding: 0 0.35rem 0 0.1rem;
+}
+
+.list-layout .product-card-list .product-image,
+.list-layout .product-card-list .product-image-placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+.product-code {
+  font-size: 0.78rem;
+  color: #6b7280;
+}
+
+.product-caption {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.list-layout .product-card-list .product-meta-row {
+  gap: 0.5rem;
+}
+
+.stock-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-overlay);
+  color: var(--color-white);
+  font-size: 1.6rem;
+  font-weight: 700;
+}

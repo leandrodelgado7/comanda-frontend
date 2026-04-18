@@ -1,0 +1,36 @@
+<div class="barcode-order-screen">
+  <div class="scanner-panel">
+    <h2 class="scanner-title mb-3">Escaneo de codigo de barras</h2>
+
+    <div class="scanner-frame">
+      <zxing-scanner
+        class="scanner"
+        [device]="selectedDevice"
+        [enable]="hasDevices && hasPermission !== false"
+        [formats]="supportedFormats"
+        [tryHarder]="true"
+        [autofocusEnabled]="true"
+        [timeBetweenScans]="150"
+        [delayBetweenScanSuccess]="300"
+        previewFitMode="cover"
+        (scanSuccess)="onCodeResult($event)"
+        (scanFailure)="onScanFailure()"
+        (scanError)="onScanError($event)"
+        (camerasFound)="onCamerasFound($event)"
+        (camerasNotFound)="onNoCamerasFound()"
+        (permissionResponse)="onHasPermission($event)"
+      >
+      </zxing-scanner>
+
+      <div class="scan-line" aria-hidden="true"></div>
+    </div>
+
+    <p class="scanner-tip">Alinea el codigo con la linea y mantene una distancia de 10 a 20 cm.</p>
+
+    @if (scannerErrorMessage) {
+      <p class="scanner-status error">{{ scannerErrorMessage }}</p>
+    }
+
+    <p class="scanner-status ok">{{ feedbackMessage }}</p>
+  </div>
+</div>

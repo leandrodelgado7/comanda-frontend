@@ -1,0 +1,54 @@
+@if (isOpen) {
+  <button
+    type="button"
+    class="modal-backdrop-custom"
+    aria-label="Cerrar modal"
+    (click)="onClose()"
+  ></button>
+
+  <div class="modal-shell" role="dialog" aria-modal="true" aria-labelledby="unregistered-item-title">
+    <div class="card modal-card shadow-lg border-0">
+      <div class="card-header d-flex align-items-center justify-content-between">
+        <h3 id="unregistered-item-title" class="h5 mb-0 fw-bold">Vender ítem no registrado</h3>
+        <button type="button" class="btn-close" aria-label="Cerrar" (click)="onClose()"></button>
+      </div>
+
+      <div class="card-body d-flex flex-column gap-3">
+        <div>
+          <label for="unregistered-item-description" class="form-label mb-2">Descripción</label>
+          <input
+            id="unregistered-item-description"
+            type="text"
+            class="form-control form-control-lg"
+            maxlength="120"
+            placeholder="Ej. Combo cafetería"
+            [(ngModel)]="descriptionInput"
+          />
+        </div>
+
+        <label for="unregistered-item-amount" class="form-label mb-0">Monto del producto</label>
+        <input
+          id="unregistered-item-amount"
+          type="number"
+          class="form-control form-control-lg"
+          min="0.01"
+          step="0.01"
+          inputmode="decimal"
+          placeholder="0.00"
+          [(ngModel)]="amountInput"
+        />
+
+        <div class="d-flex justify-content-end">
+          <button
+            type="button"
+            class="btn btn-primary-custom btn-lg"
+            [disabled]="!canAdd"
+            (click)="onAdd()"
+          >
+            Agregar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+}

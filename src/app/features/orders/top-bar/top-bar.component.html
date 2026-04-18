@@ -1,0 +1,300 @@
+<div class="sticky-top bg-body p-2 border-bottom topbar-shell">
+  <div class="topbar-content d-flex gap-2 align-items-center">
+    <div class="mode-buttons d-flex align-items-center gap-2">
+      <button
+        type="button"
+        class="btn btn-outline-secondary btn-lg icon-btn"
+        [class.voice-mode-active]="isVoiceMode"
+        title="Pedido por voz"
+        aria-label="Pedido por voz"
+        (click)="selectVoiceMode()"
+      >
+        <span aria-hidden="true">🎤</span>
+      </button>
+
+      <button
+        type="button"
+        class="btn btn-outline-secondary btn-lg icon-btn"
+        [class.barcode-mode-active]="isBarcodeMode"
+        title="Codigo de barras"
+        aria-label="Codigo de barras"
+        (click)="selectBarcodeMode()"
+      >
+        <span aria-hidden="true">▥</span>
+      </button>
+
+      <button
+        type="button"
+        class="btn btn-outline-secondary btn-lg icon-btn"
+        [class.manual-mode-active]="isSelectionMode"
+        title="Por selección"
+        aria-label="Por selección"
+        (click)="selectSelectionMode()"
+      >
+        <span aria-hidden="true">🍔</span>
+      </button>
+    </div>
+
+    @if (renderSelectionControls) {
+      <div
+        class="selection-controls-shell"
+        [class.selection-controls-shell-visible]="areSelectionControlsVisible"
+        [class.selection-controls-shell-hidden]="!areSelectionControlsVisible"
+        [attr.aria-hidden]="!isSelectionMode"
+        [attr.inert]="!areSelectionControlsVisible ? '' : null"
+      >
+        <div class="selection-controls desktop-selection-controls align-items-center gap-2">
+          <div class="search-container position-relative">
+            <input
+              class="form-control form-control-lg search-input"
+              type="text"
+              placeholder="Nombre o código"
+              name="searchTerm"
+              [(ngModel)]="searchTerm"
+              (ngModelChange)="onSearchTermChange()"
+            />
+            @if (searchTerm.trim()) {
+              <button
+                type="button"
+                class="search-clear-btn"
+                aria-label="Limpiar búsqueda"
+                title="Limpiar búsqueda"
+                (click)="clearSearchTerm()"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" aria-hidden="true" focusable="false">
+                  <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+                </svg>
+              </button>
+            } @else {
+              <span class="search-icon" aria-hidden="true">🔍</span>
+            }
+          </div>
+
+          <div class="categories-dropdown position-relative">
+            <button
+              type="button"
+              class="btn btn-outline-secondary btn-lg categories-trigger d-flex align-items-center justify-content-between"
+              [attr.aria-expanded]="isCategoryDropdownOpen"
+              aria-haspopup="listbox"
+              (click)="toggleCategoryDropdown($event)"
+            >
+              <span class="categories-trigger-text">{{ getCategoryButtonText() }}</span>
+              <span aria-hidden="true">▾</span>
+            </button>
+
+            @if (isCategoryDropdownOpen) {
+              <div class="categories-menu shadow-sm" role="listbox" aria-label="Filtrar por categorías">
+                @if (selectedCategories.size > 0) {
+                  <button
+                    type="button"
+                    class="btn btn-link categories-clear-btn"
+                    aria-label="Limpiar filtros"
+                    (click)="clearCategoryFilters($event)"
+                  >
+                    Limpiar filtros
+                  </button>
+                }
+
+                @for (category of categoryOptions; track category) {
+                  <label class="category-option" [attr.aria-label]="category">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      [checked]="isCategorySelected(category)"
+                      (change)="onCategoryToggle(category)"
+                    />
+                    <span>{{ category }}</span>
+                  </label>
+                }
+              </div>
+            }
+          </div>
+
+          <div class="sort-dropdown position-relative">
+            <button
+              type="button"
+              class="btn btn-outline-secondary btn-lg icon-btn"
+              [class.sort-mode-active]="isSortPinned"
+              [attr.aria-expanded]="isSortDropdownOpen"
+              aria-haspopup="listbox"
+              title="Ordenar productos"
+              aria-label="Ordenar productos"
+              (click)="toggleSortDropdown($event)"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true" focusable="false">
+                <path d="M0 72C0 58.8 10.7 48 24 48l48 0c13.3 0 24 10.7 24 24l0 104 24 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-96 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l24 0 0-80-24 0C10.7 96 0 85.3 0 72zM30.4 301.2C41.8 292.6 55.7 288 70 288l4.9 0c33.7 0 61.1 27.4 61.1 61.1 0 19.6-9.4 37.9-25.2 49.4l-24 17.5 33.2 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-90.7 0C13.1 464 0 450.9 0 434.7 0 425.3 4.5 416.5 12.1 411l70.5-51.3c3.4-2.5 5.4-6.4 5.4-10.6 0-7.2-5.9-13.1-13.1-13.1L70 336c-3.9 0-7.7 1.3-10.8 3.6L38.4 355.2c-10.6 8-25.6 5.8-33.6-4.8S-1 324.8 9.6 316.8l20.8-15.6zM224 64l256 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-256 0c-17.7 0-32-14.3-32-32s14.3-32 32-32zm0 160l256 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-256 0c-17.7 0-32-14.3-32-32s14.3-32 32-32zm0 160l256 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-256 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/>
+              </svg>
+            </button>
+
+            @if (isSortDropdownOpen) {
+              <div class="sort-menu shadow-sm" role="listbox" aria-label="Ordenar productos">
+                @for (option of sortOptions; track option.value) {
+                  <button
+                    type="button"
+                    class="sort-option"
+                    [class.sort-option-selected]="isSortOptionSelected(option.value)"
+                    (click)="onSortModeSelect(option.value)"
+                  >
+                    <span>{{ option.label }}</span>
+                  </button>
+                }
+              </div>
+            }
+          </div>
+
+          <button
+            type="button"
+            class="btn btn-outline-secondary btn-lg icon-btn"
+            title="Vender ítem no registrado"
+            aria-label="Vender ítem no registrado"
+            (click)="requestUnregisteredItem()"
+          >
+            <span aria-hidden="true">⚡</span>
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-outline-secondary btn-lg icon-btn"
+            [title]="layoutMode === 'grid' ? 'Cambiar a listado' : 'Cambiar a cajas'"
+            [attr.aria-label]="layoutMode === 'grid' ? 'Cambiar a listado' : 'Cambiar a cajas'"
+            (click)="onLayoutButtonPress()"
+          >
+            <span aria-hidden="true">{{ layoutMode === 'grid' ? '☰' : '☷' }}</span>
+          </button>
+        </div>
+
+        <div class="compact-selection-controls">
+          @if (isCompactSearchOpen) {
+            <div class="compact-search-container position-relative">
+              <input
+                class="form-control form-control-lg compact-search-input"
+                type="text"
+                placeholder="Nombre o código"
+                name="compactSearchTerm"
+                [(ngModel)]="searchTerm"
+                (ngModelChange)="onSearchTermChange()"
+              />
+              <button
+                type="button"
+                class="search-clear-btn"
+                aria-label="Cerrar búsqueda"
+                title="Cerrar búsqueda"
+                (click)="closeCompactSearchBar()"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" aria-hidden="true" focusable="false">
+                  <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+                </svg>
+              </button>
+            </div>
+          } @else {
+            <div class="compact-actions d-flex align-items-center gap-2">
+              <button
+                type="button"
+                class="btn btn-outline-secondary btn-lg icon-btn"
+                title="Buscar productos"
+                aria-label="Buscar productos"
+                (click)="openCompactSearchBar()"
+              >
+                <span aria-hidden="true">🔍</span>
+              </button>
+
+              <div class="compact-categories-dropdown position-relative">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary btn-lg icon-btn"
+                  [class.sort-mode-active]="selectedCategories.size > 0"
+                  [attr.aria-expanded]="isCategoryDropdownOpen"
+                  aria-haspopup="listbox"
+                  title="Categorías"
+                  aria-label="Categorías"
+                  (click)="toggleCategoryDropdown($event)"
+                >
+                  <span aria-hidden="true">🗒️</span>
+                </button>
+
+                @if (isCategoryDropdownOpen) {
+                  <div class="categories-menu compact-categories-menu shadow-sm" role="listbox" aria-label="Filtrar por categorías">
+                    @if (selectedCategories.size > 0) {
+                      <button
+                        type="button"
+                        class="btn btn-link categories-clear-btn"
+                        aria-label="Limpiar filtros"
+                        (click)="clearCategoryFilters($event)"
+                      >
+                        Limpiar filtros
+                      </button>
+                    }
+
+                    @for (category of categoryOptions; track category) {
+                      <label class="category-option" [attr.aria-label]="category">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          [checked]="isCategorySelected(category)"
+                          (change)="onCategoryToggle(category)"
+                        />
+                        <span>{{ category }}</span>
+                      </label>
+                    }
+                  </div>
+                }
+              </div>
+
+              <div class="compact-sort-dropdown position-relative">
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary btn-lg icon-btn"
+                  [class.sort-mode-active]="isSortPinned"
+                  [attr.aria-expanded]="isSortDropdownOpen"
+                  aria-haspopup="listbox"
+                  title="Ordenar productos"
+                  aria-label="Ordenar productos"
+                  (click)="toggleSortDropdown($event)"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true" focusable="false">
+                    <path d="M0 72C0 58.8 10.7 48 24 48l48 0c13.3 0 24 10.7 24 24l0 104 24 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-96 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l24 0 0-80-24 0C10.7 96 0 85.3 0 72zM30.4 301.2C41.8 292.6 55.7 288 70 288l4.9 0c33.7 0 61.1 27.4 61.1 61.1 0 19.6-9.4 37.9-25.2 49.4l-24 17.5 33.2 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-90.7 0C13.1 464 0 450.9 0 434.7 0 425.3 4.5 416.5 12.1 411l70.5-51.3c3.4-2.5 5.4-6.4 5.4-10.6 0-7.2-5.9-13.1-13.1-13.1L70 336c-3.9 0-7.7 1.3-10.8 3.6L38.4 355.2c-10.6 8-25.6 5.8-33.6-4.8S-1 324.8 9.6 316.8l20.8-15.6zM224 64l256 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-256 0c-17.7 0-32-14.3-32-32s14.3-32 32-32zm0 160l256 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-256 0c-17.7 0-32-14.3-32-32s14.3-32 32-32zm0 160l256 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-256 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/>
+                  </svg>
+                </button>
+
+                @if (isSortDropdownOpen) {
+                  <div class="sort-menu compact-sort-menu shadow-sm" role="listbox" aria-label="Ordenar productos">
+                    @for (option of sortOptions; track option.value) {
+                      <button
+                        type="button"
+                        class="sort-option"
+                        [class.sort-option-selected]="isSortOptionSelected(option.value)"
+                        (click)="onSortModeSelect(option.value)"
+                      >
+                        <span>{{ option.label }}</span>
+                      </button>
+                    }
+                  </div>
+                }
+              </div>
+
+              <button
+                type="button"
+                class="btn btn-outline-secondary btn-lg icon-btn"
+                title="Vender ítem no registrado"
+                aria-label="Vender ítem no registrado"
+                (click)="requestUnregisteredItem()"
+              >
+                <span aria-hidden="true">⚡</span>
+              </button>
+
+              <button
+                type="button"
+                class="btn btn-outline-secondary btn-lg icon-btn"
+                [title]="layoutMode === 'grid' ? 'Cambiar a listado' : 'Cambiar a cajas'"
+                [attr.aria-label]="layoutMode === 'grid' ? 'Cambiar a listado' : 'Cambiar a cajas'"
+                (click)="onLayoutButtonPress()"
+              >
+                <span aria-hidden="true">{{ layoutMode === 'grid' ? '☰' : '☷' }}</span>
+              </button>
+            </div>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</div>
