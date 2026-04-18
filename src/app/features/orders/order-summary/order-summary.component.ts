@@ -1,236 +1,113 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { BehaviorSubject, finalize, take } from 'rxjs';
-import { CartDiscount, CartItem, DeliveryDetails, DiscountType, OrderChannel, DeliveryType } from '../../../core/models/cart-item.model';
-import { CreateOrderItem, CreateOrderRequest } from '../../../core/models/create-order-request.model';
-import { CarritoService } from '../../../core/services/carrito.service';
-import { PedidoService } from '../../../core/services/pedido.service';
+import { finalize, map } from 'rxjs';
+import {
+  CreateOrderItemRequest,
+  CreateOrderRequest,
+  OrderService
+} from '../../../core/services/order.service';
+import { OrderItem } from '../../../core/models/order-item.model';
 
 @Component({
   selector: 'app-order-summary',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule],
   templateUrl: './order-summary.component.html',
   styleUrl: './order-summary.component.scss'
 })
 export class OrderSummaryComponent {
-  private readonly fallbackUserId = 1;
-  private readonly submittingSubject = new BehaviorSubject<boolean>(false);
+  readonly items$ = this.pedidoService.items$;
+  readonly subtotal$ = this.pedidoService.total$;
+  readonly iva$ = this.subtotal$.pipe(map((subtotal) => subtotal * 0.21));
+  readonly total$ = this.subtotal$.pipe(map((subtotal) => subtotal * 1.21));
+  isSubmitting = false;
+  submitError = '';
+  submitSuccess = '';
 
-  readonly items$ = this.carritoService.items$;
-  readonly subtotal$ = this.carritoService.subtotal$;
-  readonly taxAmount$ = this.carritoService.taxAmount$;
-  readonly total$ = this.carritoService.total$;
-  readonly discount$ = this.carritoService.discount$;
-  readonly discountAmount$ = this.carritoService.discountAmount$;
-  readonly deliveryDetails$ = this.carritoService.deliveryDetails$;
-  readonly submitting$ = this.submittingSubject.asObservable();
+  constructor(private readonly pedidoService: OrderService) {}
 
-  readonly channelOptions: Array<{ value: OrderChannel; label: string }> = [
-    { value: 'PHONE', label: 'Teléfono' },
-    { value: 'WEB', label: 'Web' },
-    { value: 'OTHER', label: 'Otro' },
-    { value: 'IN_STORE', label: 'Mostrador' }
-  ];
-  readonly deliveryTypeOptions: Array<{ value: DeliveryType; label: string }> = [
-    { value: 'DELIVERY', label: 'Envío' },
-    { value: 'PICKUP', label: 'Retiro' }
-  ];
-
-  isDiscountModalOpen = false;
-  isDeliveryModalOpen = false;
-  discountType: DiscountType = 'PERCENT';
-  discountValueInput: string | number = '';
-  deliveryForm: DeliveryDetails = {
-    channel: 'PHONE',
-    deliveryType: 'DELIVERY',
-    customerName: '',
-    customerPhone: '',
-    deliveryAddress: '',
-    deliveryNotes: ''
-  };
-  submitMessage = '';
-  submitMessageType: 'success' | 'error' | '' = '';
-
-  constructor(
-    private readonly carritoService: CarritoService,
-    private readonly pedidoService: PedidoService
-  ) {}
-
-  increaseQuantity(itemId: string, currentQuantity: number): void {
-    this.carritoService.changeQuantity(itemId, currentQuantity + 1);
+  increaseQuantity(productId: string, currentQuantity: number): void {
+    this.pedidoService.changeQuantity(productId, currentQuantity + 1);
   }
 
-  decreaseQuantity(itemId: string, currentQuantity: number): void {
-    this.carritoService.changeQuantity(itemId, currentQuantity - 1);
+  decreaseQuantity(productId: string, currentQuantity: number): void {
+    this.pedidoService.changeQuantity(productId, currentQuantity - 1);
   }
 
-  removeItem(itemId: string): void {
-    this.carritoService.removeItem(itemId);
+  removeItem(productId: string): void {
+    this.pedidoService.removeProduct(productId);
   }
 
   clearOrder(): void {
-    this.submitMessage = '';
-    this.submitMessageType = '';
-    this.carritoService.clearDraft();
+    this.pedidoService.clearOrder();
+    this.submitError = '';
+    this.submitSuccess = '';
   }
 
-  getItemLabel(item: CartItem): string {
-    return item.isCustom ? item.customName : item.product.descripcion;
-  }
+  submitOrder(): void {
+    const items = this.pedidoService.getCurrentItems();
 
-  openDiscountModal(): void {
-    const snapshot = this.carritoService.getSnapshot().discount;
-    this.discountType = snapshot?.type ?? 'PERCENT';
-    this.discountValueInput = snapshot?.value ?? '';
-    this.isDiscountModalOpen = true;
-  }
-
-  closeDiscountModal(): void {
-    this.isDiscountModalOpen = false;
-    this.discountValueInput = '';
-  }
-
-  applyDiscount(): void {
-    const parsedValue = Number(String(this.discountValueInput).replace(',', '.'));
-    if (!Number.isFinite(parsedValue) || parsedValue <= 0) {
-      this.carritoService.clearDiscount();
-      this.closeDiscountModal();
+    if (items.length === 0 || this.isSubmitting) {
       return;
     }
 
-    this.carritoService.setDiscount({
-      type: this.discountType,
-      value: parsedValue
-    });
-    this.closeDiscountModal();
+    const request = this.buildCreateOrderRequest(items);
+    this.isSubmitting = true;
+    this.submitError = '';
+    this.submitSuccess = '';
+
+    this.pedidoService
+      .crearPedido(request)
+      .pipe(
+        finalize(() => {
+          this.isSubmitting = false;
+        })
+      )
+      .subscribe({
+        next: () => {
+          this.submitSuccess = 'Pedido enviado correctamente.';
+          this.pedidoService.clearOrder();
+        },
+        error: () => {
+          this.submitError = 'No se pudo enviar el pedido. Intenta nuevamente.';
+        }
+      });
   }
 
-  removeDiscount(): void {
-    this.carritoService.clearDiscount();
-  }
-
-  openDeliveryModal(): void {
-    const details = this.carritoService.getSnapshot().deliveryDetails;
-    this.deliveryForm = {
-      channel: details?.channel ?? 'PHONE',
-      deliveryType: details?.deliveryType ?? 'DELIVERY',
-      customerName: details?.customerName ?? '',
-      customerPhone: details?.customerPhone ?? '',
-      deliveryAddress: details?.deliveryAddress ?? '',
-      deliveryNotes: details?.deliveryNotes ?? ''
+  private buildCreateOrderRequest(items: OrderItem[]): CreateOrderRequest {
+    return {
+      userId: 1,
+      channel: 'IN_STORE',
+      deliveryType: 'PICKUP',
+      taxPercentage: 21,
+      discountType: null,
+      discountValue: null,
+      customerName: null,
+      customerPhone: null,
+      deliveryAddress: null,
+      deliveryNotes: null,
+      items: items.map((item) => this.mapOrderItem(item))
     };
-    this.isDeliveryModalOpen = true;
   }
 
-  closeDeliveryModal(): void {
-    this.isDeliveryModalOpen = false;
-  }
-
-  saveDeliveryDetails(): void {
-    this.carritoService.setDeliveryDetails(this.deliveryForm);
-    this.closeDeliveryModal();
-  }
-
-  clearDeliveryDetails(): void {
-    this.carritoService.clearDeliveryDetails();
-    this.deliveryForm = {
-      channel: 'PHONE',
-      deliveryType: 'DELIVERY',
-      customerName: '',
-      customerPhone: '',
-      deliveryAddress: '',
-      deliveryNotes: ''
-    };
-    this.closeDeliveryModal();
-  }
-
-  storeOrder(): void {
-    if (this.submittingSubject.getValue()) {
-      return;
-    }
-
-    const snapshot = this.carritoService.getSnapshot();
-    if (snapshot.items.length === 0) {
-      return;
-    }
-
-    const request = this.buildCreateOrderRequest(snapshot.items, snapshot.discount, snapshot.deliveryDetails, snapshot.taxPercentage);
-    this.submitMessage = '';
-    this.submitMessageType = '';
-    this.submittingSubject.next(true);
-
-    this.pedidoService.crearPedido(request).pipe(
-      take(1),
-      finalize(() => this.submittingSubject.next(false))
-    ).subscribe({
-      next: () => {
-        this.carritoService.clearDraft();
-        this.isDiscountModalOpen = false;
-        this.isDeliveryModalOpen = false;
-        this.submitMessage = 'Pedido almacenado correctamente.';
-        this.submitMessageType = 'success';
-      },
-      error: () => {
-        this.submitMessage = 'No se pudo almacenar el pedido. Conservamos el estado para reintentar.';
-        this.submitMessageType = 'error';
-      }
-    });
-  }
-
-  private buildCreateOrderRequest(
-    items: CartItem[],
-    discount: CartDiscount | null,
-    deliveryDetails: DeliveryDetails | null,
-    taxPercentage: number
-  ): CreateOrderRequest {
-    const hasDelivery = this.carritoService.hasMeaningfulDeliveryDetails(deliveryDetails);
-    const request: CreateOrderRequest = {
-      userId: this.fallbackUserId,
-      channel: hasDelivery ? deliveryDetails?.channel ?? 'PHONE' : 'IN_STORE',
-      deliveryType: hasDelivery ? deliveryDetails?.deliveryType ?? 'DELIVERY' : 'PICKUP',
-      taxPercentage,
-      items: items.map((item) => this.mapItemToRequest(item))
-    };
-
-    if (discount) {
-      request.discountType = discount.type;
-      request.discountValue = discount.value;
-    }
-
-    if (hasDelivery) {
-      if (deliveryDetails?.customerName) {
-        request.customerName = deliveryDetails.customerName;
-      }
-      if (deliveryDetails?.customerPhone) {
-        request.customerPhone = deliveryDetails.customerPhone;
-      }
-      if (deliveryDetails?.deliveryAddress) {
-        request.deliveryAddress = deliveryDetails.deliveryAddress;
-      }
-      if (deliveryDetails?.deliveryNotes) {
-        request.deliveryNotes = deliveryDetails.deliveryNotes;
-      }
-    }
-
-    return request;
-  }
-
-  private mapItemToRequest(item: CartItem): CreateOrderItem {
-    if (item.isCustom) {
+  private mapOrderItem(item: OrderItem): CreateOrderItemRequest {
+    if (this.isCustomItem(item)) {
       return {
         isCustom: true,
-        customName: item.customName,
+        customName: item.product.descripcion,
         quantity: item.quantity,
-        unitPrice: item.unitPrice
+        unitPrice: item.product.precio
       };
     }
 
     return {
       isCustom: false,
-      productId: String(item.product.id),
+      productId: Number(item.product.id),
       quantity: item.quantity
     };
+  }
+
+  private isCustomItem(item: OrderItem): boolean {
+    return item.product.id.startsWith('unregistered-item-');
   }
 }

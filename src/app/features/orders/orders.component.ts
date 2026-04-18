@@ -8,7 +8,7 @@ import { VoiceOrderPanelComponent } from './voice-order/voice-order-panel.compon
 import { BarcodeScannerPanelComponent } from './barcode-order/barcode-scanner-panel.component';
 import { Product } from '../../core/models/product.model';
 import { AuthService } from '../../core/services/auth.service';
-import { CarritoService } from '../../core/services/carrito.service';
+import { OrderService } from '../../core/services/order.service';
 import { UnregisteredItemModalComponent } from './unregistered-item-modal/unregistered-item-modal.component';
 
 type ProductLayoutMode = 'grid' | 'list';
@@ -24,11 +24,11 @@ type ProductSortMode = 'ranking' | 'name-asc' | 'name-desc' | 'category-asc' | '
 export class OrdersComponent implements OnInit {
   readonly voiceOrderPanelComponent = VoiceOrderPanelComponent;
   readonly barcodeScannerPanelComponent = BarcodeScannerPanelComponent;
-  readonly username$ = this.authService.currentUsername$;
-  readonly itemsCount$ = this.carritoService.items$.pipe(
+  readonly username = 'Leandro Delgado';
+  readonly itemsCount$ = this.orderService.items$.pipe(
     map((items) => items.reduce((acc, item) => acc + item.quantity, 0))
   );
-  readonly orderTotal$ = this.carritoService.total$;
+  readonly orderTotal$ = this.orderService.total$;
   searchTerm = '';
   selectedCategories: string[] = [];
   layoutMode: ProductLayoutMode = 'grid';
@@ -40,10 +40,11 @@ export class OrdersComponent implements OnInit {
   isBarcodeScannerActive = false;
   isFullscreen = false;
   isUnregisteredItemModalOpen = false;
+  private unregisteredItemCount = 0;
 
   constructor(
     private readonly authService: AuthService,
-    private readonly carritoService: CarritoService
+    private readonly orderService: OrderService
   ) {}
 
   ngOnInit(): void {
@@ -101,8 +102,20 @@ export class OrdersComponent implements OnInit {
     this.activateManualMode();
   }
 
-  addUnregisteredItem(item: { description: string; amount: number }): void {
-    this.carritoService.addCustomItem(item.description, item.amount);
+  addUnregisteredItem(amount: number): void {
+    this.unregisteredItemCount += 1;
+
+    const product: Product = {
+      id: `unregistered-item-${this.unregisteredItemCount}`,
+      codigo: '',
+      descripcion: `Item no registrado ${this.unregisteredItemCount}`,
+      aliases: [],
+      precio: amount,
+      imagen: '',
+      disponible: true
+    };
+
+    this.orderService.addProduct(product);
     this.closeUnregisteredItemModal();
   }
 

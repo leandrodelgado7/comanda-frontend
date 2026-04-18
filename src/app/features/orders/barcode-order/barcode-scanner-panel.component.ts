@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { BarcodeFormat } from '@zxing/library';
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
 import { take } from 'rxjs';
-import { CarritoService } from '../../../core/services/carrito.service';
+import { OrderService } from '../../../core/services/order.service';
 import { ProductService } from '../../../core/services/product.service';
 
 @Component({
@@ -37,7 +37,7 @@ export class BarcodeScannerPanelComponent {
 
   constructor(
     private readonly productService: ProductService,
-    private readonly carritoService: CarritoService
+    private readonly orderService: OrderService
   ) {}
 
   onCamerasFound(devices: MediaDeviceInfo[]): void {
@@ -94,7 +94,7 @@ export class BarcodeScannerPanelComponent {
           return;
         }
 
-        this.carritoService.addProductWithQuantity(product, 1);
+        this.orderService.addProductWithQuantity(product, 1);
         this.feedbackMessage = `Agregado: ${product.descripcion}`;
       });
   }

@@ -17,21 +17,19 @@
 }
 
 .orders-header {
-  min-height: 76px;
+  min-height: 64px;
 }
 
 .orders-title {
-  font-size: 1.65rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  letter-spacing: -0.03em;
 }
 
-.orders-eyebrow {
-  color: #64748b;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+.orders-logo {
+  height: 3rem;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .fullscreen-btn {
@@ -96,14 +94,6 @@
 
 .products-column,
 .summary-column {
-  min-height: 0;
-}
-
-.summary-column {
-  align-self: stretch;
-}
-
-.catalog-panel {
   min-height: 0;
 }
 
@@ -191,11 +181,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 700;
-    color: var(--color-white);
-    background: linear-gradient(135deg, var(--color-primary), #254db8);
-    box-shadow: 0 20px 45px rgba(30, 58, 138, 0.35);
+    color: var(--bs-white);
+    background: var(--bs-primary);
   }
 
   .mobile-summary-chevron {

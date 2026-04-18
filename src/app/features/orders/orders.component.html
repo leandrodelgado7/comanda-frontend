@@ -1,6 +1,6 @@
 <div class="container-fluid p-3 orders-page">
-  <header class="orders-header d-flex align-items-center justify-content-between mb-3 px-3 py-2 bg-body border rounded-4 shadow-sm">
-    <div class="d-flex align-items-center gap-3">
+  <header class="orders-header d-flex align-items-center justify-content-between mb-3 px-2 py-1 bg-body border-bottom rounded">
+    <div class="d-flex align-items-center gap-2">
       @if (!isMobilePortrait) {
         <button
           type="button"
@@ -20,10 +20,7 @@
           }
         </button>
       }
-      <div>
-        <p class="orders-eyebrow mb-1">Backoffice</p>
-        <h1 class="orders-title mb-0">Nuevo pedido</h1>
-      </div>
+      <img class="orders-logo" src="assets/images/logo.png" alt="Logo" />
     </div>
 
     <div class="user-menu-wrapper position-relative" (mouseleave)="closeUserMenu()">
@@ -35,7 +32,7 @@
         [attr.aria-expanded]="isUserMenuOpen"
       >
         <span class="user-avatar">LD</span>
-        <span class="user-name">{{ (username$ | async) || 'Usuario' }}</span>
+        <span class="user-name">{{ username }}</span>
       </button>
 
       <div class="user-dropdown card shadow-sm" *ngIf="isUserMenuOpen" role="menu">
@@ -44,8 +41,8 @@
     </div>
   </header>
 
-  <div class="row g-3 orders-row align-items-stretch">
-    <div class="col-12 col-xl-8 col-lg-7 d-flex flex-column h-100 p-0 products-column">
+  <div class="row g-3 orders-row">
+    <div class="col-12 col-md-8 d-flex flex-column h-100 p-0 products-column">
       <app-top-bar
         class="sticky-top"
         [isVoiceMode]="isVoiceOrderActive"
@@ -83,7 +80,7 @@
       </div>
     </div>
 
-    <div class="col-12 col-xl-4 col-lg-5 d-flex flex-column h-100 p-0 summary-column">
+    <div class="col-12 col-md-4 d-flex flex-column h-100 p-0 summary-column">
       @if (!isMobilePortrait) {
         <app-order-summary></app-order-summary>
       }

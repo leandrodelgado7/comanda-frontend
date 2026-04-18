@@ -12,17 +12,15 @@ import { FormsModule } from '@angular/forms';
 export class UnregisteredItemModalComponent {
   @Input() isOpen = false;
   @Output() closeModal = new EventEmitter<void>();
-  @Output() addItem = new EventEmitter<{ description: string; amount: number }>();
-  descriptionInput = '';
+  @Output() addItem = new EventEmitter<number>();
   amountInput: string | number = '';
 
   get canAdd(): boolean {
     const amount = this.parseAmount();
-    return this.descriptionInput.trim().length > 0 && Number.isFinite(amount) && amount > 0;
+    return Number.isFinite(amount) && amount > 0;
   }
 
   onClose(): void {
-    this.descriptionInput = '';
     this.amountInput = '';
     this.closeModal.emit();
   }
@@ -34,14 +32,8 @@ export class UnregisteredItemModalComponent {
       return;
     }
 
-    const description = this.descriptionInput.trim();
-    if (!description) {
-      return;
-    }
-
-    this.descriptionInput = '';
     this.amountInput = '';
-    this.addItem.emit({ description, amount });
+    this.addItem.emit(amount);
   }
 
   private parseAmount(): number {

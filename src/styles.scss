@@ -1,10 +1,83 @@
 :root {
-	--color-primary: #344767;
-	--color-secondary: #1f2937;
-	--color-accent: #f59e0b;
-	--color-bg: #f5f7fb;
-	--color-white: #ffffff;
-	--color-overlay: rgba(15, 23, 42, 0.6);
+	/* PRIMARY (GREEN - COLOR PRINCIPAL) */
+	--primary: #4caf50;
+	--primary-dark: #388e3c;
+	--primary-light: #81c784;
+
+	/* SEMANTICOS */
+	--success: #4caf50;
+	--info: #00acc1;
+	--warning: #ff9800;
+	--danger: #f44336;
+
+	/* GRISES Y TEXTO */
+	--text-primary: #3c4858;
+	--text-secondary: #999999;
+	--text-disabled: #aaaaaa;
+
+	/* BACKGROUNDS */
+	--background-main: #f2f2f2;
+	--card-bg: #ffffff;
+
+	/* SIDEBAR */
+	--sidebar-bg: #1f1f1f;
+	--sidebar-hover: rgba(255, 255, 255, 0.1);
+
+	/* SHADOW */
+	--shadow-card: 0 2px 6px rgba(0, 0, 0, 0.15);
+
+	/* UTILS */
+	--text-on-dark: #ffffff;
+	--border-color: rgba(60, 72, 88, 0.16);
+	--primary-soft: rgba(76, 175, 80, 0.1);
+	--primary-soft-subtle: rgba(76, 175, 80, 0.02);
+	--primary-soft-strong: rgba(76, 175, 80, 0.2);
+	--danger-soft: rgba(244, 67, 54, 0.1);
+	--warning-soft: rgba(255, 152, 0, 0.2);
+	--success-soft: rgba(76, 175, 80, 0.14);
+	--info-soft: rgba(0, 172, 193, 0.14);
+
+	/* COMPAT ALIAS */
+	--text-main: var(--text-primary);
+	--text-muted: var(--text-secondary);
+	--brand: var(--primary);
+	--brand-dark: var(--primary-dark);
+	--brand-soft: var(--primary-soft);
+	--surface: var(--card-bg);
+	--surface-strong: var(--card-bg);
+	--surface-accent: var(--primary-soft);
+	--border: var(--border-color);
+	--shadow-md: var(--shadow-card);
+
+	/* LEGACY ALIAS */
+	--color-primary: var(--primary);
+	--color-secondary: var(--text-primary);
+	--color-accent: var(--warning);
+	--color-bg: var(--background-main);
+	--color-white: var(--text-on-dark);
+	--color-overlay: rgba(31, 31, 31, 0.6);
+	--color-border: var(--border-color);
+
+	/* Bootstrap compat */
+	--bs-primary: var(--primary);
+	--bs-primary-rgb: 76, 175, 80;
+	--bs-success: var(--success);
+	--bs-success-rgb: 76, 175, 80;
+	--bs-info: var(--info);
+	--bs-info-rgb: 0, 172, 193;
+	--bs-warning: var(--warning);
+	--bs-warning-rgb: 255, 152, 0;
+	--bs-danger: var(--danger);
+	--bs-danger-rgb: 244, 67, 54;
+	--bs-body-bg: var(--background-main);
+	--bs-body-color: var(--text-primary);
+	--bs-border-color: var(--border-color);
+	--bs-emphasis-color: var(--text-primary);
+	--bs-secondary-color: var(--text-secondary);
+	--bs-secondary-bg: var(--primary-soft);
+	--bs-tertiary-bg: var(--primary-soft-subtle);
+	--bs-light-rgb: 255, 255, 255;
+	--bs-dark-rgb: 31, 31, 31;
 }
 
 html,
@@ -17,7 +90,6 @@ body {
 	background-color: var(--color-bg);
 	color: var(--color-secondary);
 	overflow: hidden;
-	font-family: "Segoe UI", "Trebuchet MS", sans-serif;
 }
 
 app-root {
@@ -33,33 +105,12 @@ app-root {
 	background-color: var(--color-primary);
 	color: white;
 	border: none;
-	box-shadow: 0 10px 20px rgba(52, 71, 103, 0.18);
 }
 
 .btn-primary-custom:hover,
 .btn-primary-custom:focus {
 	background-color: var(--color-primary);
 	color: white;
-}
-
-.card,
-.form-control,
-.form-select,
-.btn {
-	border-radius: 0.85rem;
-}
-
-.form-control,
-.form-select {
-	border-color: #d5ddeb;
-	min-height: 2.8rem;
-	box-shadow: none;
-}
-
-.form-control:focus,
-.form-select:focus {
-	border-color: rgba(52, 71, 103, 0.45);
-	box-shadow: 0 0 0 0.2rem rgba(52, 71, 103, 0.12);
 }
 
 .text-accent {

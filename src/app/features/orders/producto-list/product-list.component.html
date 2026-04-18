@@ -45,13 +45,9 @@
 
             <div class="card-body p-2">
               <h3 class="h6 fw-semibold mb-1">{{ product.descripcion }}</h3>
-              <div class="product-caption mb-2">
-                <span>{{ product.categoria || 'Sin categoría' }}</span>
-                <span>Cod. {{ product.codigo || 'N/D' }}</span>
-              </div>
               @if (layoutMode === 'list') {
                 <div class="d-flex justify-content-between align-items-center product-meta-row">
-                  <p class="product-code mb-0">{{ product.categoria || 'Sin categoría' }}</p>
+                  <p class="product-code mb-0">Cod: {{ product.codigo }}</p>
                   <p class="mb-0 fs-6 fw-bold">{{ product.precio | currency: 'USD':'symbol':'1.2-2' }}</p>
                 </div>
               } @else {

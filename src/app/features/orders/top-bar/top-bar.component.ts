@@ -55,15 +55,12 @@ export class TopBarComponent implements OnInit, OnChanges, OnDestroy {
 
   ngOnInit(): void {
     this.syncSelectionControls(true);
-    this.productService.searchProducts('').pipe(take(1)).subscribe((products) => {
-      this.categoryOptions = Array.from(
-        new Set(
-          products
-            .map((product) => product.categoria?.trim())
-            .filter((category): category is string => Boolean(category))
-        )
-      ).sort((a, b) => a.localeCompare(b, 'es'));
-    });
+    this.productService
+      .getCategories()
+      .pipe(take(1))
+      .subscribe((categories) => {
+        this.categoryOptions = categories;
+      });
   }
 
   ngOnChanges(_: SimpleChanges): void {

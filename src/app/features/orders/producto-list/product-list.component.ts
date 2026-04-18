@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Observable, map } from 'rxjs';
 import { Product } from '../../../core/models/product.model';
 import { ProductService } from '../../../core/services/product.service';
-import { CarritoService } from '../../../core/services/carrito.service';
+import { OrderService } from '../../../core/services/order.service';
 
 type ProductLayoutMode = 'grid' | 'list';
 type ProductSortMode = 'ranking' | 'name-asc' | 'name-desc' | 'category-asc' | 'category-desc';
@@ -22,10 +22,10 @@ export class ProductListComponent implements OnChanges {
   @Input() sortMode: ProductSortMode = 'ranking';
 
   products$: Observable<Product[]> = this.productService.searchProducts('');
-  readonly quantityByProductId$ = this.carritoService.items$.pipe(
+  readonly quantityByProductId$ = this.orderService.items$.pipe(
     map((items) =>
       items.reduce(
-        (acc, item) => (!item.isCustom ? { ...acc, [String(item.product.id)]: item.quantity } : acc),
+        (acc, item) => ({ ...acc, [String(item.product.id)]: item.quantity }),
         {} as Record<string, number>
       )
     )
@@ -34,7 +34,7 @@ export class ProductListComponent implements OnChanges {
 
   constructor(
     private readonly productService: ProductService,
-    private readonly carritoService: CarritoService
+    private readonly orderService: OrderService
   ) {}
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -46,7 +46,7 @@ export class ProductListComponent implements OnChanges {
   }
 
   addToOrder(product: Product): void {
-    this.carritoService.addProduct(product);
+    this.orderService.addProduct(product);
   }
 
   hasProductImage(product: Product): boolean {

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { take } from 'rxjs';
 import SiriWave from 'siriwave';
 import { Product } from '../../../core/models/product.model';
-import { CarritoService } from '../../../core/services/carrito.service';
+import { OrderService } from '../../../core/services/order.service';
 import { ProductService } from '../../../core/services/product.service';
 import {
   VoiceNeedsConfirmationItem,
@@ -41,7 +41,7 @@ export class VoiceOrderPanelComponent implements OnInit, AfterViewInit, OnDestro
   constructor(
     private readonly voiceOrderService: VoiceOrderService,
     private readonly productService: ProductService,
-    private readonly carritoService: CarritoService
+    private readonly orderService: OrderService
   ) {}
 
   ngOnInit(): void {
@@ -156,7 +156,7 @@ export class VoiceOrderPanelComponent implements OnInit, AfterViewInit, OnDestro
   private addResolvedItems(items: VoiceResolvedItem[]): void {
     items.forEach((item) => {
       const product = this.getProductForVoiceItem(item);
-      this.carritoService.addProductWithQuantity(product, item.cantidad);
+      this.orderService.addProductWithQuantity(product, item.cantidad);
     });
   }
 

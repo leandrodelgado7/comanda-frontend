@@ -12,7 +12,7 @@
   min-height: 0;
   border-radius: 14px;
   border: 1px solid #d7dde8;
-  background: linear-gradient(180deg, #f6fbff 0%, #ecf4ff 100%);
+  background: linear-gradient(180deg, #f6fcf6 0%, #edf7ef 100%);
   overflow: auto;
 }
 
@@ -44,7 +44,7 @@
   border-radius: 14px;
   overflow: hidden;
   border: 1px solid #cfd8ea;
-  background: #0f172a;
+  background: var(--sidebar-bg);
 }
 
 .scanner {
