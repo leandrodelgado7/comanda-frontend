@@ -7,6 +7,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { VoiceOrderPanelComponent } from './voice-order/voice-order-panel.component';
 import { BarcodeScannerPanelComponent } from './barcode-order/barcode-scanner-panel.component';
 import { Product } from '../../core/models/product.model';
+import { User } from '../../core/models/auth.model';
 import { AuthService } from '../../core/services/auth.service';
 import { OrderService } from '../../core/services/order.service';
 import { UnregisteredItemModalComponent } from './unregistered-item-modal/unregistered-item-modal.component';
@@ -24,11 +25,11 @@ type ProductSortMode = 'ranking' | 'name-asc' | 'name-desc' | 'category-asc' | '
 export class OrdersComponent implements OnInit {
   readonly voiceOrderPanelComponent = VoiceOrderPanelComponent;
   readonly barcodeScannerPanelComponent = BarcodeScannerPanelComponent;
-  readonly username = 'Leandro Delgado';
   readonly itemsCount$ = this.orderService.items$.pipe(
     map((items) => items.reduce((acc, item) => acc + item.quantity, 0))
   );
   readonly orderTotal$ = this.orderService.total$;
+  readonly user$ = this.authService.currentUser$;
   searchTerm = '';
   selectedCategories: string[] = [];
   layoutMode: ProductLayoutMode = 'grid';
@@ -151,7 +152,28 @@ export class OrdersComponent implements OnInit {
 
   logout(): void {
     this.closeUserMenu();
-    this.authService.logout();
+    this.authService.logout().subscribe();
+  }
+
+  getUserDisplayName(user: User | null): string {
+    if (!user) {
+      return 'Usuario';
+    }
+
+    const fullName = `${user.firstName} ${user.lastName}`.trim();
+    return fullName || user.username;
+  }
+
+  getUserInitials(user: User | null): string {
+    const displayName = this.getUserDisplayName(user);
+    const initials = displayName
+      .split(/\s+/)
+      .filter(Boolean)
+      .slice(0, 2)
+      .map((part) => part.charAt(0).toUpperCase())
+      .join('');
+
+    return initials || 'U';
   }
 
   private updateViewportMode(): void {

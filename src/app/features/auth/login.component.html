@@ -11,10 +11,15 @@
             id="username"
             name="username"
             class="form-control form-control-lg"
+            [class.is-invalid]="getFieldError('username')"
             type="text"
             [(ngModel)]="username"
             required
           />
+
+          @if (getFieldError('username'); as usernameError) {
+            <div class="invalid-feedback d-block">{{ usernameError }}</div>
+          }
         </div>
 
         <div>
@@ -23,15 +28,20 @@
             id="password"
             name="password"
             class="form-control form-control-lg"
+            [class.is-invalid]="getFieldError('password')"
             type="password"
             [(ngModel)]="password"
             required
           />
+
+          @if (getFieldError('password'); as passwordError) {
+            <div class="invalid-feedback d-block">{{ passwordError }}</div>
+          }
         </div>
 
-        @if (loginError) {
+        @if (errorMessage) {
           <div class="alert alert-danger py-2 mb-0" role="alert">
-            Credenciales inválidas. Probá con cualquier usuario y contraseña 1234.
+            {{ errorMessage }}
           </div>
         }
 
