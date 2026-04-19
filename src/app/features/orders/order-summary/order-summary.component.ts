@@ -7,11 +7,12 @@ import {
   OrderService
 } from '../../../core/services/order.service';
 import { OrderItem } from '../../../core/models/order-item.model';
+import { MoneyFormatPipe } from '../../../core/pipes/money-format.pipe';
 
 @Component({
   selector: 'app-order-summary',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MoneyFormatPipe],
   templateUrl: './order-summary.component.html',
   styleUrl: './order-summary.component.scss'
 })
@@ -26,16 +27,23 @@ export class OrderSummaryComponent {
 
   constructor(private readonly pedidoService: OrderService) {}
 
-  increaseQuantity(productId: string, currentQuantity: number): void {
-    this.pedidoService.changeQuantity(productId, currentQuantity + 1);
+  increaseQuantity(itemId: string, currentQuantity: number): void {
+    this.pedidoService.changeQuantity(itemId, currentQuantity + 1);
   }
 
-  decreaseQuantity(productId: string, currentQuantity: number): void {
-    this.pedidoService.changeQuantity(productId, currentQuantity - 1);
+  decreaseQuantity(itemId: string, currentQuantity: number): void {
+    this.pedidoService.changeQuantity(itemId, currentQuantity - 1);
   }
 
-  removeItem(productId: string): void {
-    this.pedidoService.removeProduct(productId);
+  removeItem(itemId: string): void {
+    this.pedidoService.removeProduct(itemId);
+  }
+
+  updateFractionWeight(itemId: string, rawValue: string): void {
+    const normalizedValue = rawValue.replace(',', '.').trim();
+    const weightGrams = normalizedValue === '' ? 0 : Number(normalizedValue);
+
+    this.pedidoService.updateFractionWeight(itemId, weightGrams);
   }
 
   clearOrder(): void {
@@ -105,6 +113,28 @@ export class OrderSummaryComponent {
       productId: Number(item.product.id),
       quantity: item.quantity
     };
+  }
+
+  isFractionItem(item: OrderItem): boolean {
+    return item.product.saleUnit === 'FRACTION';
+  }
+
+  getItemWeightGrams(item: OrderItem): number {
+    return item.weightGrams ?? Math.round(item.quantity * 1000);
+  }
+
+  getItemWeightDisplayValue(item: OrderItem): string {
+    const weightGrams = item.weightGrams;
+
+    if (weightGrams === undefined || weightGrams === null) {
+      return '';
+    }
+
+    return weightGrams === 0 ? '' : String(weightGrams);
+  }
+
+  getItemTotal(item: OrderItem): number {
+    return item.product.precio * item.quantity;
   }
 
   private isCustomItem(item: OrderItem): boolean {

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, catchError, map, of, shareReplay } from 'rxjs';
-import { Product } from '../models/product.model';
+import { Product, ProductSaleUnit } from '../models/product.model';
 import { environment } from '../../../environments/environment';
 
 interface ApiProductCategory {
@@ -123,8 +123,13 @@ export class ProductService {
       precio: product.promotionalPrice ?? product.price,
       imagen: mainImage?.url?.trim() ?? '',
       disponible: product.available,
+      saleUnit: this.mapSaleUnit(product.saleUnit),
       categoria: product.category?.name?.trim(),
       ranking: 0
     };
+  }
+
+  private mapSaleUnit(saleUnit: string | null | undefined): ProductSaleUnit {
+    return saleUnit === 'FRACTION' ? 'FRACTION' : 'UNIT';
   }
 }

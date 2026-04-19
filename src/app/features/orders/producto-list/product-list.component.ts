@@ -25,12 +25,21 @@ export class ProductListComponent implements OnChanges {
   readonly quantityByProductId$ = this.orderService.items$.pipe(
     map((items) =>
       items.reduce(
-        (acc, item) => ({ ...acc, [String(item.product.id)]: item.quantity }),
+        (acc, item) => ({
+          ...acc,
+          [String(item.product.id)]: (acc[String(item.product.id)] ?? 0) + (item.product.saleUnit === 'FRACTION' ? 1 : item.quantity)
+        }),
         {} as Record<string, number>
       )
     )
   );
   private readonly imageLoadErrors: Record<string, boolean> = {};
+  private readonly priceFormatter = new Intl.NumberFormat('es-AR', {
+    style: 'currency',
+    currency: 'ARS',
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  });
 
   constructor(
     private readonly productService: ProductService,
@@ -60,6 +69,14 @@ export class ProductListComponent implements OnChanges {
 
   getSelectedQuantity(product: Product, quantityByProductId: Record<string, number>): number {
     return quantityByProductId[this.getProductKey(product)] ?? 0;
+  }
+
+  getDisplayPrice(product: Product): string {
+    const formattedPrice = this.priceFormatter.format(product.precio);
+
+    return product.saleUnit === 'FRACTION'
+      ? `${formattedPrice} / kg`
+      : formattedPrice;
   }
 
   private getProductKey(product: Product): string {

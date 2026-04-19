@@ -93,7 +93,7 @@
     <button type="button" class="mobile-summary-band" (click)="toggleSummarySheet()">
       @if (itemsCount$ | async; as itemsCount) {
         @if (orderTotal$ | async; as orderTotal) {
-          <span>{{ itemsCount }} ítems = {{ orderTotal | currency: 'USD':'symbol':'1.2-2' }}</span>
+          <span>{{ itemsCount }} ítems = {{ orderTotal | moneyFormat }}</span>
         }
       } @else {
         <span>No hay productos</span>

@@ -1,3 +1,5 @@
+export type ProductSaleUnit = 'UNIT' | 'FRACTION';
+
 export interface Product {
   id: string;
   codigo: string;
@@ -6,6 +8,7 @@ export interface Product {
   precio: number;
   imagen: string;
   disponible: boolean;
+  saleUnit: ProductSaleUnit;
   categoria?: string;
   ranking?: number;
 }

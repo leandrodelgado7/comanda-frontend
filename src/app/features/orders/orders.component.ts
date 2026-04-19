@@ -11,6 +11,7 @@ import { User } from '../../core/models/auth.model';
 import { AuthService } from '../../core/services/auth.service';
 import { OrderService } from '../../core/services/order.service';
 import { UnregisteredItemModalComponent } from './unregistered-item-modal/unregistered-item-modal.component';
+import { MoneyFormatPipe } from '../../core/pipes/money-format.pipe';
 
 type ProductLayoutMode = 'grid' | 'list';
 type ProductSortMode = 'ranking' | 'name-asc' | 'name-desc' | 'category-asc' | 'category-desc';
@@ -18,7 +19,7 @@ type ProductSortMode = 'ranking' | 'name-asc' | 'name-desc' | 'category-asc' | '
 @Component({
   selector: 'app-orders',
   standalone: true,
-  imports: [CommonModule, TopBarComponent, ProductListComponent, OrderSummaryComponent, UnregisteredItemModalComponent],
+  imports: [CommonModule, TopBarComponent, ProductListComponent, OrderSummaryComponent, UnregisteredItemModalComponent, MoneyFormatPipe],
   templateUrl: './orders.component.html',
   styleUrl: './orders.component.scss'
 })
@@ -26,7 +27,7 @@ export class OrdersComponent implements OnInit {
   readonly voiceOrderPanelComponent = VoiceOrderPanelComponent;
   readonly barcodeScannerPanelComponent = BarcodeScannerPanelComponent;
   readonly itemsCount$ = this.orderService.items$.pipe(
-    map((items) => items.reduce((acc, item) => acc + item.quantity, 0))
+    map((items) => items.reduce((acc, item) => acc + (item.product.saleUnit === 'FRACTION' ? 1 : item.quantity), 0))
   );
   readonly orderTotal$ = this.orderService.total$;
   readonly user$ = this.authService.currentUser$;
@@ -113,7 +114,8 @@ export class OrdersComponent implements OnInit {
       aliases: [],
       precio: amount,
       imagen: '',
-      disponible: true
+      disponible: true,
+      saleUnit: 'UNIT'
     };
 
     this.orderService.addProduct(product);

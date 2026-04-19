@@ -42,9 +42,10 @@ export interface CreateOrderRequest {
 export class OrderService {
   private readonly ordersEndpoint = environment.ordersApiUrl;
   private readonly itemsSubject = new BehaviorSubject<OrderItem[]>([]);
+  private nextItemSequence = 0;
   readonly items$ = this.itemsSubject.asObservable();
   readonly total$ = this.items$.pipe(
-    map((items) => items.reduce((acc, item) => acc + item.product.precio * item.quantity, 0))
+    map((items) => items.reduce((acc, item) => acc + this.getItemTotal(item), 0))
   );
 
   constructor(private readonly http: HttpClient) {}
@@ -62,34 +63,66 @@ export class OrderService {
       return;
     }
 
+    if (product.saleUnit === 'FRACTION') {
+      this.addFractionProducts(product, quantity);
+      return;
+    }
+
     const currentItems = this.itemsSubject.getValue();
     const existingItem = currentItems.find((item) => item.product.id === product.id);
 
     if (existingItem) {
-      this.changeQuantity(product.id, existingItem.quantity + quantity);
+      this.changeQuantity(existingItem.id, existingItem.quantity + quantity);
       return;
     }
 
-    this.itemsSubject.next([...currentItems, { product, quantity }]);
+    this.itemsSubject.next([
+      ...currentItems,
+      {
+        id: this.buildItemId(product.id),
+        product,
+        quantity
+      }
+    ]);
   }
 
-  changeQuantity(productId: string, quantity: number): void {
+  changeQuantity(itemId: string, quantity: number): void {
     if (quantity <= 0) {
-      this.removeProduct(productId);
+      this.removeProduct(itemId);
       return;
     }
 
     const updatedItems = this.itemsSubject.getValue().map((item) =>
-      item.product.id === productId ? { ...item, quantity } : item
+      item.id === itemId ? { ...item, quantity } : item
     );
 
     this.itemsSubject.next(updatedItems);
   }
 
-  removeProduct(productId: string): void {
+  updateFractionWeight(itemId: string, weightGrams: number): void {
+    const normalizedWeightGrams = Number.isFinite(weightGrams)
+      ? Math.max(0, Math.round(weightGrams))
+      : 0;
+
+    const updatedItems = this.itemsSubject.getValue().map((item) => {
+      if (item.id !== itemId) {
+        return item;
+      }
+
+      return {
+        ...item,
+        weightGrams: normalizedWeightGrams,
+        quantity: normalizedWeightGrams / 1000
+      };
+    });
+
+    this.itemsSubject.next(updatedItems);
+  }
+
+  removeProduct(itemId: string): void {
     const updatedItems = this.itemsSubject
       .getValue()
-      .filter((item) => item.product.id !== productId);
+      .filter((item) => item.id !== itemId);
 
     this.itemsSubject.next(updatedItems);
   }
@@ -101,7 +134,7 @@ export class OrderService {
   getCurrentTotal(): number {
     return this.itemsSubject
       .getValue()
-      .reduce((acc, item) => acc + item.product.precio * item.quantity, 0);
+      .reduce((acc, item) => acc + this.getItemTotal(item), 0);
   }
 
   getCurrentItems(): OrderItem[] {
@@ -110,5 +143,29 @@ export class OrderService {
 
   crearPedido(request: CreateOrderRequest): Observable<unknown> {
     return this.http.post(this.ordersEndpoint, request);
+  }
+
+  private addFractionProducts(product: Product, quantity: number): void {
+    const additions = Array.from({ length: Math.floor(quantity) }, () => ({
+      id: this.buildItemId(product.id),
+      product,
+      quantity: 0,
+      weightGrams: 0
+    }));
+
+    if (additions.length === 0) {
+      return;
+    }
+
+    this.itemsSubject.next([...this.itemsSubject.getValue(), ...additions]);
+  }
+
+  private buildItemId(productId: string): string {
+    this.nextItemSequence += 1;
+    return `${productId}-${this.nextItemSequence}`;
+  }
+
+  private getItemTotal(item: OrderItem): number {
+    return item.product.precio * item.quantity;
   }
 }

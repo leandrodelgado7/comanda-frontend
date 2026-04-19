@@ -176,7 +176,8 @@ export class VoiceOrderPanelComponent implements OnInit, AfterViewInit, OnDestro
       aliases: [],
       precio: item.precio_unitario,
       imagen: '',
-      disponible: true
+      disponible: true,
+      saleUnit: 'UNIT'
     };
   }
 

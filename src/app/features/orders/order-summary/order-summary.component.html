@@ -13,14 +13,14 @@
         </div>
       } @else {
         <div class="d-flex flex-column gap-2">
-          @for (item of items; track item.product.id) {
+          @for (item of items; track item.id) {
             <div class="bg-light rounded-3 p-2">
               <div class="d-flex justify-content-between align-items-start gap-2">
                 <h4 class="h6 fw-semibold mb-1">{{ item.product.descripcion }}</h4>
                 <button
                   class="btn btn-sm btn-link text-secondary p-0 remove-item-btn"
                   type="button"
-                  (click)="removeItem(item.product.id)"
+                  (click)="removeItem(item.id)"
                   aria-label="Remover producto"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" aria-hidden="true" focusable="false">
@@ -30,28 +30,44 @@
               </div>
 
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group" role="group">
-                  <button
-                    class="btn btn-outline-secondary"
-                    type="button"
-                    (click)="decreaseQuantity(item.product.id, item.quantity)"
-                  >
-                    -
-                  </button>
-                  <button class="btn btn-outline-secondary" type="button" disabled>
-                    {{ item.quantity }}
-                  </button>
-                  <button
-                    class="btn btn-outline-secondary"
-                    type="button"
-                    (click)="increaseQuantity(item.product.id, item.quantity)"
-                  >
-                    +
-                  </button>
-                </div>
+                @if (isFractionItem(item)) {
+                  <div class="fraction-weight-input">
+                    <input
+                      class="form-control"
+                      type="number"
+                      min="0"
+                      step="1"
+                      inputmode="decimal"
+                      [value]="getItemWeightDisplayValue(item)"
+                      (input)="updateFractionWeight(item.id, $any($event.target).value)"
+                      aria-label="Peso en gramos"
+                    />
+                    <span class="fraction-weight-suffix">gr.</span>
+                  </div>
+                } @else {
+                  <div class="btn-group" role="group">
+                    <button
+                      class="btn btn-outline-secondary"
+                      type="button"
+                      (click)="decreaseQuantity(item.id, item.quantity)"
+                    >
+                      -
+                    </button>
+                    <button class="btn btn-outline-secondary" type="button" disabled>
+                      {{ item.quantity }}
+                    </button>
+                    <button
+                      class="btn btn-outline-secondary"
+                      type="button"
+                      (click)="increaseQuantity(item.id, item.quantity)"
+                    >
+                      +
+                    </button>
+                  </div>
+                }
 
                 <span class="fw-bold fs-5">
-                  {{ item.product.precio * item.quantity | currency: 'USD':'symbol':'1.2-2' }}
+                  {{ getItemTotal(item) | moneyFormat }}
                 </span>
               </div>
             </div>
@@ -67,15 +83,15 @@
         @if (total$ | async; as total) {
           <div class="d-flex justify-content-between mb-1 text-secondary">
             <span>Subtotal</span>
-            <span>{{ subtotal | currency: 'USD':'symbol':'1.2-2' }}</span>
+            <span>{{ subtotal | moneyFormat }}</span>
           </div>
           <div class="d-flex justify-content-between mb-3 text-secondary">
             <span>IVA (21%)</span>
-            <span>{{ iva | currency: 'USD':'symbol':'1.2-2' }}</span>
+            <span>{{ iva | moneyFormat }}</span>
           </div>
           <div class="d-flex justify-content-between align-items-center mb-3">
             <span class="h3 mb-0 fw-bold">Total</span>
-            <span class="h2 mb-0 fw-bold text-primary-custom">{{ total | currency: 'USD':'symbol':'1.2-2' }}</span>
+            <span class="h2 mb-0 fw-bold text-primary-custom">{{ total | moneyFormat }}</span>
           </div>
           @if (submitError) {
             <div class="alert alert-danger py-2 mb-3" role="alert">
