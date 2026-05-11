@@ -14,17 +14,37 @@
       </div>
 
       <div class="card-body d-flex flex-column gap-3">
-        <label for="unregistered-item-amount" class="form-label mb-0">Monto del producto</label>
-        <input
-          id="unregistered-item-amount"
-          type="number"
-          class="form-control form-control-lg"
-          min="0.01"
-          step="0.01"
-          inputmode="decimal"
-          placeholder="0.00"
-          [(ngModel)]="amountInput"
-        />
+        <div class="d-flex flex-column gap-3">
+          <div>
+            <label for="unregistered-item-net-amount" class="form-label mb-0">Monto sin impuesto</label>
+            <input
+              id="unregistered-item-net-amount"
+              type="number"
+              class="form-control form-control-lg"
+              min="0.01"
+              step="0.01"
+              inputmode="decimal"
+              placeholder="0.00"
+              [ngModel]="netAmountInput"
+              (ngModelChange)="onNetAmountChange($event)"
+            />
+          </div>
+
+          <div>
+            <label for="unregistered-item-total-amount" class="form-label mb-0">Monto total</label>
+            <input
+              id="unregistered-item-total-amount"
+              type="number"
+              class="form-control form-control-lg"
+              min="0.01"
+              step="0.01"
+              inputmode="decimal"
+              placeholder="0.00"
+              [ngModel]="totalAmountInput"
+              (ngModelChange)="onTotalAmountChange($event)"
+            />
+          </div>
+        </div>
 
         <div class="d-flex justify-content-end">
           <button

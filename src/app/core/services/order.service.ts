@@ -24,6 +24,7 @@ export type CreateOrderItemRequest =
 
 export interface CreateOrderRequest {
   userId: number;
+  createdBy: number;
   channel: 'IN_STORE';
   deliveryType: 'PICKUP';
   taxPercentage: number;

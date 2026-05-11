@@ -20,7 +20,7 @@ import {
   User
 } from '../models/auth.model';
 import { environment } from '../../../environments/environment';
-import { HAS_REFRESH_RETRY, SKIP_AUTH, SKIP_REFRESH } from '../interceptors/auth.interceptor';
+import { SKIP_AUTH, SKIP_REFRESH } from '../interceptors/auth.interceptor';
 import { ApiHttpService } from './api-http.service';
 import { AuthStorageService } from './auth-storage.service';
 
@@ -157,6 +157,25 @@ export class AuthService {
     return this.currentUserSubject.getValue();
   }
 
+  hasRole(roleCode: string): boolean {
+    const normalizedRole = roleCode.trim().toUpperCase();
+
+    if (!normalizedRole) {
+      return false;
+    }
+
+    return this.getCurrentUserRoles().includes(normalizedRole);
+  }
+
+  hasAnyRole(roleCodes: readonly string[]): boolean {
+    if (!roleCodes.length) {
+      return false;
+    }
+
+    const currentRoles = this.getCurrentUserRoles();
+    return roleCodes.some((roleCode) => currentRoles.includes(roleCode.trim().toUpperCase()));
+  }
+
   clearSessionAndRedirect(): void {
     this.clearSession();
     void this.router.navigate(['/login']);
@@ -213,6 +232,11 @@ export class AuthService {
   private buildDisplayName(user: User): string {
     const fullName = `${user.firstName} ${user.lastName}`.trim();
     return fullName || user.username;
+  }
+
+  private getCurrentUserRoles(): string[] {
+    const user = this.currentUserSubject.getValue();
+    return user?.roles.map((role) => role.code.toUpperCase()) ?? [];
   }
 
   private buildAuthUrl(path: string): string {

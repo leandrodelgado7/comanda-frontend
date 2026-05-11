@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { finalize } from 'rxjs';
 import { AuthService } from '../../core/services/auth.service';
 import { FieldError } from '../../core/models/auth.model';
+import { ToastService } from '../../core/services/toast.service';
 
 @Component({
   selector: 'app-login',
@@ -23,7 +24,8 @@ export class LoginComponent {
 
   constructor(
     private readonly authService: AuthService,
-    private readonly router: Router
+    private readonly router: Router,
+    private readonly toastService: ToastService
   ) {}
 
   submit(): void {
@@ -36,12 +38,14 @@ export class LoginComponent {
       .pipe(finalize(() => (this.loading = false)))
       .subscribe({
         next: () => {
+          this.toastService.showSuccessToast('Sesion iniciada correctamente.');
           void this.router.navigate(['/orders']);
         },
         error: (error: HttpErrorResponse) => {
           const authError = this.authService.mapHttpError(error);
           this.errorMessage = authError.message ?? 'No se pudo iniciar sesión.';
           this.fieldErrors = authError.fieldErrors ?? [];
+          this.toastService.showErrorToast(this.errorMessage);
         }
       });
   }

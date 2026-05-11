@@ -86,23 +86,13 @@
             <span>{{ subtotal | moneyFormat }}</span>
           </div>
           <div class="d-flex justify-content-between mb-3 text-secondary">
-            <span>IVA (21%)</span>
+            <span>IVA ({{ taxPercentage }}%)</span>
             <span>{{ iva | moneyFormat }}</span>
           </div>
           <div class="d-flex justify-content-between align-items-center mb-3">
             <span class="h3 mb-0 fw-bold">Total</span>
             <span class="h2 mb-0 fw-bold text-primary-custom">{{ total | moneyFormat }}</span>
           </div>
-          @if (submitError) {
-            <div class="alert alert-danger py-2 mb-3" role="alert">
-              {{ submitError }}
-            </div>
-          }
-          @if (submitSuccess) {
-            <div class="alert alert-success py-2 mb-3" role="alert">
-              {{ submitSuccess }}
-            </div>
-          }
           <div class="d-flex align-items-stretch gap-2">
             <button
               class="btn btn-outline-secondary clear-order-btn"

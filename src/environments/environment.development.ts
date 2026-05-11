@@ -5,6 +5,7 @@ export const environment = {
   apiBaseUrl: API_BASE_URL,
   // apiUrl: 'http://vps-2068649-x.dattaweb.com:8000/transcribe',
   apiUrl: 'http://localhost:8000/transcribe',
+  taxPercentage: 21,
   productsApiUrl: `${API_BASE_URL}/api/products`,
   categoriesApiUrl: `${API_BASE_URL}/api/categories`,
   ordersApiUrl: `${API_BASE_URL}/api/orders`,

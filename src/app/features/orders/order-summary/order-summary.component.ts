@@ -8,6 +8,9 @@ import {
 } from '../../../core/services/order.service';
 import { OrderItem } from '../../../core/models/order-item.model';
 import { MoneyFormatPipe } from '../../../core/pipes/money-format.pipe';
+import { environment } from '../../../../environments/environment';
+import { AuthStorageService } from '../../../core/services/auth-storage.service';
+import { ToastService } from '../../../core/services/toast.service';
 
 @Component({
   selector: 'app-order-summary',
@@ -19,13 +22,17 @@ import { MoneyFormatPipe } from '../../../core/pipes/money-format.pipe';
 export class OrderSummaryComponent {
   readonly items$ = this.pedidoService.items$;
   readonly subtotal$ = this.pedidoService.total$;
-  readonly iva$ = this.subtotal$.pipe(map((subtotal) => subtotal * 0.21));
-  readonly total$ = this.subtotal$.pipe(map((subtotal) => subtotal * 1.21));
+  readonly taxPercentage = environment.taxPercentage;
+  private readonly taxRate = this.taxPercentage / 100;
+  readonly iva$ = this.subtotal$.pipe(map((subtotal) => subtotal * this.taxRate));
+  readonly total$ = this.subtotal$.pipe(map((subtotal) => subtotal * (1 + this.taxRate)));
   isSubmitting = false;
-  submitError = '';
-  submitSuccess = '';
 
-  constructor(private readonly pedidoService: OrderService) {}
+  constructor(
+    private readonly pedidoService: OrderService,
+    private readonly authStorage: AuthStorageService,
+    private readonly toastService: ToastService
+  ) {}
 
   increaseQuantity(itemId: string, currentQuantity: number): void {
     this.pedidoService.changeQuantity(itemId, currentQuantity + 1);
@@ -48,8 +55,6 @@ export class OrderSummaryComponent {
 
   clearOrder(): void {
     this.pedidoService.clearOrder();
-    this.submitError = '';
-    this.submitSuccess = '';
   }
 
   submitOrder(): void {
@@ -61,8 +66,6 @@ export class OrderSummaryComponent {
 
     const request = this.buildCreateOrderRequest(items);
     this.isSubmitting = true;
-    this.submitError = '';
-    this.submitSuccess = '';
 
     this.pedidoService
       .crearPedido(request)
@@ -73,21 +76,23 @@ export class OrderSummaryComponent {
       )
       .subscribe({
         next: () => {
-          this.submitSuccess = 'Pedido enviado correctamente.';
+          this.toastService.showSuccessToast('Pedido enviado correctamente.');
           this.pedidoService.clearOrder();
         },
         error: () => {
-          this.submitError = 'No se pudo enviar el pedido. Intenta nuevamente.';
+          this.toastService.showErrorToast('No se pudo enviar el pedido. Intenta nuevamente.');
         }
       });
   }
 
   private buildCreateOrderRequest(items: OrderItem[]): CreateOrderRequest {
+    const userId = this.authStorage.getSession()?.user.id ?? 1;
     return {
-      userId: 1,
+      userId,
+      createdBy: userId,
       channel: 'IN_STORE',
       deliveryType: 'PICKUP',
-      taxPercentage: 21,
+      taxPercentage: this.taxPercentage,
       discountType: null,
       discountValue: null,
       customerName: null,
