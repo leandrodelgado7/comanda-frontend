@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { map } from 'rxjs';
 import { ProductListComponent } from './producto-list/product-list.component';
@@ -46,7 +46,8 @@ export class OrdersComponent implements OnInit {
 
   constructor(
     private readonly authService: AuthService,
-    private readonly orderService: OrderService
+    private readonly orderService: OrderService,
+    private readonly elementRef: ElementRef
   ) {}
 
   ngOnInit(): void {
@@ -120,6 +121,13 @@ export class OrdersComponent implements OnInit {
 
     this.orderService.addProduct(product);
     this.closeUnregisteredItemModal();
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent): void {
+    if (this.isUserMenuOpen && !this.elementRef.nativeElement.contains(event.target)) {
+      this.closeUserMenu();
+    }
   }
 
   @HostListener('window:resize')
