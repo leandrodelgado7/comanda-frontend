@@ -1,10 +1,11 @@
 const API_BASE_URL = 'http://localhost:8080';
+const VOICE_API_BASE_URL = 'https://vps-2068649-x.dattaweb.com:8000';
 
 export const environment = {
   apiBaseUrl: API_BASE_URL,
-//   apiUrl: 'http://localhost:8000/transcribe-test',
-//   apiUrl: 'http://localhost:8000/transcribe',
-  apiUrl: 'https://vps-2068649-x.dattaweb.com:8000/transcribe',
+  voiceApiBaseUrl: VOICE_API_BASE_URL,
+  transcribeApiUrl: `${VOICE_API_BASE_URL}/transcribe`,
+  retryApiUrl: `${VOICE_API_BASE_URL}/retry`,
   taxPercentage: 21,
   productsApiUrl: `${API_BASE_URL}/api/products`,
   categoriesApiUrl: `${API_BASE_URL}/api/categories`,

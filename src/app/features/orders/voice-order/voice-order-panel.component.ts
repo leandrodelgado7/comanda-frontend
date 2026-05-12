@@ -9,6 +9,7 @@ import {
   VoiceNeedsConfirmationItem,
   VoiceNeedsConfirmationOption,
   VoiceOrderResponse,
+  VoiceRejectedItem,
   VoiceOrderService,
   VoiceResolvedItem
 } from '../../../core/services/voice-order.service';
@@ -26,9 +27,11 @@ export class VoiceOrderPanelComponent implements OnInit, AfterViewInit, OnDestro
 
   isListening = false;
   isProcessing = false;
+  isRetrying = false;
 
   needsConfirmation: VoiceNeedsConfirmationItem[] = [];
   showConfirmationModal = false;
+  private rejectedItemsForRetry: VoiceRejectedItem[] = [];
 
   private readonly productsById = new Map<string, Product>();
   private readonly productsByCode = new Map<string, Product>();
@@ -129,6 +132,23 @@ export class VoiceOrderPanelComponent implements OnInit, AfterViewInit, OnDestro
     this.showConfirmationModal = false;
   }
 
+  async retryVoiceProcessing(): Promise<void> {
+    if (this.isRetrying || this.isProcessing || !this.rejectedItemsForRetry.length) {
+      return;
+    }
+
+    this.isRetrying = true;
+    const response = await this.voiceOrderService.retryLastRecording(this.rejectedItemsForRetry);
+    this.isRetrying = false;
+
+    if (!response) {
+      alert('Error al reintentar el procesamiento del audio');
+      return;
+    }
+
+    this.handleVoiceResponse(response);
+  }
+
   onMicContextMenu(event: MouseEvent): void {
     event.preventDefault();
   }
@@ -136,21 +156,59 @@ export class VoiceOrderPanelComponent implements OnInit, AfterViewInit, OnDestro
   private handleVoiceResponse(response: VoiceOrderResponse): void {
     const resolved = response.resolved ?? [];
     const pendingConfirmation = response.needs_confirmation ?? [];
+    this.rejectedItemsForRetry = this.buildRejectedItems(resolved, pendingConfirmation);
 
     if (!resolved.length && !pendingConfirmation.length) {
       alert('No se pudo reconocer el producto');
       return;
     }
 
-    if (resolved.length > 0) {
-      this.addResolvedItems(resolved);
-    }
-
-    this.needsConfirmation = pendingConfirmation.map((item) => ({
-      ...item,
-      options: [...item.options].sort((a, b) => b.confianza - a.confianza)
+    // Convertir items resolved a items que se muestren en el modal de confirmación
+    const resolvedAsConfirmation: VoiceNeedsConfirmationItem[] = resolved.map((item) => ({
+      cantidad: item.cantidad,
+      options: [
+        {
+          id: item.id,
+          descripcion: item.descripcion,
+          precio_unitario: item.precio_unitario,
+          confianza: item.confianza ?? 1.0
+        }
+      ]
     }));
-    this.showConfirmationModal = pendingConfirmation.length > 0;
+
+    this.needsConfirmation = [
+      ...resolvedAsConfirmation,
+      ...pendingConfirmation.map((item) => ({
+        ...item,
+        options: [...item.options].sort((a, b) => b.confianza - a.confianza)
+      }))
+    ];
+    this.showConfirmationModal = this.needsConfirmation.length > 0;
+  }
+
+  private buildRejectedItems(
+    resolved: VoiceResolvedItem[],
+    pendingConfirmation: VoiceNeedsConfirmationItem[]
+  ): VoiceRejectedItem[] {
+    const rejectedFromResolved: VoiceRejectedItem[] = resolved.map((item) => ({
+      id: item.id,
+      descripcion: item.descripcion,
+      precio_unitario: item.precio_unitario,
+      cantidad: item.cantidad,
+      confianza: item.confianza
+    }));
+
+    const rejectedFromConfirmation: VoiceRejectedItem[] = pendingConfirmation.flatMap((item) =>
+      item.options.map((option) => ({
+        id: option.id,
+        descripcion: option.descripcion,
+        precio_unitario: option.precio_unitario,
+        cantidad: item.cantidad,
+        confianza: option.confianza
+      }))
+    );
+
+    return [...rejectedFromResolved, ...rejectedFromConfirmation];
   }
 
   private addResolvedItems(items: VoiceResolvedItem[]): void {

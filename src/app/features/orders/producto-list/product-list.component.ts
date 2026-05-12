@@ -21,7 +21,9 @@ export class ProductListComponent implements OnChanges {
   @Input() layoutMode: ProductLayoutMode = 'grid';
   @Input() sortMode: ProductSortMode = 'ranking';
 
-  products$: Observable<Product[]> = this.productService.searchProducts('');
+  products$: Observable<Product[]> = this.productService.searchProducts('').pipe(
+    map((products) => this.sortProducts(products, this.sortMode))
+  );
   readonly quantityByProductId$ = this.orderService.items$.pipe(
     map((items) =>
       items.reduce(

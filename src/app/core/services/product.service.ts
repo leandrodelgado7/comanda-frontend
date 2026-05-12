@@ -34,6 +34,7 @@ interface ApiProduct {
   stockMin: number;
   available: boolean;
   images: ApiProductImage[];
+  ranking: number | null;
 }
 
 @Injectable({
@@ -125,7 +126,7 @@ export class ProductService {
       disponible: product.available,
       saleUnit: this.mapSaleUnit(product.saleUnit),
       categoria: product.category?.name?.trim(),
-      ranking: 0
+      ranking: product.ranking ?? 0
     };
   }
 
