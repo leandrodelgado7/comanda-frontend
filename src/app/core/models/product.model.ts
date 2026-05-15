@@ -6,6 +6,7 @@ export interface Product {
   descripcion: string;
   aliases: string[];
   precio: number;
+  promotionalPrice?: number | null;
   imagen: string;
   disponible: boolean;
   saleUnit: ProductSaleUnit;

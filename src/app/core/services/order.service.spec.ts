@@ -65,4 +65,15 @@ describe('OrderService', () => {
     expect(items[1].quantity).toBe(0.35);
     expect(service.getCurrentTotal()).toBe(550);
   });
+
+  it('agrega un producto FRACTION por gramos en una sola linea', () => {
+    service.addFractionProductByWeight(fractionProduct, 350);
+
+    const items = service.getCurrentItems();
+
+    expect(items.length).toBe(1);
+    expect(items[0].weightGrams).toBe(350);
+    expect(items[0].quantity).toBe(0.35);
+    expect(service.getCurrentTotal()).toBe(350);
+  });
 });

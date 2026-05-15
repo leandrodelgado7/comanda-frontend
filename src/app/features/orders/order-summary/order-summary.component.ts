@@ -139,7 +139,23 @@ export class OrderSummaryComponent {
   }
 
   getItemTotal(item: OrderItem): number {
+    return this.getEffectiveUnitPrice(item) * item.quantity;
+  }
+
+  getItemOriginalTotal(item: OrderItem): number {
     return item.product.precio * item.quantity;
+  }
+
+  hasPromotionalPrice(item: OrderItem): boolean {
+    const promotionalPrice = item.product.promotionalPrice;
+    return promotionalPrice !== null && promotionalPrice !== undefined && promotionalPrice > 0;
+  }
+
+  private getEffectiveUnitPrice(item: OrderItem): number {
+    const promotionalPrice = item.product.promotionalPrice;
+    return promotionalPrice !== null && promotionalPrice !== undefined && promotionalPrice > 0
+      ? promotionalPrice
+      : item.product.precio;
   }
 
   private isCustomItem(item: OrderItem): boolean {

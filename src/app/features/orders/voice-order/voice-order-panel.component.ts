@@ -214,6 +214,12 @@ export class VoiceOrderPanelComponent implements OnInit, AfterViewInit, OnDestro
   private addResolvedItems(items: VoiceResolvedItem[]): void {
     items.forEach((item) => {
       const product = this.getProductForVoiceItem(item);
+
+      if (product.saleUnit === 'FRACTION') {
+        this.orderService.addFractionProductByWeight(product, item.cantidad);
+        return;
+      }
+
       this.orderService.addProductWithQuantity(product, item.cantidad);
     });
   }

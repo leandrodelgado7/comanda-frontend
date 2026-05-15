@@ -66,9 +66,20 @@
                   </div>
                 }
 
-                <span class="fw-bold fs-5">
-                  {{ getItemTotal(item) | moneyFormat }}
-                </span>
+                <div class="d-flex flex-column align-items-end">
+                  @if (hasPromotionalPrice(item)) {
+                    <span class="text-muted text-decoration-line-through">
+                      {{ getItemOriginalTotal(item) | moneyFormat }}
+                    </span>
+                    <span class="fw-bold fs-5 text-success">
+                      {{ getItemTotal(item) | moneyFormat }}
+                    </span>
+                  } @else {
+                    <span class="fw-bold fs-5">
+                      {{ getItemTotal(item) | moneyFormat }}
+                    </span>
+                  }
+                </div>
               </div>
             </div>
           }

@@ -1,5 +1,5 @@
-const API_BASE_URL = 'http://localhost:8080';
-const VOICE_API_BASE_URL = 'https://vps-2068649-x.dattaweb.com:8000';
+const API_BASE_URL = 'https://api.comidas-miriapoli.com.ar';
+const VOICE_API_BASE_URL = 'https://voice.comidas-miriapoli.com.ar';
 
 export const environment = {
   apiBaseUrl: API_BASE_URL,

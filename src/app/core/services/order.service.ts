@@ -87,6 +87,32 @@ export class OrderService {
     ]);
   }
 
+  addFractionProductByWeight(product: Product, weightGrams: number): void {
+    if (product.saleUnit !== 'FRACTION' || !product.disponible) {
+      return;
+    }
+
+    const normalizedWeightGrams = Number.isFinite(weightGrams)
+      ? Math.max(0, Math.round(weightGrams))
+      : 0;
+
+    if (normalizedWeightGrams <= 0) {
+      return;
+    }
+
+    const currentItems = this.itemsSubject.getValue();
+
+    this.itemsSubject.next([
+      ...currentItems,
+      {
+        id: this.buildItemId(product.id),
+        product,
+        quantity: normalizedWeightGrams / 1000,
+        weightGrams: normalizedWeightGrams
+      }
+    ]);
+  }
+
   changeQuantity(itemId: string, quantity: number): void {
     if (quantity <= 0) {
       this.removeProduct(itemId);
@@ -167,6 +193,13 @@ export class OrderService {
   }
 
   private getItemTotal(item: OrderItem): number {
-    return item.product.precio * item.quantity;
+    return this.getEffectiveUnitPrice(item.product) * item.quantity;
+  }
+
+  private getEffectiveUnitPrice(product: Product): number {
+    const promotionalPrice = product.promotionalPrice;
+    return promotionalPrice !== null && promotionalPrice !== undefined && promotionalPrice > 0
+      ? promotionalPrice
+      : product.precio;
   }
 }

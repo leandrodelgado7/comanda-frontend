@@ -48,11 +48,25 @@
               @if (layoutMode === 'list') {
                 <div class="d-flex justify-content-between align-items-center product-meta-row">
                   <p class="product-code mb-0">Cod: {{ product.codigo }}</p>
-                  <p class="mb-0 fs-6 fw-bold">{{ getDisplayPrice(product) }}</p>
+                  <div class="d-flex align-items-center gap-2">
+                    @if (hasPromotionalPrice(product)) {
+                      <p class="mb-0 fs-6 text-muted text-decoration-line-through">{{ getDisplayPrice(product) }}</p>
+                      <p class="mb-0 fs-6 fw-bold text-success">{{ getPromotionalDisplayPrice(product) }}</p>
+                    } @else {
+                      <p class="mb-0 fs-6 fw-bold">{{ getDisplayPrice(product) }}</p>
+                    }
+                  </div>
                 </div>
               } @else {
                 <div class="d-flex justify-content-between align-items-center product-price-row">
-                  <p class="mb-0 fs-5 fw-bold">{{ getDisplayPrice(product) }}</p>
+                  <div class="d-flex flex-column align-items-start">
+                    @if (hasPromotionalPrice(product)) {
+                      <p class="mb-0 fs-6 text-muted text-decoration-line-through">{{ getDisplayPrice(product) }}</p>
+                      <p class="mb-0 fs-5 fw-bold text-success">{{ getPromotionalDisplayPrice(product) }}</p>
+                    } @else {
+                      <p class="mb-0 fs-5 fw-bold">{{ getDisplayPrice(product) }}</p>
+                    }
+                  </div>
                   <!-- <span class="text-primary-custom fw-semibold">Agregar</span> -->
                 </div>
               }

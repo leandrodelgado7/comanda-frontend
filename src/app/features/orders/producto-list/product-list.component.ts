@@ -81,6 +81,27 @@ export class ProductListComponent implements OnChanges {
       : formattedPrice;
   }
 
+  getPromotionalDisplayPrice(product: Product): string {
+    const promotionalPrice = this.getEffectiveUnitPrice(product);
+    const formattedPrice = this.priceFormatter.format(promotionalPrice);
+
+    return product.saleUnit === 'FRACTION'
+      ? `${formattedPrice} / kg`
+      : formattedPrice;
+  }
+
+  hasPromotionalPrice(product: Product): boolean {
+    const promotionalPrice = product.promotionalPrice;
+    return promotionalPrice !== null && promotionalPrice !== undefined && promotionalPrice > 0;
+  }
+
+  private getEffectiveUnitPrice(product: Product): number {
+    const promotionalPrice = product.promotionalPrice;
+    return promotionalPrice !== null && promotionalPrice !== undefined && promotionalPrice > 0
+      ? promotionalPrice
+      : product.precio;
+  }
+
   private getProductKey(product: Product): string {
     return String(product.id);
   }
