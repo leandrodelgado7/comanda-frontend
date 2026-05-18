@@ -195,13 +195,13 @@ export class OrdersComponent implements OnInit {
     }
   }
 
-  async toggleFullscreen(): Promise<void> {
+  toggleFullscreen(): void {
     if (this.isFullscreen) {
-      await document.exitFullscreen();
+      document.exitFullscreen().catch((err) => console.error('exitFullscreen error:', err));
       return;
     }
 
-    await document.documentElement.requestFullscreen();
+    document.documentElement.requestFullscreen().catch((err) => console.error('requestFullscreen error:', err));
   }
 
   private activateManualMode(): void {
