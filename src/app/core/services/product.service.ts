@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, catchError, map, of, shareReplay } from 'rxjs';
+import { Observable, catchError, map, of, shareReplay, tap } from 'rxjs';
 import { Product, ProductSaleUnit } from '../models/product.model';
 import { environment } from '../../../environments/environment';
 
@@ -23,7 +23,7 @@ interface ApiProduct {
   id: number;
   name: string;
   description: string | null;
-  internalCode: number | null;
+  internalCode: number | string | null;
   externalCode: string | null;
   price: number;
   promotionalPrice: number | null;
@@ -43,24 +43,36 @@ interface ApiProduct {
 export class ProductService {
   private readonly productsEndpoint = environment.productsApiUrl;
   private readonly categoriesEndpoint = environment.categoriesApiUrl;
-  private readonly products$ = this.http
-    .get<ApiProduct[]>(this.productsEndpoint)
-    .pipe(
-      map((products) => products.map((product) => this.mapApiProduct(product))),
-      catchError((error) => {
-        console.error('No se pudieron cargar los productos.', error);
-        return of([] as Product[]);
-      }),
-      shareReplay(1)
-    );
+  private cachedProducts$: Observable<Product[]> | null = null;
 
   constructor(private readonly http: HttpClient) {}
+
+  public getProducts$(): Observable<Product[]> {
+    if (!this.cachedProducts$) {
+      this.cachedProducts$ = this.http
+        .get<ApiProduct[]>(this.productsEndpoint)
+        .pipe(
+          map((products) => products.map((product) => this.mapApiProduct(product))),
+          tap({
+            error: () => {
+              this.cachedProducts$ = null;
+            }
+          }),
+          catchError((error) => {
+            console.error('No se pudieron cargar los productos.', error);
+            return of([] as Product[]);
+          }),
+          shareReplay(1)
+        );
+    }
+    return this.cachedProducts$;
+  }
 
   searchProducts(searchTerm: string, categories: string[] = []): Observable<Product[]> {
     const normalizedTerm = searchTerm.trim().toLowerCase();
     const normalizedCategories = categories.map((category) => category.trim().toLowerCase());
 
-    return this.products$.pipe(
+    return this.getProducts$().pipe(
       map((products) => {
         return products.filter((product) => {
           const matchesSearch =
@@ -96,13 +108,27 @@ export class ProductService {
   }
 
   findByCodigo(codigo: string): Observable<Product | undefined> {
-    const normalizedCode = codigo.trim();
+    const scannedExternalCode = codigo.trim();
+    const scannedInternalCode = this.normalizeInternalCode(codigo);
 
-    return this.products$.pipe(
-      map((products) =>
-        products.find((product) => String(product.codigo).trim() === normalizedCode)
-      )
+    return this.getProducts$().pipe(
+      map((products) => {
+        return products.find((product) => {
+          const productExternalCode = product.externalCode?.trim() ?? '';
+          const productInternalCode = this.normalizeInternalCode(product.internalCode ?? '');
+
+          return (
+            productExternalCode === scannedExternalCode ||
+            (productInternalCode !== '' && productInternalCode === scannedInternalCode) ||
+            String(product.codigo).trim() === scannedExternalCode
+          );
+        });
+      })
     );
+  }
+
+  invalidateCache(): void {
+    this.cachedProducts$ = null;
   }
 
   private mapApiProduct(product: ApiProduct): Product {
@@ -114,11 +140,15 @@ export class ProductService {
 
         return left.displayOrder - right.displayOrder;
       })[0];
-    const code = product.externalCode?.trim() || String(product.internalCode ?? product.id);
+    const externalCode = product.externalCode?.trim() ?? '';
+    const internalCode = String(product.internalCode ?? '').trim();
+    const code = externalCode || internalCode || String(product.id);
 
     return {
       id: String(product.id),
       codigo: code,
+      externalCode: externalCode || undefined,
+      internalCode: internalCode || undefined,
       descripcion: product.name.trim(),
       aliases: product.description?.trim() ? [product.description.trim()] : [],
       precio: product.price,
@@ -129,6 +159,16 @@ export class ProductService {
       categoria: product.category?.name?.trim(),
       ranking: product.ranking ?? 0
     };
+  }
+
+  private normalizeInternalCode(code: string): string {
+    const trimmedCode = code.trim();
+    if (!trimmedCode) {
+      return '';
+    }
+
+    const withoutLeadingZeros = trimmedCode.replace(/^0+/, '');
+    return withoutLeadingZeros || '0';
   }
 
   private mapSaleUnit(saleUnit: string | null | undefined): ProductSaleUnit {

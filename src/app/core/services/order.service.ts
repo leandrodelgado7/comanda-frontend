@@ -4,6 +4,7 @@ import { BehaviorSubject, Observable, map } from 'rxjs';
 import { OrderItem } from '../models/order-item.model';
 import { Product } from '../models/product.model';
 import { environment } from '../../../environments/environment';
+import { ProductService } from '../services/product.service';
 
 export interface CreateOrderCatalogItemRequest {
   isCustom: false;
@@ -49,7 +50,7 @@ export class OrderService {
     map((items) => items.reduce((acc, item) => acc + this.getItemTotal(item), 0))
   );
 
-  constructor(private readonly http: HttpClient) {}
+  constructor(private readonly http: HttpClient, private readonly productService: ProductService) {}
 
   addProduct(product: Product): void {
     this.addProductWithQuantity(product, 1);
@@ -201,5 +202,17 @@ export class OrderService {
     return promotionalPrice !== null && promotionalPrice !== undefined && promotionalPrice > 0
       ? promotionalPrice
       : product.precio;
+  }
+
+  reloadProducts(): void {
+    this.productService.invalidateCache(); // Clear the cache to force a fresh API call
+    this.productService.getProducts$().subscribe({
+      next: (products) => {
+        console.log('Products reloaded:', products);
+      },
+      error: (error) => {
+        console.error('Failed to reload products:', error);
+      }
+    });
   }
 }

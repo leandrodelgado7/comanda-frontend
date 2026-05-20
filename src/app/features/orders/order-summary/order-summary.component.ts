@@ -78,6 +78,7 @@ export class OrderSummaryComponent {
         next: () => {
           this.toastService.showSuccessToast('Pedido enviado correctamente.');
           this.pedidoService.clearOrder();
+          this.pedidoService.reloadProducts(); // Reinvoke the product service to reload products
         },
         error: () => {
           this.toastService.showErrorToast('No se pudo enviar el pedido. Intenta nuevamente.');
