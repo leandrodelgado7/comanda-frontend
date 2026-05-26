@@ -7,7 +7,8 @@ import {
   HttpRequest
 } from '@angular/common/http';
 import { inject } from '@angular/core';
-import { Observable, catchError, switchMap, throwError } from 'rxjs';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
+import { Observable, catchError, finalize, switchMap, throwError } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import { AuthService } from '../services/auth.service';
 import { ToastService } from '../services/toast.service';
@@ -15,6 +16,7 @@ import { ToastService } from '../services/toast.service';
 export const SKIP_AUTH = new HttpContextToken<boolean>(() => false);
 export const SKIP_REFRESH = new HttpContextToken<boolean>(() => false);
 export const HAS_REFRESH_RETRY = new HttpContextToken<boolean>(() => false);
+let activeRequests = 0;
 
 export const authInterceptor: HttpInterceptorFn = (
   request: HttpRequest<unknown>,
@@ -22,6 +24,7 @@ export const authInterceptor: HttpInterceptorFn = (
 ): Observable<HttpEvent<unknown>> => {
   const authService = inject(AuthService);
   const toastService = inject(ToastService);
+  const loaderService = inject(NgxUiLoaderService);
   const isPublicRequest = isPublicSecurityRequest(request);
   const accessToken = authService.getAccessToken();
   const shouldSkipAuth = request.context.get(SKIP_AUTH);
@@ -35,6 +38,11 @@ export const authInterceptor: HttpInterceptorFn = (
         }
       })
     : request;
+
+  activeRequests += 1;
+  if (activeRequests === 1) {
+    loaderService.start();
+  }
 
   return next(authenticatedRequest).pipe(
     catchError((error: unknown) => {
@@ -76,6 +84,13 @@ export const authInterceptor: HttpInterceptorFn = (
           return throwError(() => refreshError);
         })
       );
+    }),
+    finalize(() => {
+      activeRequests = Math.max(0, activeRequests - 1);
+
+      if (activeRequests === 0) {
+        loaderService.stop();
+      }
     })
   );
 };
