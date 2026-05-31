@@ -60,7 +60,17 @@ export class OrderSummaryComponent {
   submitOrder(): void {
     const items = this.pedidoService.getCurrentItems();
 
-    if (items.length === 0 || this.isSubmitting) {
+    if (this.isSubmitting) {
+      return;
+    }
+
+    if (items.length === 0) {
+      this.toastService.showErrorToast('Debes agregar al menos un producto para enviar el pedido.');
+      return;
+    }
+
+    if (items.some((item) => item.quantity <= 0)) {
+      this.toastService.showErrorToast('No puede haber productos con cantidad en cero.');
       return;
     }
 
