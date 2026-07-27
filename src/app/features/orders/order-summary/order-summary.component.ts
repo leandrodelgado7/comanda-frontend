@@ -11,6 +11,10 @@ import { MoneyFormatPipe } from '../../../core/pipes/money-format.pipe';
 import { environment } from '../../../../environments/environment';
 import { AuthStorageService } from '../../../core/services/auth-storage.service';
 import { ToastService } from '../../../core/services/toast.service';
+import {
+  formatRoundedTaxIncludedAmount,
+  roundTaxIncludedAmount
+} from '../../../core/utils/tax-inclusive-price.util';
 
 @Component({
   selector: 'app-order-summary',
@@ -25,7 +29,9 @@ export class OrderSummaryComponent {
   readonly taxPercentage = environment.taxPercentage;
   private readonly taxRate = this.taxPercentage / 100;
   readonly iva$ = this.subtotal$.pipe(map((subtotal) => subtotal * this.taxRate));
-  readonly total$ = this.subtotal$.pipe(map((subtotal) => subtotal * (1 + this.taxRate)));
+  readonly total$ = this.subtotal$.pipe(
+    map((subtotal) => roundTaxIncludedAmount(subtotal * (1 + this.taxRate)))
+  );
   isSubmitting = false;
 
   constructor(
@@ -160,6 +166,10 @@ export class OrderSummaryComponent {
   hasPromotionalPrice(item: OrderItem): boolean {
     const promotionalPrice = item.product.promotionalPrice;
     return promotionalPrice !== null && promotionalPrice !== undefined && promotionalPrice > 0;
+  }
+
+  formatRoundedTotal(total: number): string {
+    return formatRoundedTaxIncludedAmount(total);
   }
 
   private getEffectiveUnitPrice(item: OrderItem): number {

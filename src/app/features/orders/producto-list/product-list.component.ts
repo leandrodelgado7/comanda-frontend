@@ -4,6 +4,8 @@ import { Observable, map } from 'rxjs';
 import { Product } from '../../../core/models/product.model';
 import { ProductService } from '../../../core/services/product.service';
 import { OrderService } from '../../../core/services/order.service';
+import { environment } from '../../../../environments/environment';
+import { formatRoundedTaxIncludedAmount } from '../../../core/utils/tax-inclusive-price.util';
 
 type ProductLayoutMode = 'grid' | 'list';
 type ProductSortMode = 'ranking' | 'name-asc' | 'name-desc' | 'category-asc' | 'category-desc';
@@ -36,12 +38,7 @@ export class ProductListComponent implements OnChanges {
     )
   );
   private readonly imageLoadErrors: Record<string, boolean> = {};
-  private readonly priceFormatter = new Intl.NumberFormat('es-AR', {
-    style: 'currency',
-    currency: 'ARS',
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2
-  });
+  private readonly taxRate = environment.taxPercentage / 100;
 
   constructor(
     private readonly productService: ProductService,
@@ -74,7 +71,7 @@ export class ProductListComponent implements OnChanges {
   }
 
   getDisplayPrice(product: Product): string {
-    const formattedPrice = this.priceFormatter.format(product.precio);
+    const formattedPrice = formatRoundedTaxIncludedAmount(this.getPriceWithTax(product.precio));
 
     return product.saleUnit === 'FRACTION'
       ? `${formattedPrice} / kg`
@@ -83,7 +80,7 @@ export class ProductListComponent implements OnChanges {
 
   getPromotionalDisplayPrice(product: Product): string {
     const promotionalPrice = this.getEffectiveUnitPrice(product);
-    const formattedPrice = this.priceFormatter.format(promotionalPrice);
+    const formattedPrice = formatRoundedTaxIncludedAmount(this.getPriceWithTax(promotionalPrice));
 
     return product.saleUnit === 'FRACTION'
       ? `${formattedPrice} / kg`
@@ -104,6 +101,10 @@ export class ProductListComponent implements OnChanges {
 
   private getProductKey(product: Product): string {
     return String(product.id);
+  }
+
+  private getPriceWithTax(price: number): number {
+    return price * (1 + this.taxRate);
   }
 
   private sortProducts(products: Product[], mode: ProductSortMode): Product[] {
